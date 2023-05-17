@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clear_float</title>
+
+  <style>
+    /* 单引号只是为了照顾低版本浏览器 */
+    /* .clearfix:after {
+      content: none;
+      display: block;
+      height: 0px;
+      clear: both;
+      visibility: hidden;
+    } */
+    .clearfix:before,
+    .clear:after {
+      content: "";
+      display: table;
+    }
+
+    .clear:after {
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <div class="clearfix"></div>
+  </div>
+</body>
+
+</html>

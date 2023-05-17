@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>TRADEMARK</title>
+  <link rel="stylesheet" href="css/dpl.css">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="https://kit.fontawesome.com/43705908d2.js" crossorigin="anonymous"></script>
+
+  <script src="js/scroll.js"></script>
+  <script src="js/comm.js"></script>
+  <script src="js/nav.js"></script>
+
+  <script>
+    /*********************************************
+    for slideshow 1*******************************
+    **********************************************/
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "flex";
+      dots[slideIndex - 1].className += " active";
+    }
+
+    /*********************************************
+    for slideshow 1 end*******************************
+    **********************************************/
+
+    /*********************************************
+     * for slideshow 2 end*******************************
+    **********************************************/
+    var slide2Index = 1;
+    showSlides2(slide2Index);
+
+    function currentSlide2(n) {
+      showSlides2(slideIndex = n);
+    }
+    function showSlides2(n) {
+      var i;
+      var slides2 = document.getElementsByClassName("mySlides2");
+      var slides2text = document.getElementsByClassName("slide2text")
+      var dots2 = document.getElementsByClassName("dot2");
+      
+      for (i = 0; i < slides2.length; i++) {
+        slides2[i].style.display = "none";
+        slides2text[i].style.display = "none";
+      }
+      for (i = 0; i < dots2.length; i++) {
+        dots2[i].className = dots2[i].className.replace(" active", "");
+      }
+
+      slides2text[slideIndex - 1].style.display = "block";
+      slides2[slideIndex - 1].style.display = "block";
+      dots2[slideIndex - 1].className += " active";
+    }
+  </script>
+</head>
+
+<body>
+  <div id="header">
+  </div>
+  <div id="page-body">
+  </div>
+  <div id="footer">
+  </div>
+</body>
+
+</html>

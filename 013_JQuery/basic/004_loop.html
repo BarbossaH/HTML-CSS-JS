@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../00_JQuery/Jquery_min.js"></script>
+</head>
+
+<body>
+  <script>
+    $(function () {
+      $('div').css('background', 'skyblue');
+      $('ul li').css('color', 'red')
+
+      $('div:first').css('color', 'blue');
+      $('div:last').css('color', 'red');
+      $('div:eq(2)').css('color', 'yellow');
+
+      $('ul li:odd').css('background', "#ccc")
+    })
+  </script>
+
+  <div>I could fall in a little love with Fiona </div>
+  <div>I could fall in a little love with Fiona </div>
+  <div>I could fall in a little love with Fiona </div>
+  <div>I could fall in a little love with Fiona </div>
+  <ul>
+    <li>I don't think it is true.</li>
+    <li>I don't think it is true.</li>
+    <li>I don't think it is true.</li>
+    <li>I don't think it is true.</li>
+  </ul>
+</body>
+
+</html>

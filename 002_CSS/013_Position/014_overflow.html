@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overflow</title>
+  <!-- Overflow就是溢出 -->
+  <!-- 四个属性：visible, auto, hidden, scroll 
+  auto 和scroll的区别就是auto只有超出的时候才显示滚动条，而scroll是一直显示滚动条 -->
+  <!-- 一般情况下隐藏
+  但是，定位的部分慎用隐藏，因为定位经常会超出盒子 -->
+  <style>
+    .awning {
+      /* overflow: hidden; */
+      /* overflow: scroll; */
+      overflow: auto;
+      height: 100px;
+      width: 100px;
+      border: solid;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="awning">awning, because its characteristic,
+    it often spread out the house.</div>
+  <!-- <div class="awning">awning</div> -->
+</body>
+
+</html>

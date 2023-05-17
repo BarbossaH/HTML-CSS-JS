@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var o = {
+      name: 'andy',
+    }
+
+    function fn(a, b) {
+      console.log(this);
+
+    }
+    // fn.call();
+    // fn.call(1, 2);
+    // fn.call(o, 1, 2);
+
+    function Father(uname, age, sex) {
+      this.uname = uname;
+      this.age = age;
+      this.sex = sex;
+      console.log(Father.prototype.constructor);
+
+    }
+    Father.prototype.sing = function () {
+      return 'I can sing';
+    }
+    function Son(uname, age, sex) {
+      Father.call(this, uname, age, sex);
+      console.log(Son.prototype.constructor);
+
+    }
+    var ldf = new Son('Julian', 18, 'fale');
+    //这是不对的不能调用父类的构造函数，需要把son的prototype指向father，但是继续保留自己son的构造函数
+    // ldf.sing();
+  </script>
+</body>
+
+</html>

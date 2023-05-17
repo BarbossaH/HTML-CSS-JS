@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise</title>
+  <style>
+    .nav {
+      height: 41px;
+      line-height: 41px;
+      border-top: orange 3px solid;
+      border-bottom: #edeef0 1px solid;
+    }
+
+    .nav a {
+      /* 行内元素没有高，所以要转化成行内块元素 */
+      display: inline-block;
+      color: #4c4c4c;
+      text-decoration: none;
+      padding: 0px 20px;
+      font-size: 12px;
+      height: 41px;
+    }
+
+    /* 如果没有指定高度和宽度，padding是不会影响盒子的高度和宽度的。
+    如果指定了高度和宽度，比如width：100%，即便是这样也会撑开盒子。只要有了属性，就会撑开。 */
+    /* 如果父元素指定了宽高，但是子元素没有指定，那么padding也不会影响盒子大小，不会超过父元素 */
+    .nav a:hover {
+      background-color: powderblue;
+      color: orange;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="nav">
+    <a href="#">Google</a>
+    <a href="#">YouTube</a>
+    <a href="#">Twitter</a>
+    <a href="#">Chrome</a>
+    <a href="#">Subsribe me</a>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      position: absolute;
+      margin: 30px auto;
+      width: 100px;
+      height: 100px;
+      background-color: gold;
+    }
+
+    /* button  */
+  </style>
+
+  <script src="017animation.js"></script>
+</head>
+
+<body>
+  <div></div>
+  <button class='btn500'>start</button>
+  <button class='btn800'>start</button>
+  <script>
+    var now = +new Date();
+    // var timePeriod = 
+    var div = document.querySelector('div');
+    var btn500 = document.querySelector('.btn500');
+    var btn800 = document.querySelector('.btn800');
+    btn500.addEventListener('click', function () {
+      animation(div, 200, function () { });
+    })
+    btn800.addEventListener('click', function () {
+      animation(div, 400, function () { div.style.backgroundColor = 'red'; });
+    })
+
+    // function animation(obj, speed, time) {
+    //   if (time === '' || time === undefined || time === 0) { time = 100; }
+
+    //   // 这个可以避免bug，因为多次点击就会多次产生定时器，所以就要先清除已有的定时器
+    //   clearInterval(obj.timer);
+    //   // 使用这种方式可以给回调函数传参数
+    //   //把定时器作为对象的参数，这样就不用分配空间，提升执行效率；
+    //   obj.timer = setInterval(function () {
+    //     if (speed === '' || speed === undefined || speed === 0) { speed = 1; }
+    //     // console.log(div.offsetLeft);
+    //     obj.style.left = obj.offsetLeft + speed + 'px';
+    //     if (+new Date() > now + 10000) {
+    //       clearInterval(obj.timer);
+    //     }
+    //     // if (div.offsetLeft > 100) {
+    //     //   clearInterval(timer);
+    //     // }
+    //   }, time);
+    // }
+  </script>
+</body>
+
+</html>

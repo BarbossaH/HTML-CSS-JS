@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      list-style-type: none;
+    }
+
+    .box {
+      width: 250px;
+      margin: 100px auto;
+    }
+
+    .box li {
+      float: left;
+      width: 24px;
+      height: 24px;
+      background-color: lime;
+      margin: 15px;
+      /* 常规做法 */
+      background: url(images/sprite.png) 0px -44px no-repeat;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
+
+  <script>
+    var lies = document.querySelectorAll('li');
+    for (var i = 0; i < lies.length; i++) {
+      // 这个是使用参数设置精灵图片，前提是精灵图有规律需要美术配合
+      lies[i].style.backgroundPosition = '0 0';
+      // lies[i].style.backgroundPosition = '0 -' + i * 44 + 'px';
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .change {
+      /* background-color: lime; */
+      width: 300px;
+      height: 300px;
+      margin: 100px auto;
+    }
+
+    .test {
+      background-color: magenta;
+    }
+  </style>
+</head>
+
+<body>
+  <div>text</div>
+
+  <script>
+    var change = document.querySelector('div');
+    change.onclick = function () {
+      // 这个会覆盖以前已有的类名
+      this.className = 'change test';
+    }
+  </script>
+</body>
+
+</html>

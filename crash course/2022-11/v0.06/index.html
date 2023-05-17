@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SNUGNZ LIMITED - HEALTHY LIVING</title>
+<link rel="stylesheet" media="screen and (min-width:1024px)" href="css/pc.css">
+<link rel="stylesheet" media="screen and (max-width:1024px)" href="css/pd.css">
+<link rel="stylesheet" media="screen and (max-width:850px)" href="css/mb.css">
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+<link rel="icon" type="image/png" href="img/icon.png" />
+<script src="js/jquery-3.3.1.min.js"></script><script src="js/commen.js"></script><script src="js/screen.js"></script><script>window.onload = function (){var url=location.search;if (url.indexOf("?") != -1){var str=url.substr(1);strs=str.split("&");var num = strs.length;if (num == 1){if(strs[0]=="cn"){pagename="cnhome";themenu="menucn";pageon="cn";document.getElementById("banner").style.height=window.innerHeight+"px";mcontent="layout/bannercontent.html";$.get(mcontent, function(data, status){document.getElementById("banner").innerHTML = data;});}else{pagename=strs[0];themenu="menuen";pageon="en";}}else if(num ==2){pagename=strs[0]+strs[1];themenu="menu"+strs[0];pageon=strs[0];}else{alert("Warning!!! You are entering a wrong URL!");window.location.href = "/";}}else{pagename="home";themenu="menuen";pageon="en";document.getElementById("banner").style.height=window.innerHeight+"px";mcontent="layout/bannercontent.html";$.get(mcontent, function(data, status){document.getElementById("banner").innerHTML = data;});}pageurl="pages/"+pagename+".html";menurl="layout/"+themenu+".html";$.get(pageurl, function(data, status){document.getElementById("pagebody").innerHTML = data;});$.get(menurl, function(data, status){document.getElementById("header").innerHTML = data;});}
+window.onresize=function(){var theurl=location.search;if (theurl.indexOf("?") != -1){var rsstr=theurl.substr(1);strs=rsstr.split("&");if(strs[0]=="cn"){			document.getElementById("banner").style.height=window.innerHeight+"px";mcontent="layout/bannercontent.html";$.get(mcontent, function(data, status){document.getElementById("banner").innerHTML = data;});}}else{document.getElementById("banner").style.height=window.innerHeight+"px";mcontent="layout/bannercontent.html";$.get(mcontent, function(data, status){document.getElementById("banner").innerHTML = data;});}}
+window.onscroll = function(){topmenuchage();if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){document.getElementById("myBtn").style.display = "block";} else {document.getElementById("myBtn").style.display = "none";}}</script>
+</head>
+<body>
+<script>
+$('body').on('click', function(e){var menuselect = document.getElementById('m1');var elementID = document.getElementById('ddm1');if ( (event.target != elementID) && (event.target.parentNode != elementID) && (event.target != menuselect) && (event.target.parentNode != menuselect) && $('#ddm1').hasClass('opened')){$('#ddm1').toggleClass('opened closed');}var menuselect = document.getElementById('m2');var elementID = document.getElementById('ddm2');if ( (event.target != elementID) && (event.target.parentNode != elementID) && (event.target != menuselect) && (event.target.parentNode != menuselect) && $('#ddm2').hasClass('opened')){$('#ddm2').toggleClass('opened closed');}});$('#m1').on('click', function(e){if ($('#ddm1').hasClass('closed')){$('#ddm1').toggleClass('closed opened');}else{$('#ddm1').toggleClass('opened closed');}if ($('#ddm2').hasClass('closed')){$('#ddm2').toggleClass('closed opened');}else{$('#ddm2').toggleClass('opened closed');}
+});/* mouse click at outer opened menu*/
+</script>
+<div id="mbmbut" class="mbmbut" onClick="menuswitch();"></div>
+<div id="cover" class="cover_off" onClick="closesubpage()"></div>
+<div id="content_block"><iframe id="content_page" class="content_block_iframe_off" src='/pages/'></iframe></div>
+<div id="close" class="close_off" onClick="closesubpage()"></div>
+<div id="header" class="headeroff"></div>
+<div id="banner" style="" class=""></div>
+<div id="pagebody"></div>
+<div id="footer"><div id="infooter"><img src="img/footerlogo.PNG" height="80" style="float:left;margin:20px"/><a href="?TermsConditions" style="color:#fff">Terms & Conditions</a> | Copyright © SnugNZ group Ltd 2020 All rights reserved.<br/><br/></div></div>
+<button onClick="topFunction();" id="myBtn" >Top</button><script>function topFunction() {document.body.scrollTop = 0;document.documentElement.scrollTop = 0;}</script>
+</body>
+</html>

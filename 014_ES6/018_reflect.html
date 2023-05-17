@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //reflect是希望对象，数组等等使用其默认行为,而不是自己去手写
+
+    let obj = {}
+    // Object.defineProperty(obj, "name", {
+    //   value: "Julian",
+    //   writable: false,
+    //   enumerable: false
+    // })
+    // Object.defineProperty(obj, "name", {
+    //   value: "xia" //这么写就会报错，因为使用的是Object类
+    // })
+    // obj.name = 'Lucy'; //这么不会报错，但是无法修改值
+
+
+    Reflect.defineProperty(obj, "name", {
+      value: "Julian",
+      writable: false,
+      enumerable: false
+    })
+    let res = Reflect.defineProperty(obj, "name", {
+      value: "Julian",
+
+    })
+    let res1 = Reflect.defineProperty(obj, "name", {
+      value: "Xia",
+
+    })
+    console.log(res); //true 因为没有修改，所以返回true，另外就是不会抛出异常，而是true or false
+    console.log(res1);//false 不能被修改
+    console.log(obj);
+    obj.name = 'xia';
+    console.log(obj);//name = "Julian" 无法修改，也无法删除
+    // 上述行为等价于 obj.name = 'Julian'
+
+
+    let s1 = new Set();
+    let pro = new Proxy(s1, {
+      get() {
+
+      },
+      set() {
+        // return
+      }
+    })
+  </script>
+</body>
+
+</html>

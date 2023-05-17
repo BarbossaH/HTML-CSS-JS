@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 300px;
+      height: 300px;
+      background-color: springgreen;
+    }
+  </style>
+  <script src="../../00_JQuery/Jquery_min.js"></script>
+  <script>
+    $(function () {
+      $('button').eq(0).click(function () {
+        $('div').hide(1000);
+      })
+      $('button').eq(1).click(function () {
+        $('div').show(1000);
+      })
+      $('button').eq(2).click(function () {
+        $('div').toggle(1000);
+      })
+    })
+  </script>
+</head>
+
+<body>
+  <div></div>
+  <button>btn</button>
+  <button>btn</button>
+  <button>btn</button>
+</body>
+
+</html>

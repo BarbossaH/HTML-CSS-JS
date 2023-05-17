@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model_transform</title>
+  <!-- 一个有用的小工具，snipaste很好用 -->
+  <!-- 如何让文字锤子居中 -->
+  <style>
+    a {
+      width: 100px;
+      height: 120px;
+      background-color: red;
+      display: block;
+      /*important8*/
+    }
+
+    div {
+      width: 200px;
+      height: 60px;
+      color: white;
+      background-color: purple;
+      display: inline;
+    }
+
+    span {
+      width: 200px;
+      height: 100px;
+      background-color: yellow;
+      display: inline-block;
+      /*important8*/
+    }
+  </style>
+</head>
+<!-- 特殊情况下，我们需要元素模式的转换，简单理解一个模式的元素需要另外一种模式的特性
+
+比如想要增加链接a的触发范围。
+转换为块：dispaly-block -->
+
+<body>
+  <a href="#">Bride and Groom are wedding.</a>
+  <a href="#">Bride and Groom are wedding.</a>
+  <div>there is a bouquet in the bride's hand.</div>
+  <div>there is a bouquet in the bride's hand.</div> <br>
+  <span>sole is a piece of shoe.</span>
+  <span>sole is a piece of shoe.</span>
+</body>
+
+</html>

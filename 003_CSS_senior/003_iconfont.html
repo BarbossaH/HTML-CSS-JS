@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Icon_Font</title>
+
+  <!-- 为什么出现字体图标
+  精灵图的缺点：图片文件还是比较大的，图片本身放大所需会失真，一旦图片制作完要更换非常复杂。
+  此时，有一种技术的可以解决以上问题，就是字体图标iconfont
+  字体图标可以为前端工程师提供一种方便搞笑的图标使用方式，展示的是图标，本质是子体
+  也就是说它可以使用字体的属性，变换大小和变换颜色等等。 -->
+
+  <!-- 字体图标的优点
+  轻量级：一个字体图标比任何图像都要小，一旦字体加载了，图标就会马上渲染出来，减少了服务器请求
+  灵活性：本质就是文字，可以改变颜色，大小，阴影，透明效果，旋转等等
+  兼容性：几乎支持所有浏览器
+  注意：字体图标不能替代精灵技术。只是对工作中图标部分技术的提升和优化。
+  稍微复杂的背景图标还是要使用精灵图来做。 -->
+
+  <!--字体库下载
+     Icomoon 字库 http://Icomoon.io
+  阿里iconfont http://www.iconfont.cn -->
+
+  <!-- 字体图标的引入
+  先下载下来，然后放到使用的根目录下。一般有多种格式的文件预防兼容问题。
+  有一坨代码需要复制，做一个字体声明
+  然后打开demo.html打开文件后复制需要图标后面的方框；
+  然后跟元素声明一个字体。通过选择器font-family: 'icomoon'引入 -->
+
+  <!-- 字体图标的追加
+  图标会逐渐不够用了，我们需要添加新的图标。
+  把压缩包里的selection.json重新上传，然后选中自己想要的新的图标，重新下载替换原来的。
+  进入网站（icomoon），就会有记录我们原来下载的。点击import icons.然后选择.json文件。覆盖就可以
+  重新下载，然后用新的文件替换就可以。 
+  一般情况下，如果不换电脑，不换账号的前提下，只是本人操作网站会有记录，
+  但是一旦发生了工作交接，就需要json文件了-->
+
+  <!-- 在实际开发场景中，只需要向服务器请求一次拿到字体就行了。 -->
+
+  <style>
+    @font-face {
+      font-family: 'icomoon';
+      src: url('fonts/icomoon.eot?bn0uyx');
+      src: url('fonts/icomoon.eot?bn0uyx#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?bn0uyx') format('truetype'),
+        url('fonts/icomoon.woff?bn0uyx') format('woff'),
+        url('fonts/icomoon.svg?bn0uyx#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+    }
+
+    span {
+      font-family: 'icomoon';
+      font-size: 30px;
+      color: skyblue;
+    }
+  </style>
+</head>
+
+<body>
+  <span></span>
+  <span></span>
+</body>
+
+</html>

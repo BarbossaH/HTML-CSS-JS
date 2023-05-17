@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //foreach() map() filter(), some(), every()
+    var arr = [1, 2, 3];
+    arr.forEach(function (value, index, arr) {
+      // console.log('每个数组元素' + value);
+      // console.log('每个数组元素索引号' + index);
+      // console.log('数组本身' + arr);
+    })
+
+    // for (var key in arr) {
+    //   console.log('每个数组元素' +arr[key] );
+    //   console.log('每个数组元素索引号' + key);
+    // }
+    var newArr = arr.filter(function (value, index, arr) {
+      // return value < 3;
+      return value % 2 !== 0;
+    })
+    // console.log(newArr);
+
+    //如果找到了满足条件的就终止循环
+    var flag = arr.some(function (value, index, arr) {
+      return value > 2;
+    })
+    var arr1 = ['1', '2', '3'];
+    var flag1 = arr.some(function (value) {
+      return value == '2';
+    })
+    console.log(flag);
+    console.log(flag1);
+//研究一下map和every
+  </script>
+</body>
+
+</html>

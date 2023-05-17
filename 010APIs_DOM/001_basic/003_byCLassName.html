@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="box">box1</div>
+  <div class="box">box2</div>
+  <div id="nav">
+    <ul>
+      <li>index</li>
+      <li>products</li>
+    </ul>
+  </div>
+
+  <script>
+    // 使用类名获取有兼容性的问题，手机端没问题，ie678就会就问题。这都是新增的方法。
+    var boxes = document.getElementsByClassName('box');
+    console.log(boxes);
+    // 或许指定方式的第一个元素
+    var box1 = document.querySelector('.box');
+    console.log(box1);
+    var nv = document.querySelector('#nav');
+    console.log(nv);
+    var lili = document.querySelector('li');
+    console.log(lili);
+
+    // 这个方法得到也是一个类数组
+    var Allbox = document.querySelectorAll('.box');
+    console.log(Allbox);
+
+  </script>
+</body>
+
+</html>

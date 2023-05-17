@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+  <title>Document</title>
+
+  <style>
+    div {
+      width: 100px;
+      height: 250px;
+      border: 1px solid greenyellow;
+      background: url(../007_animation/media/dog.jpg) no-repeat;
+      /* 等比缩放 */
+      /* background-size: 500px; */
+
+      /* 粗暴的拉伸 */
+      /* background-size: 500px 200px; */
+
+      /* 图片一直拉升，直到完全覆盖父盒子 */
+      /* background-size: cover; */
+
+      /* background-size: 50%; */
+
+      /* 图片拉升至高度或者宽度符合就可以了 */
+      background-size: contain;
+
+      /* 以上所有的工作就是为了手机Retina系统，先准备2倍图片，
+      然后h5将图片压缩，放到手机里，手机会将图片扩张2倍 */
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>

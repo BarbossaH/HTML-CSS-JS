@@ -1,0 +1,135 @@
+body{
+    background: url("../img/login/bg.jpg") no-repeat center fixed;
+    background-size: cover;
+    font-family: "Open Sans", sans-serif;
+}
+#logo{
+    max-width: 170px;
+    display: block;
+    margin: 75px auto 0 auto;
+}
+#login-box{
+    background-color: white;
+    width: 360px;
+    margin: 15px auto;
+    box-shadow: 1px 4px 8px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+#login{
+    padding: 30px;
+    padding-bottom: 0;
+}
+#login-box h1{
+    font-size: 24px;
+    font-weight: normal;
+    margin: 8px 0;
+}
+#login p{
+    font-size: 13px;
+    margin-top: 25px;
+}
+.logincontainer{
+    height: 34px;
+    width: 95%;
+    margin: 0 auto;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.logincontainer img{
+    width: 15px;
+    float: left;
+    margin: 10px;
+}
+.logincontainer input{
+    height: 32px;
+    border: none;
+    background-color: transparent;
+    font-family: 400 13.3333px Arial;
+    font-size: 17px;
+    line-height: 32px;
+}
+input:focus{
+    outline: none;
+}
+.checkboxcontainer{
+    margin: 30px 0;
+}
+#checkbox{
+    height: 19px;
+    width: 19px;
+}
+#login-box button, form input[type=submit]{
+    height: 34px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+button.blue, form input[type=submit]{
+    color: white;
+    background-color: #46b8da;
+    border: 1px solid #46b8da;
+    float: right;
+}
+
+#login-box hr{
+    width: 90%;
+    margin: 0 auto;
+}
+#loginbottom{
+    padding: 20px 30px;
+    overflow: auto;
+}
+
+#loginbottom a{
+    font-size: 13px;
+    text-decoration: none;
+    margin: 8px;
+    height: 34px;
+    line-height: 34px;
+    color: #0d638f;
+    cursor: pointer;
+}
+#register{
+    padding: 30px 0;
+}
+.registercontainer, .photocontainer, #register h1{
+    padding: 0 30px;
+}
+.registercontainer input, .registercontainer select{
+    height: 30px;
+    width: 95%;
+    margin: 0 6px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.registercontainer select{
+    width: 96%;
+    height: 34px;
+    font-size: 17px;
+}
+#login-box span{
+    color: red;
+    font-size: 15px;
+}
+#registerbottom{
+    padding: 10px 30px 30px 30px;
+    overflow: auto;
+}
+button.back{
+    float: left;
+    border: 1px solid lightgrey;
+    background-color: whitesmoke;
+    color: black;
+}
+#forgot{
+    padding: 30px;
+}
+button#back{
+    border: 2px solid black;
+    padding: 0 10px;
+}
+button#back img{
+    width: 15px;
+}
+#forgotbottom{
+    padding: 10px 30px 50px 30px;
+}

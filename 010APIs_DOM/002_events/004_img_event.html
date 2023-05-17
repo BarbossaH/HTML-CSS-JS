@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id='bgc'>bgc</button>
+  <button id='beauty'>beauty</button> <br>
+  <img src="../../008_Mobile/008_Ali_Pro/images/banner.jpeg" alt="">
+
+  <script>
+    var image = document.querySelector('img');
+    var bgc_btn = document.getElementById('bgc');
+    console.log(bgc_btn);
+    bgc_btn.onclick = function () {
+      image.title = 'banner';
+      image.src = "../../008_Mobile/008_Ali_Pro/images/banner.jpeg";
+    }
+
+    //注意onclick都是小写
+    var beauty_btn = document.getElementById('beauty');
+    beauty_btn.onclick = function () {
+      image.title = 'beauty';
+      image.src = "../../008_Mobile/008_Ali_Pro/images/beauty.jpg";
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 静态成员和实例成员
+    // 通过this添加就是实例成员，只能通过实例化的对象来访问
+    function Star(uname, age) {
+      this.uname = uname;
+      this.age = age;
+      // this.sing = function () {
+      //   console.log('I can sing.');
+      // }
+    }
+    Star.prototype.sing = function () {
+      console.log('I can sing.');
+
+    }
+    var ldh = new Star('liu', 18);
+    var zhang = new Star('zhang', 18);
+    // console.log(ldh.uname);
+    // ldh.sing();
+    //静态成员：在构造函数本身添加的成员
+    Star.sex = 'male';//应该是和c++ static一样的属性
+    // console.log(Star.uname);//不能通过对象来访问，
+    // console.log(Star.sex);
+    console.log(ldh.sing === zhang.sing);//如果是实例对象的函数就是false如果是原型则是true
+    // console.log(Star);
+    console.dir(Star);
+    ldh.sing();
+    zhang.sing();
+    console.log(ldh);
+    // 一般情况下，公共属性放到构造函数里，但是函数就放到原型对象上，节省内容空间
+  </script>
+</body>
+
+</html>

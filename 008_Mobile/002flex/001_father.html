@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      display: flex;
+      width: 640px;
+      height: 320px;
+      background-color: violet;
+      /* 默认的主轴是x */
+      flex-direction: row;
+      /* 这个是翻转顺序并且靠右对齐 */
+      /* flex-direction: row-reverse; */
+      /* flex-direction: column; */
+      /* justify-content: center; */
+      /* justify-content: flex-end;
+      justify-content: flex-start; */
+      /* 设置主轴上的元素排列，平均分配空间包括两边（左右，或者上下取决于主轴） */
+      justify-content: space-around;
+
+      /* 这个是非常重要的，经常使用的效果 两边贴边，中间平均*/
+      /* justify-content: space-between; */
+
+
+      /* ------------------控制次轴的布局------------------------ */
+      /* 适应与单行的情况，多行无效 */
+      /* align-items: flex-start; */
+      /* align-items: stretch; */
+      /* align-items: center; */
+
+      /* 适应与多行的情况，单行无效 */
+      flex-wrap: wrap;
+      align-content: space-around;
+
+
+      /* 父元素常见属性
+      flex-wrap: ;
+      flex-direction: ;
+      justify-content: ;
+      align-items: ;
+      align-content: ;
+      flex-flow: ; */
+    }
+
+    span {
+      width: 200px;
+      height: 100px;
+      background-color: turquoise;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>3</span>
+    <span>3</span>
+    <span>3</span>
+  </div>
+</body>
+
+</html>

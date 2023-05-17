@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 如果行内元素添加绝对或者浮动或者固定定位，可以直接设置高度和宽度 -->
+  <!-- 如果块元素添加绝对或者固定定位，默认的大小是内容的大小。 -->
+  <!-- 浮动元素，绝对定位等，元素不会出发外边距合并的问题（塌陷的问题） -->
+  <style>
+    span {
+      position: absolute;
+      top: 100px;
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+
+    .box {
+      /* 如果添加了定位宽度和高度就跟随内容的大小了 */
+      /* position: absolute; */
+      background-color: powderblue;
+    }
+  </style>
+</head>
+
+<body>
+  <span>Spectecular</span>
+  <div class="box">compliment</div>
+</body>
+
+</html>

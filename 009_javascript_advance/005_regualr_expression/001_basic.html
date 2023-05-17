@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var re = new RegExp(/123/);
+    console.log(re.test(43124));//false
+    console.log(re.test(431234));//true
+
+    var reg = /1234/;
+    console.log(re.test(431234));//true
+    console.log(re.test(431112334));//true
+    // console.log(re.test(452673814));//false
+    // console.log(re.test(4321));//false
+    // console.log(re.test(1626364));//false
+
+  </script>
+</body>
+
+</html>

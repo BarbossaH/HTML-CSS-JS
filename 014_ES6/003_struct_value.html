@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let [a, b, c] = [1, 2, 3];
+    // console.log(a);
+    // console.log(b);
+    // console.log(c);
+    let arr = [4, 5, 6];
+    let [x, y, z, d, e] = arr;
+    // console.log('x= ' + x);
+    // console.log('y= ' + y);
+    // console.log(z);
+    // console.log(d);
+    // console.log(e);
+    [x, y, z, d, e] = [y, x, z, d, e]//交换数据
+    // console.log('x= ' + x);
+    // console.log('y= ' + y);
+    let [w, t, r, [, l,]] = [1, [2, 3, 56], 56, [21, 31, 14]];
+
+    let [xx] = [];
+    // console.log('xx=' + xx);
+    let [yy = 1] = [];
+    // console.log('yy=' + yy);
+
+    let person = { uname: 'fiona', age: 18 };
+    // let { uname, age } = person;
+    // let { age, uname } = person;
+    // console.log(age, uname);
+
+    let { age } = person;
+    console.log(age);
+
+    let { uname } = person;
+    console.log(uname);
+
+    let { ok, ko } = person;
+    // console.log(ok, ko);//undefined
+    // console.log(uname, age);
+
+    let { uname: yourname, age: realage } = person;
+    console.log(yourname);
+    console.log(realage);
+
+
+    let code = 'AAA';
+    let res = {
+      uname: 'julian',
+      code: 200,
+      data: '123'
+    };
+    // let { code } = res;//这样会重名，报错，所以要使用下面的方式取值,避免重复
+    let { code: co, err = 'no issue' } = res;
+    console.log(co, err);
+
+    function getData() {
+      let res = {
+        code: 200,
+        data: { list: ['a', 'b', 'c'] }
+      }
+      test(res);
+    }
+    function test({ code, data: { list: [a] } }) {
+      console.log(code, a);
+      // console.log(code, data);//error 报错
+      // 通过这种方式就可以直接使用对象里面的值了
+    }
+
+    getData();
+
+    let myname = 'Julian';
+    let [ee, tt, cc] = myname;
+    console.log(ee, tt, cc);
+    let { length } = myname;
+    let { length: ln } = myname;
+    console.log(length); //6
+    console.log(ln); //6
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>media</title>
+  <style>
+    @media screen and (min-width: 320px) {
+      html {
+        font-size: 21.33px;
+      }
+    }
+
+    @media screen and (min-width: 750px) {
+      html {
+        /* 首先要确定一个标准，以750像素为标准，分成15分。当然都是以主流手机屏幕尺寸，除以一个分数15，20
+        这个分数可以随便，方便计算就好 */
+        font-size: 50px;
+      }
+    }
+
+    div {
+      width: 4rem;
+      height: 4rem;
+      background-color: chartreuse;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>

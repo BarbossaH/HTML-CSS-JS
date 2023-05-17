@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    var arr = [1, 4, 6, 2, 7, 8, 3, 9, 7, 5];
+
+    //参数不需要写类型，这点与c++不一样。
+    //升序 
+    function bubbleSortUp(arr) {
+      var big = arr[0];
+      for (var j = arr.length - 1; j >= 0; j--) {
+        for (var i = 0; i < j; i++) {
+          if (arr[i] > arr[i + 1]) {
+            big = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = big;
+          }
+        }
+      }
+      console.log(arr);
+    }
+
+    //降序
+    function bubbleSortDown(arr) {
+      var small = arr[0];
+      for (var j = arr.length - 1; j >= 0; j--) {
+        for (var i = 0; i < j; i++) {
+          if (arr[i] < arr[i + 1]) {
+            small = arr[i + 1];
+            arr[i + 1] = arr[i];
+            arr[i] = small;
+          }
+        }
+      }
+      console.log(arr);
+    }
+
+    bubbleSortDown(arr);
+    bubbleSortUp(arr);
+
+    var fucn11 = function () {
+      console.log('hello world');
+
+    }
+
+    fucn11();
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

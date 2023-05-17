@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vertical_align</title>
+
+  <!-- 图片和文字垂直居中，可以使图片和文字垂直对其。
+  但是，只对行内元素和行内块元素起作用。对块元素是不起作用的。 -->
+
+  <!-- vertical-align: baseline, top, middle, bottom
+  baseline  默认。元素放在父元素的基线上。
+  top 把元素的顶端与行中最高元素的顶部对齐
+  middle 把元素放置在父元素的中部
+  bottom 把元素的顶端与行中最低的元素的顶端对齐 -->
+  <style>
+    img {
+      /* vertical-align: baseline; */
+      vertical-align: bottom;
+      /* vertical-align: middle; */
+      /* vertical-align: top; */
+      /* border: orange 1px solid; */
+      /* display: block; */
+    }
+
+    /* 注意：因为会有基线对齐的问题，所以图片底部会有空白缝隙 */
+    /* 第一种策略就是设置非baseline，只要不是baseline就行
+    第二种方式就是设置为快元素 */
+    /* 推荐使用第一种方式 */
+
+
+    div {
+      border: orange 2px solid;
+    }
+
+    textarea {
+      vertical-align: middle;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <img src="/001html/html_1_firstday/src/beauty.jpg" alt="">
+  </div>
+  <br>
+  <!-- <textarea name="" id="" cols="30" rows="10">please text</textarea>please write down -->
+</body>
+
+</html>

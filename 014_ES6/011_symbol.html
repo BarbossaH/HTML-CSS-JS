@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //为什么使用symbol
+    let obj = {
+      uname: "Julian",
+      age: 18,
+      getName() {
+        return this.name;
+      }
+    }
+    let s1 = Symbol();
+    let s2 = Symbol();
+    //symbol不能运算
+    //隐式转换为boolean
+    if (s1) {
+      // console.log('symbol can be a condition');
+
+    }
+
+    let uname = Symbol()
+    obj[uname] = 'fiona';
+    // console.log(obj); //name: 'Julian', age: 18, Symbol(): 'fiona', getName: ƒ
+    //如果我们写了一些属性，但是我们并不知道其中的变量明，为了防止冲突，就用symbol作为变量的标记，因为symbol是唯一的
+    //我们为了防止被别人覆盖，也会使用symbol作为标记。
+
+    let myname = Symbol();
+    let myage = Symbol();
+    let person = {
+      [myname]: "Julian",
+      [myage]: 42,
+      [Symbol()]: 'adress'//但是一般不这么写，因为无法访问
+    }
+
+    // console.log(person[myname]);
+
+    //一般使用这种方式写,加参数就是为了打印的时候可以看到标记，知道干什么，不然都只是显示symbol
+    let keys = {
+      name: Symbol("name"),
+      age: Symbol('age'),
+      adress: Symbol('adress'),
+      test: Symbol('test'),
+      learn: Symbol('learn'),
+    }
+
+    let individual = {
+      [keys.name]: 'Darren',
+      [keys.adress]: 'where',
+      [keys.age]: 50,
+      [keys.test]() {
+        // console.log('test is sucessful');
+
+      },
+      [keys.learn]() {
+        // console.log("i am learning hard");
+        // console.log(this);
+
+      },
+      //内置外部无法访问
+      [Symbol.iterator]() {
+        return console.log('i am iterator');
+
+      }
+    }
+    individual[keys.test]();
+    individual[keys.learn]();
+    individual.name = "Nick"
+    individual.enroll = function () {
+      // console.log('we are enrolling students');
+
+    }
+    for (i in individual) {
+      // console.log(i, individual[i]);//结果是name ,i 是key值 不能遍历symbol
+      if (individual[i] instanceof Function) {
+        individual[i]();
+      }
+    }
+
+    //但是只拿到symbol属性
+    // console.log(Object.getOwnPropertySymbols(individual));
+
+    //有一个方法可以拿到所有的属性 reflect
+    // console.log(Reflect.ownKeys(obj));
+    // console.log(Reflect.ownKeys(individual));
+    //所以通过foreach方法访问
+    Reflect.ownKeys(individual).forEach(function (value, index, arr) {
+      // console.log(value);
+      // console.log(value, index, arr);
+      console.log(value, individual[value]);
+    })
+
+    //做同样的事情
+    // Reflect.ownKeys(individual).forEach((value) => { console.log(value, individual[value]); }
+    // )
+
+  </script>
+</body>
+
+</html>

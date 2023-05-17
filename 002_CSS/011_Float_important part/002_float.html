@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float</title>
+
+  <!-- 传统传统针对pc端的布局方式：
+  1、标准流（普通流，文档流）：就是按照标签默认方式排列；
+  2、浮动：；
+  3、定位：估计就是将元素固定的网页某个位置；
+  一个完整的网页必有以上三种方式；
+  移动端是另外的方式； -->
+
+  <!-- 为什么需要浮动？
+  如何让div块级元素排成一行？
+  行内块元素中间有缝隙，不同的浏览器缝隙大小位置。所以这种特质无法满足现实灵活的要求
+  浮动可以改变元素默认的排列方式 -->
+
+  <!-- 注意，重点：网页布局第一准则：多个块元素纵向排列，使用标准流；多个块级元素横行排列使用浮动。 -->
+  <!-- 父元素管页面上下位置，子元素控制左右的位置 受父元素约束，这个也很重要，
+    不受父元素约束就会跟浏览器去改变，这是一般情形不需要的 -->
+  <!-- float属性用于创建浮动框，将其移动到另一边，直到左边或者右边触及包含块或者另一个浮动的边缘。 -->
+
+  <!-- 浮动是一个选择器的值
+  float:none, left, right. -->
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    div {
+      width: 400px;
+      height: 400px;
+      background-color: purple;
+    }
+
+    .Left {
+      float: left;
+
+      background-color: springgreen;
+    }
+
+    .Right {
+      float: right;
+      width: 600px;
+      height: 400px;
+      background-color: red;
+    }
+
+    /* 重点：
+    1、浮动元素会脱离标准流；俗称脱标 浮起来，原来的位置不再保留，可能会被其它元素占据
+    2、浮动的元素会一行内并且元素 顶部 对齐；
+    3、浮动元素具有行内块元素特性；所以如果有了浮动特性，就可以直接设置宽高，不用写inline-block 
+      宽度如果没有设置，就由内容决定*/
+
+    span {
+      float: left;
+      height: 300px;
+      width: 100px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="Left">While lie</div> -->
+  <div class="Right">Paint the town red</div>
+  <span>1</span><span>2</span>
+  <div>3</div>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // if (parseInt(prompt('enter a number please')) !== Math.random(4)) {
+    //   prompt('enter a number please');
+    // }
+    // else {
+    //   alert('Congratulations');
+    // }
+
+    function getRandomInt(max) {
+      return Math.floor(Math.random() * max);
+    }
+
+    var rad = getRandomInt(11);
+    console.log(rad);
+    var count = 2;
+    do {
+      var input = parseInt(prompt('enter a number please'));
+
+      if (input > rad) { alert('bigger'); }
+      else if (input < rad) { alert('smaller'); }
+      else {
+        alert('congratulations');
+      }
+      count--;
+      if (count <= 0) {
+        alert('There is no opportunity now.');
+        break;
+      }
+    } while (input !== rad)
+
+// 首先熟悉了do while 的语法
+// 写了一遍随机数算法和理解了流程
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

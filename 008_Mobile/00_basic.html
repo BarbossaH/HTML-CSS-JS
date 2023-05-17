@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=1.0,minimum-scale=1.0, user-scalable=no">
+  <title>Document</title>
+  <style>
+    div {
+      width: 375px;
+      height: 300px;
+      background-color: chartreuse;
+    }
+
+    /* 如果需求是100*100的图片，那么将图片使用一下的方式压缩，这样放到手机里就会变成100*100的样子 */
+    img:nth-child(2) {
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <p>I am strong.</p> -->
+  <!-- Retina技术在手机中的应用使得图片会增大，比如iPhone8就会将图片放大至2北 -->
+  <!-- <div>i am</div> -->
+
+  <img src="apple50.png" alt="">
+  <img src="apple100.png" alt="">
+</body>
+
+</html>

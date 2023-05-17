@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<!-- const 简单数据类型不能修改值，但是复杂数据类型可以修改内部的值，比如可以修改数组和对象内部的值 -->
+<!-- 因为复杂类型的数据实际操作的是指针，const指针不可修改，但是指针指向内部的值可以修改 -->
+
+<body>
+  <script>
+    if (true) {
+      const a = 10;
+      if (true) {
+        const a = 20;
+        console.log(a);
+
+      }
+      console.log(a);
+
+    }
+    // const b;//必须赋值
+    // console.log(a);//报错
+    const obj = Object.freeze({ uname: 'ok', age: 18 })
+    obj.uname = 'dsa';
+    console.log(obj.uname);//ok不被修改
+
+  </script>
+</body>
+
+</html>

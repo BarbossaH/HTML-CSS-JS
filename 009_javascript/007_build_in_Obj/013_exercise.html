@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var str = 'Today I do not feel good because I did not sleep well and I feel fiona dislike me.';
+    var newStr = {};
+    for (var i = 0; i < str.length; i++) {
+      var char = str.charAt(i);
+      if (newStr[char]) {
+        newStr[char]++;
+      }
+      else {
+        newStr[char] = 1;
+      }
+    }
+
+    console.log(newStr);
+    var max = 0;
+    var mostchar = '';
+    for (k in newStr) {
+      // console.log(k);
+      if (newStr[k] > max && k !== ' ') {
+        max = newStr[k];
+        mostchar = k;
+      }
+    }
+
+    console.log(mostchar, max);
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

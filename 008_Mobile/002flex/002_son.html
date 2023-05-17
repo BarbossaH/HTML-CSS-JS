@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    section {
+      display: flex;
+      width: 300px;
+      height: 50px;
+      /* align-items: center; */
+      justify-content: space-around;
+    }
+
+    section div:nth-child(1) {
+      /* width: 50px;
+      height: 50px; */
+      /* 如果采取这种方式，压缩屏幕的时候就会缩放，有时某些按钮不希望缩放，所以采取上面的方式，固定像素 */
+      flex: 1;
+      background-color: violet;
+    }
+
+    /* 注意打空格 */
+    section div:nth-child(2) {
+      /* 这是从剩余空间划分分数,如果其他兄弟元素写了具体的像素，不是用flex做的，兄弟元素是不会受flex影响  */
+      flex: 4;
+      background-color: yellow;
+    }
+
+    section div:nth-child(3) {
+      /* width: 50px;
+      height: 50px; */
+      flex: 1;
+      background-color: violet;
+    }
+
+    header {
+      display: flex;
+      width: 500px;
+      height: 300px;
+      background-color: violet;
+      margin-top: 50px;
+    }
+
+    header span:nth-child(1) {
+      flex: 1;
+      height: 80px;
+      background-color: yellow;
+    }
+
+    header span:nth-child(2) {
+      flex: 1;
+      height: 80px;
+      /* 数值越小越靠前，与z-index不同 */
+      order: -1;
+      background-color: palegreen;
+    }
+
+    header span:nth-child(3) {
+      flex: 1;
+      height: 80px;
+      /* 只控制自己的位置，不影响其他兄弟元素 */
+      align-self: flex-end;
+      background-color: red;
+    }
+  </style>
+
+</head>
+
+<body>
+  <section>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </section>
+
+  <header>
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+  </header>
+</body>
+
+</html>

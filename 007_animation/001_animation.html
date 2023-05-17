@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 先定义动画
+再调用动画 
+百分比就是一个动画时间周期的百分比-->
+  <style>
+    @keyframes animition1 {
+
+      0% {
+        /* from { */
+        transform: translatex(0);
+      }
+
+      35% {
+        transform: translatex(1000px);
+      }
+
+      50% {
+        transform: translate(1000px, 300px);
+      }
+
+      85% {
+        /* to { */
+        transform: translate(0px, 300px);
+      }
+
+      100% {
+        /* to { */
+        transform: translate(0);
+      }
+    }
+
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      /* animation: animition1 2s forwards ease; */
+      animation-name: animition1;
+      animation-duration: 3s;
+      animation-delay: 0s;
+      /* animation-iteration-count: infinite; */
+      animation-iteration-count: 2;
+      /* animation-fill-mode: forwards; */
+      /* 分步数走，就像格子进度条一样 */
+      /* animation-timing-function: steps(3); */
+      animation-timing-function: linear;
+      animation-direction: alternate;
+    }
+
+    div:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+</body>
+
+</html>

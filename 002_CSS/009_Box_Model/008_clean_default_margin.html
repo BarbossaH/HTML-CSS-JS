@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clean Default Margin</title>
+
+  <style>
+    /* 这句话是css的第一行代码，因为浏览器都有各自默认元素的内外边距，这句代码就可以清除所有边距 */
+
+    /* 注意：行内元素为了照顾兼容性，尽量设置左右内外边距，不要设置上下内外边距，
+    但是转换为块和行内块元素就可以了。 */
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>123</div>
+  <ul>
+    <li>1234</li>
+  </ul>
+</body>
+
+</html>

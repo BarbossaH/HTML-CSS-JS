@@ -1,0 +1,20 @@
+
+/* unvisited link */
+a:link {
+  color: black;
+  text-decoration: none;
+} 
+
+a:visited {
+  color: black;
+}
+
+ a:hover {
+  color: skyblue;
+  text-decoration: underline;
+}
+
+a:active {
+  color: black;
+  text-decoration: underline;
+}

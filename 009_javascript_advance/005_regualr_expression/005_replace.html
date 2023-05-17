@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <textarea name="" id="msg" cols="30" rows="10"></textarea><button>submit</button>
+  <div></div>
+  <script>
+    var text = document.querySelector('#msg');
+    var div = document.querySelector('div');
+    var btn = document.querySelector('button');
+    btn.onclick = function () {
+
+      // div.innerHTML = text.value.replace(/fuck/g, 'f**k');
+      // div.innerHTML = text.value.replace(/fuck/i, 'f**k');
+      div.innerHTML = text.value.replace(/fuck|virgin/gi, 'f**k');
+    }
+    var str = 'andy and baby';
+    var newstr = str.replace('andy', 'fiona');
+    var newstr1 = str.replace(/baby|love/gi, 'fiona');
+    console.log(newstr);
+    console.log(newstr1);
+
+  </script>
+</body>
+
+</html>

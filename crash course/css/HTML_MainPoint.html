@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+  1. The <!DOCTYPE> declaration represents the document type, and helps the browser to display web pages correctly.
+  2. It must only appear once, at the tope of the page before any HTML tags
+  3. The <!DOCTYPE> declaration is not case sensitive.-->
+
+<!-- A webpage is fundamently made up of three constituents: HTML, cascading style sheets and Javascript -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>first one</title>
+  <style type="text/css">
+    table {
+      border: 1px solid black;
+    }
+
+    td {
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <header> This is the header.</header>
+  </div>
+
+  <h1>Registration form</h1>
+  <div id="reg-form">
+    <!-- placeholder means default value. -->
+    <!-- required meand mandatory field. -->
+    <form action="" method="">
+      <label for="first-name">First Name:</label>
+      <input type="text" name="first-name" placeholder="Julian" required>
+      <label for="last-name">Last Name:</label>
+      <input type="text" name="last-name" placeholder="Huang" required>
+
+      <div>
+        <!-- if attribution name is the same, every choice cannot exit simultaneously -->
+        <label for="gender-male">Male</label>
+        <input type="radio" name="gender-samename" value="choice1">
+        <label for="gender-female">Female</label>
+        <input type="radio" name="gender-samename" value="choice2">
+        <label for="gender-other">Other</label>
+        <input type="radio" name="gender-samename" value="choice3">
+      </div>
+
+      <div>
+        <label for="email"></label>
+        <input type="email" name="email" placeholder="xyz@email.com" id="">
+        <label for="password"></label>
+        <input type="password" name="password">
+      </div>
+
+      <div>
+        <label for="select-option">Birthday:</label>
+        <select name="month" id="">
+          <option value="0" selected disabled>Month</option>
+          <option value="Jan">January</option>
+          <option value="Feb">February</option>
+          <option value="Mar">March</option>
+          <option value="Apr">Aoril</option>
+          <option value="May">May</option>
+          <option value="Jun">June</option>
+          <option value="Jul">July</option>
+          <option value="Agu">Agust</option>
+          <option value="Sep">September</option>
+          <option value="Otc">October</option>
+          <option value="Nov">Novenber</option>
+          <option value="Dec">December</option>
+        </select>
+      </div>
+
+      <label for="agree">I agree the current situation is not good but neet to be changed</label>
+      <input type="checkbox" name="agree">
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <h1>This is not my first page.</h1>
+  <h2>This is not my first page.</h2>
+  <h3>This is not my first page.</h3>
+  <h4>This is not my first page.</h4>
+  <h5>This is not my first page.</h5>
+  <h6>This is not my first page.</h6>
+
+  <p>A <b>paragraph</b> always <strong>This is also bold.</strong> on a new line, and browsers automatically add some
+    white space (a margin) before
+    and
+    after a paragraph.You cannot be sure</br> how HTML will be displayed.
+    Large or small screens, and resized windows will create different results.
+    With HTML, you cannot change the display by adding extra spaces or extra lines in your HTML <br>code.
+    The browser will automatically remove any extra spaces and lines when the page is displayed:</p>
+
+  <img src="source.jpg" alt="there was supposed to be an image here." height="200px" width="300px">
+  <hr width="70%">
+  <big>This text is big</big>
+  <small>This text is small</small>
+  <h2>This is one of my favourite things.</h2>
+  <ol>
+    <li>Achievement.</li>
+    <li>Game</li>
+    <li>This is a random thing.</li>
+    <li>This is a random list.</li>
+    <li>This is a random list.</li>
+  </ol>
+
+  <table>
+    <thead>
+      <th>Dog</th>
+      <th>Cat</th>
+      <th>Pet</th>
+    </thead>
+    <tr>
+      <td>Lovely</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Lovely</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+    <tr>
+      <td>Lovely</td>
+      <td>No</td>
+      <td>Yes</td>
+    </tr>
+  </table>
+
+  <h1>This is first layer title.</h1>
+  <ul>
+    <h3>This is the second layor title in ul tag. And it is intended.</h3>
+    <li>This is unordered list.</li>
+    <li>This is unordered list.</li>
+    <li>This is unordered list.</li>
+    <li>This is unordered last one <img src="https://cdn.pixabay.com/photo/2014/09/26/05/31/night-461707__340.jpg"
+        width="50px" height="50px" alt="">.</li>
+  </ul>
+  <div>
+    <footer>
+      This is the footer.
+    </footer>
+  </div>
+</body>
+
+</html>

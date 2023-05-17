@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="box"></div>
+  <div id="box1"></div>
+  <script>
+    // let div = document.querySelector('#div');
+    // console.log(box);
+    // console.dir(box)
+    //数据的拦截
+    let obj = {}
+    Object.defineProperty(obj, 'data', {
+      get() {
+        // console.log('I can be got');
+        return 'beauty';
+      },
+      set(parm) {
+        // console.log('I am setting something');
+        // div.innerHTML = 'so I can modify the content simultaneously.'
+        // box.innerHTML = parm
+      }
+    })
+
+    // Object.defineProperty 只能拦截对象，只能拦截一个属性
+    //--------------------------------------------------------------------------------
+    let proxyObj = {}
+    let newProxy = new Proxy(proxyObj, {
+      get(target, key) {
+        console.log('I am proxy\'s get');
+        return target[key];
+      },
+      set(target, key, value) {
+        target[key] = value;
+        console.log('proxy\'s set');
+        if (key === 'data') {
+          box.innerHTML = value;
+        }
+        if (key === 'a') {
+          box1.innerHTML = value;
+        }
+        return value;
+      }
+    });
+
+    newProxy.data = 'I am very good';
+    console.log(newProxy.data);
+    newProxy.a = 'ko';
+    console.log('a' in proxyObj);
+
+
+  </script>
+</body>
+
+</html>

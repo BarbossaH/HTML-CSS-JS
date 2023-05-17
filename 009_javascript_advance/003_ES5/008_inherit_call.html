@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function fn(x, y) {
+      console.log('I am Julian');
+      // this 指向window对象
+      console.log(this);
+      console.log(x + y);
+    }
+    // 注意类面是键值结构，map一样
+    var ob = {
+      name: 'Julian'
+    }
+    fn(1, 2);
+    // 这两个this指向就不同的，这就是call的主要目的
+    fn.call();//Nan callthis是number，interesting
+    fn.call(ob, 1, 2);
+  </script>
+</body>
+
+</html>

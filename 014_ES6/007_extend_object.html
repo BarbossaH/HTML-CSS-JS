@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let uname = 'myname';
+    // let position = "City";
+
+    // //模块化思想
+    // let obj = {
+    //   name,
+    //   // age=9,
+    //   [position]: "Auckland", //属性简写，可以模块化命名
+    //   [uname + 'test']() { },
+    //   test: function () { },
+    //   test1: function () { },
+    //   test2() { },//这种方式也可以，新写法 对象简写？
+    //   test3() { }
+    // }
+    // console.log(obj);
+
+    // console.log(obj.name); //myname
+    // // console.log(obj.age); //error
+    //-----------------------------扩展运算符--------------------------------------------------------
+    //  （。。。）复制 es2018才支持
+    // let obj = {
+    //   name: "Julian"
+    // }
+    // //  l类似数组
+    // let obj1 = {
+    //   ...obj
+    // }
+    // console.log(obj1);
+    // obj1.name = "Kevin";
+    // console.log(obj1);
+    // console.log('obj=' + obj);
+    // console.log(obj);
+
+    // let test1 = {
+    //   name: "noone"
+    // }
+    // let test2 = {
+    //   age: 18
+    // }
+    // let test3 = {
+    //   name: "Julian"
+    // }
+
+    // console.log({ ...test1, ...test2, ...test3 }); //{name: 'Julian', age: 18}
+    //重复的name被覆盖了
+    //-----------------------------object.assign--------------------------------------------------------
+    // let test = {}
+    // let test1 = {
+    //   name: "noone"
+    // }
+    // let test2 = {
+    //   age: 18
+    // }
+    // let test3 = {
+    //   name: "Julian"
+    // }
+    // console.log(Object.assign(test, test1, test2, test3));
+    //test被修改，所以最好是空的来接这个类
+    //-----------------------------object.is--------------------------------------------------------
+    // 类似== ===
+    // NaN == NaN false
+    // Object.is(NaN, NaN) true  
+
+    console.log(Object.is({}, {})); //false
+    Object.is(parseInt('A'), NaN); //true
+    Object.is(+0, -0)//false
+    console.log(+0 == -0); //true
+    console.log(+0 === -0); //true
+
+
+  </script>
+</body>
+
+</html>

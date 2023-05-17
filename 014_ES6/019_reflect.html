@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let obj = {
+      name: 'Julian'
+    }
+    // console.log('name' in obj);
+    // console.log(Reflect.has(obj, 'name'));
+    Reflect.deleteProperty(obj, 'name');
+    // console.log(obj);
+
+    Reflect.set(obj, 'age', 18);
+    // console.log(Reflect.get(obj, 'age'));
+    //--------------------------------------------------------------------------------
+
+    let s1 = new Set();
+    let pro = new Proxy(s1, {
+      get(target, key) {
+        if (target[key] instanceof Function) {
+          return s1[key].bind(target);
+        }
+        return s1[key];
+      },
+      set(target, key, val) {
+        return Reflect.set(...arguments) //这个return可以加可不加，不过以后最好还是加上
+        // return Reflect.set(target, key, val);
+      }
+    })
+    pro.add(1);
+    pro.add(2);
+    pro.add(3);
+    pro.add(9);
+    console.log(s1);
+    //--------------------------------------------------------------------------------
+    let s2 = new Set();
+    let pro2 = new Proxy(s2, {
+      get(target, key) {
+        if (target[key] instanceof Function) {
+          return Reflect.get(...arguments).bind(target)
+        }
+        return Reflect.get(...arguments);
+      },
+      set(target, key, value) {
+        return Reflect.set(...arguments);
+      }
+    })
+    pro2.add(9);
+    pro2.add(7);
+    pro2.add(8);
+    // console.log(s2);
+    //--------------------------------------------------------------------------------
+    let arr = [1, 2, 3, 4, 5];
+    let pro3 = new Proxy(arr, {
+      get() {
+        console.log('get');
+
+        return Reflect.get(...arguments);
+      },
+      set() {
+        let somt = Reflect.set(...arguments)
+        console.log(somt, 'set');
+
+        return Reflect.set(...arguments);  //这里必须要返回，不返回就报错,可能是因为push有返回值
+
+      }
+    })
+
+    let pro4 = new Proxy(arr, {
+      get(target, key) {
+        return target[key];
+      },
+      set(target, key, val) {
+        return target[key] = val;
+      }
+
+    })
+    pro3.push(4);
+    pro4.push(99);
+    console.log(arr);
+
+  </script>
+</body>
+
+</html>

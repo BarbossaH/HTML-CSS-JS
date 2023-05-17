@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //symbol作为常量是经常用的
+    const vi = Symbol();
+    const mu = Symbol();
+    const pi = Symbol();
+    function play(type) {
+      switch (type) {
+        case vi:
+          console.log('play vedio');
+
+          break;
+        case mu:
+          console.log('play music');
+
+          break;
+        case pi:
+          console.log('play picture');
+
+          break;
+      }
+    }
+    play(vi);
+  </script>
+</body>
+
+</html>

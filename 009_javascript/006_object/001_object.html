@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var obj = {
+      name: 'Julian',
+      age: 18,
+      kids: ['Yu', 'Xi'],
+      ability: function () {
+        console.log('I am a coder.');
+      }
+    }
+
+    console.log(obj.name);
+    console.log(obj['age']);
+    console.log(obj['kids']);
+    obj.ability();
+    // console.log(obj.ability());
+
+    var obj2 = new Object();
+    obj2.name = 'Fiona';
+    obj2.age = 55;
+    obj2.character = function () {
+      console.log('a crazy women.');
+    }
+    console.log(obj2.age);
+    obj2.character();
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

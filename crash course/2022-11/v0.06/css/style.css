@@ -1,0 +1,7 @@
+body{width:100%;height:100%;margin:0;padding:0; font-family:Poppins,"微软雅黑 Light"; font-size:12px;background:#fff}
+a:link {color: #999;text-decoration: none;}
+a:visited {color: ##999;text-decoration: none;}
+a:hover {color: #00C;text-decoration: none;}
+.cbtitle{width:120px;heigh:40px;line-height:40px;font-size:23px;padding:0 2%;margin:0;color:#fff;font-weight:bolder;float:left;display:block; background:#263152;border-radius:0 25px 0 0;text-align:center}
+.cbcontent{width:96%;heigh:auto;overflow:auto;font-size:18px;padding:15px 2%;margin:0 0 15px 0;color:#263152;text-align:center;float:left;border-top:1px #263152 solid}
+hr{margin:5px 0;padding:0;border:1px #263152 solid;}

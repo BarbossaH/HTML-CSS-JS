@@ -1,0 +1,163 @@
+* {
+    font-family: sans-serif;
+}
+
+body {}
+
+.nav-item {
+    color: black;
+    font-size: 16px;
+}
+
+.nav-item.active {
+    border-bottom: black 2px solid;
+}
+
+.nav-contact {
+    background-color: orange;
+    color:white;
+}
+
+h2{
+    color: #555555;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: none;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: 0;
+}
+
+h3{
+    color: #555555;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 22px;
+    font-style: normal;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: none;
+}
+
+h4{
+
+}
+
+
+h5{
+    color: #666666;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0px;
+    text-transform: none;
+    background: transparent;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    outline: 0;
+}
+
+h6{
+    color: #959595;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    line-height: 21px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0px;
+    text-transform: none;
+}
+
+p{
+    color: #555555;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    line-height: 24px;
+    font-style: normal;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+.block-container01 {
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.161);
+}
+
+.form-container input[type=submit] {
+    color: white;
+}
+
+/*
+color    
+*/
+
+.bg-white {
+    background-color: white;
+}
+
+.bg-black {
+    background-color: black;
+}
+
+.bg-grey {
+    background-color: rgb(149  , 149 , 149);
+}
+
+.bg-dark-grey{
+    background-color: 	#222222;
+}
+
+.bg-grey-02{
+    background-color: #eeeeee;;
+}
+
+.bg-gold {
+    background-color: rgb(236, 191, 86);
+}
+
+.bg-orange{
+    background-color: orange;
+}
+
+.font-gold {
+    color: rgb(236, 191, 86);
+}
+
+.font-grey {
+    color: rgb(112, 112, 112)  !important;
+}
+
+.font-white {
+    color: white;
+}
+
+::placeholder {
+    color: rgba(112, 112, 112, 1);
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgba(112, 112, 112, 1);
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgba(112, 112, 112, 1);
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      /* border: solid 1px black; */
+      width: 700px;
+      margin: 20px auto;
+    }
+
+    input {
+      width: 50px;
+      outline: none;
+      /* margin: 0 auto; */
+      /* border: ; */
+    }
+
+    table {
+      /* border: 1px solid black; */
+      width: 500px;
+      margin: 20px auto;
+      border-collapse: collapse;
+    }
+
+    td,
+    th {
+      border: 1px skyblue solid;
+      text-align: center;
+    }
+  </style>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      var data = [{
+        ID: 1,
+        Name: 'Julian',
+        Strength: 99
+      }, {
+        ID: 2,
+        Name: 'Xia',
+        Strength: 80
+      }, {
+        ID: 3,
+        Name: 'Kevin',
+        Strength: 90
+      }, {
+        ID: 4,
+        Name: 'Lucy',
+        Strength: 999
+      }];
+
+      var tbody = document.querySelector('tbody');
+      var btn_price = document.querySelector('.price_search');
+      var btn_name = document.querySelector('.name_search');
+      setData(data);
+
+      function setData(mydata) {
+        tbody.innerHTML = '';
+        mydata.forEach(function (value) {
+          // console.log('i do not stop');
+          // return true;
+          var tr = document.createElement('tr');
+          tr.innerHTML = '';
+          tr.innerHTML = '<td>' + value.ID + '</td><td>' + value.Name + '</td><td>' + value.Strength + '</td>';
+          tbody.appendChild(tr);
+        })
+      }
+
+      var startInput = document.querySelector('.start');
+      var endInput = document.querySelector('.end');
+      btn_price.addEventListener('click', function () {
+        var newData = data.filter(function (value) {
+          return value.Strength > startInput.value && value.Strength < endInput.value
+        })
+        // console.log(newData);
+        setData(newData);
+      })
+      var nameInput = document.querySelector('.family');
+      btn_name.addEventListener('click', function () {
+        // var newData = data.filter(function (value) {
+        //   return value.Name === nameInput.value;
+
+        // })
+
+        // 查询唯一的元素的时候，就用some
+        var newData = [];
+        data.some(function (value) {
+          if (value.Name === nameInput.value) {
+            newData.push(value);
+            return true;
+          }
+        })
+        setData(newData);
+      })
+    })
+
+  </script>
+</head>
+
+<body>
+  <div>
+    according to the price: <input class="start" type="number" name="" id=""> - <input class="end" type="number" name=""
+      id="">
+    <button class="price_search">search</button>
+    according to the name: <input class="family" type="text" name="" id="">
+    <button class="name_search">search</button>
+
+  </div>
+  <table>
+    <thead>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+    </thead>
+    <tbody>
+
+    </tbody>
+  </table>
+
+
+</body>
+
+</html>

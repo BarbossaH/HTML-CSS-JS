@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../00_JQuery/Jquery_min.js"></script>
+
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    // $('div').hide();
+    // 如果把元素写在脚本前面，那就要先等元素引入才执行脚本
+    // $(document).ready(function () {
+    //   $('div').hide();
+    // })
+    $(function () {
+      // $('div').hide();
+      jQuery('div').hide();
+    })
+  </script>
+
+  <div></div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprite</title>
+  <!-- 为什么使用精灵图
+  一个网页往往会应用很多小的背景图片作为修饰，当网页中的图像过多时，服务器就会频繁接受和发送
+  请求图片，造成服务器请求压力过大，这将大大降低页面的加载速度。
+  因此，为了有效的减少服务器接受和发送请求的次数，提高页面的加载速度，出现了css精灵技术。
+  也称之CSS sprites, css雪碧。 （这个与做游戏的方式是一摸一样的）-->
+
+  <!-- 什么样的情况需要精灵技术：
+  1、可以使用于背景图片，比如按钮，小的图标等等；这些不经常更换，而且内容固定的
+  2、对于经常更换的图片是不使用精灵技术的 -->
+
+  <!-- 精灵图的实现原理
+  利用background-position，只要将背景图片移到所需在的位置。
+  一定要精确量出盒子大小和位置； （这就是为什么我们开发游戏时要预先加载部分精灵图，
+  全加载进入游戏时间就会变长）-->
+
+  <style>
+    .box1 {
+      width: 46px;
+      height: 43px;
+      /* background-color: royalblue; */
+      margin: 100px auto;
+      background: url(/001html/html_1_firstday/src/sprites.jpg) no-repeat -71px -64px;
+      /* 注意使用no-repeat,为了预防万一，养成这个习惯 */
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="box1"></div>
+</body>
+
+</html>

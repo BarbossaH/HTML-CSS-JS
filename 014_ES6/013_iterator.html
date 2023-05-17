@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <script>
+    let arr = ['aa', 'bbb', 'cccc'];
+    for (let i in arr) {
+      // console.log(i);  //index 0, 1, 2
+    }
+    for (let i of arr) {
+      // console.log(i); //value
+    }
+    //得到的是数组的遍历器
+    let iter = arr[Symbol.iterator]()
+    // console.log(iter);
+    // console.log(iter.next()); //{value: 'aa', done: false}
+    // console.log(iter.next());//{value: 'bbb', done: false}
+    // console.log(iter.next());//{value: 'cccc', done: false}
+    // console.log(iter.next());//{value: undefined, done: true}
+
+    // 数组是自带遍历器的
+    //所以我们可以自己把遍历器放到对象里
+    //--------------------------------------------------------------------------------
+    let str = 'adfc';
+    // console.dir(String); //可以看出string类型中有iterator
+
+    for (let i of str) {
+      // console.log(i);
+
+    }
+
+    function test() {
+      // console.log(arguments); //也有遍历器
+
+      for (let i of arguments) {
+        // console.log(i);
+
+      }
+    }
+    // test(1, 2, 3, 4, 5);
+    //--------------------------------------------------------------------------------
+    // 对象不支持，因为对象没有序列化的
+    let testObj = {
+      "0": 'Julian',
+      "1": 19,
+      2: 'China',
+      3: "male",
+      length: 4,
+      [Symbol.iterator]: Array.prototype[Symbol.iterator]
+    }
+
+    for (let i of testObj) {
+      // console.log(i)
+    }
+    let obhh = {
+      myname: "julan",
+      ok: "33",
+      da: "44",
+      rf: "55",
+
+    }
+    // Reflect.ownKeys(obhh).forEach(ele => {
+    //   console.log(obhh[ele]);
+    // })
+    //--------------------------------------------------------------------------------
+    // 如果下面的类是无法看到的，访问的，那么就可以植入迭代器
+    let realObj = {
+      name: "Julian",
+      agne: 18,
+      // family: "xia",
+      family: ['xia', 'kevin', 'lucy'],
+      [Symbol.iterator]() {
+        let index = 0;
+        // console.log(this);
+
+        return {
+          // next: function () {
+          //   console.log(this) //this = next()
+          //   return 1;
+          // }
+          next: () => {
+            // console.log(this) // this 是realObj类对象
+            // console.log(index);
+            return { value: this.family[index++], done: index > this.family.length ? true : false };
+          }
+        }
+      }
+    }
+
+
+    let iter1 = realObj[Symbol.iterator]; //只是得到指针和内容
+    let iter2 = realObj[Symbol.iterator](); //得到方法
+    // console.log(iter1);
+    // console.log(iter2);
+
+    // console.log(iter2.next());
+    // console.log(iter2.next());
+    // console.log(iter2.next());
+    // console.log(iter2.next());
+
+    //在类里设置了iterator后，就可以使用 for of循环
+    for (let i of realObj) {
+      console.log(i);
+    }
+    //这么写也必须是需要手动内置一个迭代器
+    console.log([...realObj]);
+
+    let lis = document.querySelectorAll('li');
+    console.log([...lis]);//这个就有了迭代器，因为放入数组了
+    console.log(Array.from(lis));//the same to previous line
+
+  </script>
+
+</body>
+
+</html>

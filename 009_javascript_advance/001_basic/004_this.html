@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>btn</button>
+  <script>
+    var that, _that;
+    class Start {
+      constructor(username, age) {
+        that = this;
+        this.username = username;
+        this.age = age;
+        // console.log(this);
+        this.sing();
+        this.btn = document.querySelector('button');
+        this.btn.onclick = this.sing;
+      }
+      sing() {
+        // 因为是btn调用了sing，所以这个this是btn，不是类
+        // console.log(this);
+        //如果是直接调用，如第20行一样，输出的就是mymind，如果是btn调用，就是undefined 
+        //因为this.username的this根据不同的调用对象会发生变化，直接调用就是本类，btn调用则是btn永远指向调用者
+        console.log(this.username);
+      }
+      dance() {
+        _that = this;
+        // console.log(this);
+
+      }
+
+    }
+
+    var hiddedmind = new Start('mymind', 'hidden');
+    // console.log(that === hiddedmind);
+    hiddedmind.dance();
+    // console.log(_that === hiddedmind);
+    // console.log(_that);
+
+  </script>
+</body>
+
+</html>

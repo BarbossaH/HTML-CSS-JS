@@ -1,0 +1,17 @@
+body{width:96%;height:96%;margin:2%;padding:0;font-family:"Poppins", sans-serif;}
+p{font-size:15px;}
+.title{font-size:24px;font-weight:bolder;width:100%;border-bottom:1px #000000 solid}
+.block{width:50%;height:auto;overflow:auto;margin:0;padding:0;float:left; text-align:justify; background:#FFF}
+.block img{float:right}
+.blocktitle{width:96%;height:45px;line-height:45px;margin:0 2%;padding:0;text-align:left;font-weight:bolder}
+.blockcontent{width:96%;height:auto;overflow:auto;line-height:22px;font-size:12px;margin:10px 2%;padding:0;text-align:justify;color:#333}
+.form{width:100%;height:auto;overflow:auto;margin:0;padding:0;font-size:12px}
+.form .input{border:1px #999 solid;width:200px; height:25px;float:left;margin:3px}
+.form .email{border:1px #999 solid;width:458px; height:25px;float:left;margin:3px}
+.form .label{width:50px;height:25px;line-height:30px;float:left;margin:3px 0}
+.form textarea{width:507px}
+.form .message{width:100%;height:25px;line-height:30px;float:left;margin:3px 0}
+.form .button{width:100px;height:36px;float:left;margin:3px 0}
+@media screen and (max-width: 900px){
+.block{width:100%}
+}

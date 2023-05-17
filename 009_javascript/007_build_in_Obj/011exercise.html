@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var arr = ['c', 'a', 'z', 'a', 'x', 'a', 'x', 'c', 'c'];
+    var newArr = [];
+    // 使用indexOf就变得超级简单了不用洋洋洒洒写一堆下面的代码了，我想原理是一样的。
+    for (var i = 0; i < arr.length; i++) {
+      if (newArr.indexOf(arr[i]) == -1) {
+        newArr.push(arr[i]);
+      }
+    }
+    var doubleArr = newArr.concat(newArr);
+    console.log('我是双份的' + doubleArr);
+    doubleArr.splice(4);
+    console.log('被阉割了' + doubleArr);
+
+    // var isSame = true;
+    // newArr[0] = arr[0];
+    // for (var i = 0; i < arr.length; i++) {
+    //   for (var j = 0; j < newArr.length; j++) {
+    //     if (arr[i] === newArr[j]) {
+    //       isSame = true;
+    //       break;
+    //     }
+    //     else {
+    //       isSame = false;
+    //     }
+
+    //   }
+    //   if (!isSame) {
+    //     newArr.push(arr[i]);
+    //   }
+    // }
+
+    console.log(newArr);
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

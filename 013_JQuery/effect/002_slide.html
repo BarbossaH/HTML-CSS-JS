@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../00_JQuery/Jquery_min.js"></script>
+  <script>
+    $(function () {
+      $('button').eq(0).click(function () {
+        $('div').slideUp(1000);
+      })
+      $('button').eq(1).click(function () {
+        $('div').slideDown(1000);
+      })
+      $('button').eq(2).click(function () {
+        $('div').slideToggle(1000);
+      })
+    })
+  </script>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: springgreen;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+</body>
+
+</html>

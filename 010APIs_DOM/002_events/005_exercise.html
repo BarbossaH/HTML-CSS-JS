@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      position: relative;
+      width: 200px;
+      /* height: 30px; 不写高度就是为了让子盒子撑开父盒子，这样就不会有出边框的问题*/
+      border-bottom: 1px solid #cccccc;
+      margin: 100px auto;
+    }
+
+    .box input {
+      width: 160px;
+      height: 20px;
+      outline: none;
+      border: none;
+    }
+
+    .box img {
+      position: absolute;
+      right: 0;
+      top: 0px;
+      width: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <!-- <form action=""> -->
+    <input type="password">
+    <img src="images/close.png" alt="">
+    <!-- </form> -->
+
+    <script>
+      var password = document.querySelector('input');
+      var eye = document.querySelector('img');
+      eye.onclick = function () {
+        if (password.type === "password") {
+          password.type = 'text';
+          eye.src = 'images/open.png'
+        } else {
+          password.type = 'password';
+          eye.src = 'images/close.png';
+        }
+      }
+    </script>
+  </div>
+</body>
+
+</html>

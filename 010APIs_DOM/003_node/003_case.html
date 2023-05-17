@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    textarea {
+      width: 300px;
+      height: 300px;
+      outline: none;
+      resize: none;
+      border: 1px solid indianred;
+    }
+
+    /* button {} */
+  </style>
+</head>
+
+<body>
+  <textarea name="" id="" cols="30" rows="10"></textarea>
+  <button>submit</button>
+  <button disabled>delete</button>
+  <ul></ul>
+
+  <script>
+    var text = document.querySelector('textarea');
+    var btn = document.querySelectorAll('button');
+    var ul = document.querySelector('ul');
+
+    btn[0].onclick = function () {
+
+      if (text.value == '') {
+        alert('please enter your name');
+        return false;
+      }
+      else {
+        var li = document.createElement('li');
+        var value = text.value;
+        li.innerHTML = value;
+        // ul.appendChild(li);
+        ul.insertBefore(li, ul.children[0]);
+        text.value = '';
+        btn[1].disabled = false;
+
+      }
+    }
+
+    btn[1].onclick = function () {
+      if (ul.children.length > 0) {
+        ul.removeChild(ul.children[0]);
+        if (ul.children.length <= 0) {
+          btn[1].disabled = true;
+
+        }
+      } else {
+        alert('nothing');
+      }
+    }
+  </script>
+</body>
+
+</html>

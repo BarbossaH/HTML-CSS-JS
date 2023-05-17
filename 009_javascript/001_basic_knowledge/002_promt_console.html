@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // prompt('请输入你想要的东西');
+    // alert('这是你想要的东西吗');
+    // console.log('我会在后面监视你');
+    /*     var age = 10,
+          myname = 'something',
+          information = 'somewhere'; */
+    // var gender;
+    // console.log(gender);//undefined
+    // var mymotto = prompt('please enter you motto');
+    // alert(mymotto);
+    // console.log(mymotto);
+
+    var yourname = 'fiona';
+    var myname = 'julian';
+    var temper = '';
+    temper = yourname;
+    yourname = myname;
+    myname = temper;
+    console.log(myname, yourname);
+
+    /*     console.log(Infinity);
+        console.log(-Infinity); */
+    console.log(Number.MAX_VALUE);
+    console.log(Number.MIN_VALUE);
+
+    console.log(Number.MAX_VALUE * 2);
+    console.log(-Number.MAX_VALUE * 2);
+    // 方法名要注意我写成了Nan所以报错了，函数表示是是否是非数字，这个我没有注意到
+    console.log(isNaN('NaN' - 100));
+    // 嵌套字符串要遵守外双内单引号的方式，或者外单内双也可以
+    var str = 'I am a "smart" guy';
+    // 转义字符 注意符号\
+    var str1 = "fiona is a stuip \n but cute lady ";
+    console.log(str1);
+
+    var str2 = 'this is a greeve indeed, I will leave \"alone\".'
+    // alert(str2);
+
+    var sm = undefined;
+    console.log(sm + 'fiona');
+    // 结果是NaN
+    console.log(sm + 1);
+
+    var nm = null;
+    console.log(nm + 'fiona');
+
+    console.log(nm + 1);
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

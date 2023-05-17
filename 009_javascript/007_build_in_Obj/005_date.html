@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date</title>
+  <script>
+    const date = new Date();
+    console.log(new Date(2022, 0, 2));
+    console.log(new Date('2022-1-2'));
+    console.log(new Date());
+    console.log(date.getMilliseconds());
+
+    // mon比实际月份值小1
+    var mon = date.getMonth();
+    var date1 = date.getDate();
+    var day = date.getDay();
+    console.log(mon);
+    console.log(date1);
+
+    // 或者周几的数值，周日是0
+    console.log(day);
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

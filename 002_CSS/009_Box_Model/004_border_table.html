@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab_border</title>
+
+  <style>
+    table,
+    td,
+    th {
+      /* width: 500px;
+      height: 200px; */
+      border: 1px purple solid;
+      /* 默认边框是不合并的，是紧邻的，这样就会合并 */
+      border-collapse: collapse;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <table align="center" cellpadding="20" cellspacing="0">
+    <thead>
+      <tr>
+        <!-- 表头单元格 -->
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Age</th>
+        <th>Img</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a href="/html_1_firstday/001_language_standard.html">Julian</a>&nbsp;&nbsp;<a
+            href="#">Xia</a>&nbsp;&nbsp;<a href="#">Kevin</a></td>
+        <td>Male</td>
+        <td>41</td>
+        <td><img src="/001html/html_1_firstday/src/beauty.jpg" width="60" /></td>
+      </tr>
+      <tr>
+        <td>Lucy</td>
+        <td>Female</td>
+        <td>9</td>
+        <td><img src="/html_1_firstday/src/beauty.jpg" width="60" /></td>
+      </tr>
+      <tr>
+        <td>Kevin</td>
+        <td>I don't know</td>
+        <td>17</td>
+        <td><img src="/html_1_firstday/src/beauty.jpg" width="60" /></td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>

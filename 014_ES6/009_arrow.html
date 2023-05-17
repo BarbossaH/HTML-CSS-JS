@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let test = function () { }
+    // let test = () => {
+    //   console.log('test');
+    // }
+    // test();
+
+    // // let test1 = () => {
+    // //   return '11111111';
+    // // }
+    // let test1 = () => '111111111';
+    // console.log(test1());
+
+    let arr = ['a', 'b', 'c'];
+    let arr1 = ['aa', 'bb', 'cc'];
+    let newarr = arr.map(function (value) {
+      return `<li>${value}</li>`;
+    })
+    console.log(newarr);
+
+    let newarr1 = arr1.map((value) => `<li>${value}</li>`);
+    console.log(newarr1);
+
+    //尖头函数只有return可以省略，如果返回对象需要注意
+    let test2 = () => ({
+      name: "Julian",
+      age: "young"
+    })
+    console.log(test2());
+    //如果只有一个参数可以省略小括号
+    let newarr2 = arr.map(value => `<li>${value}</li>`);
+    let newarr3 = arr1.map((value, index) => `<li>${value}</li>`);
+    console.log(newarr2);
+    console.log(newarr3);
+//箭头函数无法访问arguments，无法new
+//箭头函数指向父作用域
+  </script>
+</body>
+
+</html>

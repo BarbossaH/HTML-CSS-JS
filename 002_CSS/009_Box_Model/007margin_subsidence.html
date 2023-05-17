@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaXian</title>
+
+  <style>
+    /* 注意：塌陷问题。如果父元素设置了外边距(width and height)，子元素也设置外边距时，父元素就可能会塌陷。 */
+    .father {
+      height: 400px;
+      width: 400px;
+      background-color: palegreen;
+      /* margin-top: 50px; */
+      /* border-top: solid 1px transparent; */
+      /* border-top: 1px solid rgba(22, 22, 22, 0.3); */
+      /* padding: 1px; */
+      /* overflow: hidden; */
+    }
+
+    .son {
+      height: 200px;
+      width: 200px;
+      background-color: skyblue;
+      /* border: solid 3px rgba(22, 22, 22, 0.3); */
+      margin-top: 100px;
+    }
+
+    /* 我的理解是所有的边框默认都是相对于body的位置。
+    假如子元素也要移动的距离大于父元素移动的距离，
+    父元素就会跟着走，如果一样的话，子元素不会移动，因为他们是绑定的。 */
+    /* 解决方案：记住就好了
+    1、为父元素指定一个上边框
+    2、添加一个内边距；
+    3、为父元素增加overflow：hidden */
+  </style>
+
+</head>
+
+<body>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+</body>
+
+</html>

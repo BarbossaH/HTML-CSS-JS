@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Normal skills</title>
+  <!-- 
+  1、margin 负值的应用
+  当浮动的元素的边框，放在一起会叠加，所以使用margin的负值使边框重叠就可以了。
+  然后使用定位和z-index的属性进行设置，让其显示在最上层
+  2、文字围绕浮动元素
+  当图片和文字需要一起显示，希望把文字围绕在图片附近，只需要将图片设置为浮动即可。
+  但是如果第一个单词太长就容易出问题。汉字没问题。
+  3、行内块的应用
+    看下一个文档
+  4、css三角强化 -->
+
+  <style>
+    ul li {
+      list-style: none;
+      float: left;
+      margin-left: -1px;
+      width: 100px;
+      height: 200px;
+      background-color: palegreen;
+      border: purple 1px solid;
+    }
+
+    ul li:hover {
+      position: relative;
+      /* 只有定位的元素才能使用z-index: 属性; */
+      z-index: 1;
+      border: 1px solid red
+    }
+
+    .box {
+      width: 260px;
+      height: 70px;
+      background-color: red;
+      margin: 0 auto;
+    }
+
+    .pic {
+      float: left;
+      width: 100px;
+      height: 70px;
+    }
+
+    .pic img {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+
+  <div class="box">
+    <div class="pic">
+      <img src="/001html/html_1_firstday/src/beauty.jpg" alt="">
+    </div>
+    <!-- 如果第一个单词足够长，没有空格这种方法就会失效，当然一般是没有这么长的单词的 -->
+    <p>disaj dijsads dsadsdsds dsads doisjad</p>
+  </div>
+</body>
+
+</html>

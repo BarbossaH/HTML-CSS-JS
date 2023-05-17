@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fake Element</title>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    /* 伪元素默认是行内元素，转换成块元素 
+    目前我还没有学 这个是额外标签法的升级版
+    缺点就是要照顾低版本的浏览器，我想这就是w3c不推荐的原因*/
+    .clearfix:after {
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+    }
+
+    .clearfix {
+      /* IE6 7专有 */
+      *zoom: 1;
+    }
+
+    .box {
+      width: 1000px;
+      margin: 0 auto;
+      border: aqua solid;
+    }
+
+    .subtle {
+      float: left;
+      width: 300px;
+      height: 300px;
+      background-color: blueviolet;
+    }
+
+    .delicate {
+      float: left;
+      width: 300px;
+      height: 300px;
+      background-color: chartreuse;
+    }
+
+    .delicious {
+      float: left;
+      width: 300px;
+      height: 300px;
+      background-color: deeppink;
+    }
+
+    .stumble {
+      height: 20px;
+      background-color: gold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box clearfix">
+    <div class="subtle">subtle</div>
+    <div class="delicate ">delicate</div>
+    <div class="delicious">delicious</div>
+  </div>
+  <div class="stumble">stumble on</div>
+</body>
+
+</html>

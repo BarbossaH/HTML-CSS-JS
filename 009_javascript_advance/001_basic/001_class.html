@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    class Star {
+      // 在new的时候就会自动调用构造函数
+      // constructor() { }
+      constructor(uname, age) {
+        this.uname = uname;
+        this.age = age;
+      }
+      teaching(gender) {
+        console.log('I am a ' + gender + ' English teacher,' + ' and my name is ' + this.uname);
+
+      }
+    }
+    //类名注意首字母大写，代表类
+    var fiona = new Star('fiona', 18);
+    var darren = new Star('Darren', 'old');
+    console.log(fiona.uname, fiona.age);
+    console.log(darren.uname, darren.age);
+    fiona.teaching('female');
+    darren.teaching('male');
+  </script>
+</body>
+
+</html>

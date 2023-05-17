@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clean Float</title>
+  <style>
+    /* 在实际需求中，非常多的情况父盒子是不能给固定高度的，比如产品列表。
+    产品的数量随时会增加或者减少，给父盒子固定高度就是不合适。 
+    再比如新闻页面，相同的布局，但是文字内容却不同，也很难给固定的高度*/
+
+    /* 如果给子元素改成浮动属性，父元素的高度就会变成0； 
+    所以在添加父盒子的兄弟盒子，兄弟盒子就会占据父盒子的位置。页面就会紊乱。 */
+
+    /* 所以就要清除浮动的影响 如果父盒子有高度，就不需要清除 
+    清除浮动之后，父盒子就会自动检测高度，根据子盒子的情况。
+    就不会影响随后的标准流。 */
+
+    /* 选择器{clear:属性} 属性有left, right, both. */
+    /* 实际工作中，几乎只用both。清除浮动的策略就是闭合浮动，要捣乱在家里捣乱，别出去捣乱 */
+
+    /* 清除浮动的方法（w3c推荐）
+    额外标签法：在浮动元素末尾添加一个空的标签 <div style="clear:both"></div>,
+    或者其他标签 如<br/>等 */
+    /* 老师不推荐这种方式，优点通俗易懂，每个父盒子都要添加无意义的标签，结构比较差
+    另外还要注意：新增的盒子必须是块级元素，不能是行内元素，br是可以的 */
+
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    .box {
+      width: 1000px;
+      border: solid blue;
+      margin: 0 auto;
+    }
+
+    .subtle {
+      float: left;
+      width: 300px;
+      height: 400px;
+      background-color: burlywood;
+    }
+
+    .delicate {
+      float: left;
+      width: 400px;
+      height: 300px;
+      background-color: cyan;
+    }
+
+    .cushy {
+      height: 200px;
+      background-color: red;
+    }
+
+    .clear {
+      clear: both;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="subtle">Stay put</div>
+    <div class="delicate">Solid water</div>
+    <div class="subtle">Stay put</div>
+    <div class="delicate">Solid water</div>
+    <div class="subtle">Stay put</div>
+    <div class="delicate">Solid water</div>
+    <div class="clear"></div>
+  </div>
+  <div class="cushy">cushy</div>
+</body>
+
+</html>

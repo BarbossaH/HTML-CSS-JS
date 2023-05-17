@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 200px;
+      height: 200px;
+      margin: 20px auto;
+      border: 6px solid gold;
+      padding: 10px;
+      overflow-y: scroll;
+      font-size: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">There is a long time.</div>
+  <script>
+    var box = document.querySelector('.box');
+    // 边框 6
+    console.log(box.clientLeft);
+    // 包含padding，边框内侧的大小 220
+    console.log(box.clientWidth);
+    // 包含margin的大小 232
+    console.log(box.offsetWidth);
+    //包含padding的 220，但是一旦内容超出框的大小，就是内容的大小 580px
+    console.log(box.scrollHeight);
+    box.addEventListener('scroll', eventScroll);
+    function eventScroll(e) {
+      console.log(box.scrollTop);
+    }
+  </script>
+</body>
+
+</html>

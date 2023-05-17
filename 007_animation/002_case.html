@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .hotpoint {
+      position: relative;
+      width: 500px;
+      height: 300px;
+      margin: 0 auto;
+      background: url(../001html/html_1_firstday/src/beauty.jpg) no-repeat;
+      /* background-repeat: no-repeat; */
+    }
+
+    .eye {
+      border: 3px red solid;
+      border-radius: 50%;
+    }
+
+    .lefteye {
+      position: absolute;
+      top: 120px;
+      right: 264px;
+
+    }
+
+
+    .righteye {
+      position: absolute;
+      top: 112px;
+      right: 214px;
+      /* border: 3px red solid; */
+    }
+
+    .hotpoint div[class^="pulse"] {
+      /* 保证波纹居中 */
+      position: absolute;
+      /* 为什么这里使用top和right，因为父类使用就是他们而top会比bottom优先执行，所以使用bottom时就不会有效果 */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      /* 老师没有用border而用了阴影，他说漂亮 */
+      box-shadow: 0 0 10px red;
+      border-radius: 50%;
+      animation: pulse 1s linear infinite;
+    }
+
+    .hotpoint div.pulse2 {
+      animation-delay: 0.3s;
+    }
+
+    .hotpoint div.pulse3 {
+      animation-delay: 0.6s;
+    }
+
+    @keyframes pulse {
+      0% {}
+
+      70% {
+        /* 使用宽高变大，阴影不会变大，而使用scale阴影会变大 */
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+      }
+
+      100% {
+        width: 50px;
+        height: 50px;
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="hotpoint">
+    <div class="lefteye eye">
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+    </div>
+    <div class="righteye eye">
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+    </div>
+  </div>
+  <!-- <img src="../001html/html_1_firstday/src/beauty.jpg" alt=""> -->
+</body>
+
+</html>

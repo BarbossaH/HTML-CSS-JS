@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function countDown(time) {
+      var curTime = +new Date();
+      var endTime = +new Date(time);
+      var duration = (endTime - curTime) / 1000;
+      console.log(duration);
+
+      var day = parseInt(duration / (60 * 60 * 24));
+      day = day < 10 ? '0' + day : day;
+      var hour = parseInt(duration / 60 / 60 % 24);
+      hour = hour < 10 ? '0' + hour : hour;
+      var min = parseInt(duration / 60 % 60);
+      min = min < 10 ? '0' + min : min;
+      var sec = parseInt(duration % (60));
+      sec = sec < 10 ? '0' + sec : sec;
+
+      return day + '天 ' + hour + '小时 ' + min + '分 ' + sec + '秒 ';
+    }
+
+    console.log(countDown('2022-12-6 18:30:00'));
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

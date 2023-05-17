@@ -1,0 +1,116 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Call Center</title>
+	<link rel="stylesheet" media="screen and (min-width:1186px)" href="css/pcstyle.css">
+	<link rel="stylesheet" media="screen and (max-width:1186px)" href="css/mbstyle.css">
+	<link rel="icon" type="image/png" href="img/icon.png" />
+	<script src="js/commen.js"></script>
+	<script src="js/screen.js"></script>
+	<script>window.onscroll = function () { topmenuchage() };</script>
+</head>
+
+<body>
+	<script>
+		var lastMouseX = null;
+		var lastMouseY = null;
+		document.body.addEventListener("click", function (e) {
+			lastMouseX = e.screenX;
+			lastMouseY = e.screenY;
+			//alert(CheckMenuoff('ddm2')+' x='+lastMouseX+' y='+lastMouseY);
+			if (CheckMenuoff('ddm2') == 1) {
+				closedmms(lastMouseX, lastMouseY, 'ddm2');
+				//alert(CheckMenuoff('ddm2')+' x='+lastMouseX+' y='+lastMouseY);
+			}
+		});
+	</script>
+	<div id="mbmbut" class="mbmbut" onclick="menuswitch();"></div>
+	<div id="cover" class="cover_off" onclick="closesubpage()"></div>
+	<div id="content_block"><iframe id="content_page" class="content_block_iframe_off" src='/pages/'></iframe></div>
+	<div id="close" class="close_off" onclick="closesubpage()"></div>
+	<div id="header" class="headeroff">
+		<div id="nav" class="nav">
+			<nav>
+				<img src="img/logo.jpg" height="100px" onclick="gotourl('/');">
+				<a id="m5" onclick="opensubpage('contact.html')">Contact Us</a>
+				<a id="m4" onclick="opensubpage('faq.html')">FAQ</a>
+				<a id="m3" onclick="opensubpage('choose.html')">Why Choose Us</a>
+				<a id="m2" onclick="dropdownMenu('m2','ddm2')">Our Services</a>
+				<ul id="ddm2" class="closed">
+					<li onclick="opensubpage('service0.html')">Inbound</li>
+					<li onclick="opensubpage('service1.html')">Outbound</li>
+					<li onclick="opensubpage('service2.html')">Helpdesk</li>
+					<li onclick="opensubpage('service3.html')">Back end office</li>
+				</ul>
+				<a id="m1" onclick="opensubpage('work.html')">How it works</a>
+				<a id="m0" onclick="opensubpage('about.html')">About Us</a>
+			</nav>
+		</div>
+	</div>
+	<div id="banner">
+		<div class="bannertext">
+			<span>Call Centre Services</span><br /><br />
+			Are your calls overflowing? Is your business making the most of each and every enquiry, both day and night? Our
+			call centre services are open 24/7, offering a welcoming, friendly and professional team to handle your business
+			enquiry, whatever the call volumes.<br /><br />
+			Let Answers enhance your company image, maximise call capture and increase customer satisfaction. We’re simply
+			there when the phone rings, every time.</div>
+	</div>
+	<div id="main">
+		<div id="main_menu">
+			<div class="main_menu">
+				<div class="menu_title" style="background-image:url(img/whoweare.PNG)">WHO WE ARE</div>
+				<div class="menu_content">
+					<p>CC is your call center managed by people who have over 30 years of combined experience.</p><span
+						style="float:right;"><a style="font-size:15px;cursor:pointer" onclick="opensubpage('about.html')">...
+							more</a></span>
+				</div>
+			</div>
+			<div class="main_menu">
+				<div class="menu_title" style="background-image:url(img/whatwedo.PNG)">WHAT WE DO</div>
+				<div class="menu_content">
+					<p>We bring to you your very own contact center providing core support to your business. </p><span
+						style="float:right;"><a style="font-size:15px;cursor:pointer" onclick="opensubpage('service.html')">...
+							more</a></span>
+				</div>
+			</div>
+			<div class="main_menu">
+				<div class="menu_title" style="background-image:url(img/howwework.PNG)">HOW WE WORK</div>
+				<div class="menu_content">
+					<p>We make it really simple for you. Just follow the process</p><span style="float:right;"><a
+							style="font-size:15px;cursor:pointer" onclick="opensubpage('work.html')">... more</a></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<div id="infooter">
+			<div class="block">
+				<img src="img/greylogo.png" style="margin:0;width:70px;float:left" />
+				<div style="height:70px;line-height:45px;color:#FFF;font-size:20px;margin:15px 0;float:left">Virtual Connections
+					Limited</div>
+			</div>
+			<div class="block">
+				<form action="https://formspree.io/jian@alphatech.nz" method="POST" class="contactform">
+					<div style="height:40px;line-height:40px;color:#FFF;font-size:18px;text-align:left">LEAVE A MESSAGE TO US
+					</div>
+					<div class="label">NAME</div><input type="text" name="Sender" class="input">
+					<div class="label">PHONE</div><input type="text" name="phone" class="input">
+					<div class="label">EMAIL</div><input type="email" name="From" class="email">
+					<div class="label">MESSAGE</div>
+					<div style="float:left"><textarea name="Message" rows="10" class="message"></textarea></div>
+					<input type="submit" value="Send Message" class="button">
+				</form>
+			</div>
+			<div class="block"></div>
+			<div class="cr">
+				<hr>Copyright©2018. Powered by CallCentre Limited</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  模糊搜索：<input type="text" name="" id="mysearch">
+  <script>
+    const input = document.querySelector('input');
+    // input.oninput = function () {
+    //   console.log(this.value);
+    //   setTimeout(function () {
+    //     console.log(this.value);
+    //     console.log(`send ${this.value} to the backend`); //undefined
+
+    //   }, 2000)
+    // }
+
+    //解决undefined有三种方式，一种是使用记录父类的this，另一种是使用箭头函数，不过我这里也会尝试使用bind
+    // input.oninput = function () {
+    //   console.log(this.value);
+    //   setTimeout(function () {
+    //     console.log(`send ${this.value} to the backend`);
+    //   }.bind(this), 1000)
+    // }
+
+    //箭头函数指向父领域的this
+    input.oninput = function () {
+      setTimeout(() => {
+        console.log(`send ${this.value} to me`);
+
+      }, 1000);
+    }
+  </script>
+</body>
+
+</html>

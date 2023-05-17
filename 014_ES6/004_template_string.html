@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .red {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <ul></ul>
+  <script>
+    let name = 'Julian';
+    let ola = '<li>\
+    <b>' + name + '</b>\
+    </li > ';
+    // 上面使用 \ 也可以使特别长的代码链接在一起，但是阅读性不好。
+    const ul = document.querySelector('ul');
+    ul.innerHTML = ola;
+    let oli = `<li>
+    <b>  ${name}  </b>
+    </li >`;
+    ul.innerHTML = oli;
+    //这样也可以，反引号，tab上面，1键左边的那个按钮
+
+    let arr = ['Power', 'Money', 'Reputation'];
+    let lis = arr.map(function (arr, index) {
+      return `<li class=${index == 0 ? 'red' : ''}><b>${arr}</b>${test()}</li>`;
+    })
+    console.log(lis);
+    console.log(lis.join(''));
+    ul.innerHTML = lis.join('');
+    function test() {
+      return ' : I am the best';
+    }
+  </script>
+</body>
+
+</html>

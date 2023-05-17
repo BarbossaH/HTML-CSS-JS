@@ -1,0 +1,263 @@
+body {
+  min-width: 320px;
+  max-width: 540px;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+
+  /* 这是复合型的字体设置，必须按照这个顺序，字体样式，粗细，大小和行间距，字体 */
+  font:normal 14px/1.5 Tahoma,"Lucida Grande";
+  color: #000000;
+  /* 永远不会出现水平滚动条 */
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+  /* font: */
+}
+/* 注意路径问题，这个折腾了好久 */
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?r9hies');
+  src:  url('../fonts/icomoon.eot?r9hies#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?r9hies') format('truetype'),
+    url('../fonts/icomoon.woff?r9hies') format('woff'),
+    url('../fonts/icomoon.svg?r9hies#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+a {
+  text-decoration: none;
+}
+/* c3盒子模型 */
+div {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search-index {
+  display: flex;
+  /* 固定的盒子必须有宽度 固定定位以屏幕为主，与父元素没关系*/
+  position: fixed;
+  /* 有了定位margin就不起作用了 */
+  top: 0;
+  left: 50%;
+  /* 写这行是为了兼容老版本，与下面的那句意思是一样的 */
+  -webkit-transform: translateX(-50%);
+  /* 如果什么都不设置，不设置left和transform也会在中间，但是不鼓励这么做 */
+  transform: translateX(-50%);
+  width: 100%;
+  height: 44px;
+  background-color: #f6f6f6;
+  max-width: 540px;
+  min-width: 320px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+.searchbar{
+  flex: 1;
+  height: 26px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 6px 12px;
+  line-height: 21px;
+  font-size: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2) ;
+
+}
+.searchbar::before{
+  content: "\e90a";
+  font-family: 'icomoon';
+  /* display: block; */
+  width: 20px;
+  height: 20px;
+  color: red;
+  font-size: 13px;
+  margin: 0 5px;
+
+/* background-color: aqua; */
+
+}
+.myProfile{
+  width: 44px;
+  height: 40px;
+  color: #000000;
+  font-size: 10px;
+  text-align: center;
+  
+  background-color:greenyellow ;
+}
+
+.myProfile::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-image: url(../images/tabbar.png);
+  background-size: 32px auto;
+  background-position: 0 -90px;
+  margin: -10px auto 1px;
+}
+/* focus Picture */
+.foucs img{
+  width: 100%;
+  /* 因为搜索栏是固定定位，所以会飘起来，所以就会遮住焦点图 */
+  margin-top: 44px;
+  height: 120px;
+}
+
+/* 局部导航栏 我一开始是使用div包住这个ul的，但是就会出现位置下移的现象*/
+.local-nav {
+  display: flex;
+  height: 64px;
+  background-color: #fff;
+  margin: 0px 4px;
+  border-radius: 6px;
+}
+
+/* ul默认有margin和padding值，所以要改成0 */
+.local-nav li {
+  flex:1;
+  /* background-color: aquamarine; */
+  /* border-radius: 6px; */
+  
+}
+
+
+.local-nav li a{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-evenly; */
+  align-items: center;
+  font-size: 12px;
+}
+
+[class^=local-nav-icon]{
+  /* flex:1; 因为需要图片尺寸，所以不能用平均分，会出问题*/
+  margin-top: 10px;
+  width: 30px;
+  height: 30px;
+  /* background-color: chartreuse; */
+  /* background-image: url(../images/tabbar.png); */
+  /* background-position: 0 -32px; */
+  background: url(../images/tabbar.png) no-repeat 0 0;
+  background-size: 32px auto;
+}
+
+.local-nav-icon2 {
+  background-position: 0 -32px;
+}
+
+.local-nav-icon3 {
+  background-position: 0 -64px;
+}
+
+.local-nav-icon4 {
+  background-position: 0 -96px;
+}
+
+.local-nav-icon5 {
+  background-position: 0 -128px;
+}
+
+/* 主导航栏 */
+nav {
+  border-radius: 8px;
+  margin: 0 4px 3px;
+  /* 这是一个小技巧，保持父元素四个圆角 */
+  overflow: hidden;
+}
+
+.nav-common {
+  display: flex;
+  height: 88px;
+  background-color: pink;
+}
+
+.nav-common:first-child {
+  background: -webkit-linear-gradient(left, #fa5a55, #fa994d);
+
+}
+
+.nav-common:nth-child(2)
+{
+  margin: 3px 0;
+  background: -webkit-linear-gradient(left, #4b90ed, #53bced);
+
+}
+.nav-common:nth-child(3)
+{
+  background: -webkit-linear-gradient(left, #34c2a9, #6cd559);
+
+}
+.nav-item {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  /* 加了这句话就出问题了，文字边框变短了 */
+  /* align-items: center; */
+}
+.nav-item a {
+  flex: 1;
+  text-align: center;
+  line-height: 44px;
+  text-shadow: 1px 1px rgba(0, 0, 0, .2);
+  color: #fff;
+
+}
+
+
+.nav-item a:nth-child(1){
+  border-bottom: 1px solid white ;
+  /* background-color: red; */
+}
+
+
+.nav-item:first-child a{
+  border: 0;
+  /* background: -webkit-linear-gradient(left,red, yellow); */
+  /* 默认是由上往下 */
+  /* background: -webkit-linear-gradient(red, yellow); */
+  /* background: -webkit-linear-gradient(top left , red, blue); */
+  background: url(../images/carton.jpg) no-repeat center center;
+  background-size: 121px auto;
+
+  /* line-height: 88px; */
+}
+
+.nav-item:nth-child(-n+2){
+  border-right: 1px solid #fff;
+}
+
+.subnav {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 8px;
+  background-color: white;
+  margin: 0 4px;
+}
+
+.subnav li {
+  flex: 20%
+}
+
+.subnav li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+}
+
+.subnav-icon {
+  /* flex: 1; */
+  width: 28px;
+  height: 28px;
+  background-color: violet;
+  background: url(../images/tabbar.png) no-repeat 0 -56px;
+  background-size:  28px auto;
+}
+

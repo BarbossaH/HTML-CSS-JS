@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div><img src="../007_animation/media/scale.jpg" alt=""></div>
+  <button>保留图片</button>
+  <script>
+    var div = document.querySelector('div');
+    var timer1 = setTimeout(closeImage, 5000);
+    function closeImage() {
+      div.style.display = 'none';
+    }
+
+    var btn = document.querySelector('button');
+    btn.addEventListener('click', function (e) {
+      clearTimeout(timer1);
+      alert("I am strong");
+    });
+  </script>
+</body>
+
+</html>

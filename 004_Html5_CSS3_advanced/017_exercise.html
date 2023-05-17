@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercise</title>
+  <style>
+    @font-face {
+      font-family: 'icomoon';
+      src: url('fonts/icomoon.eot?bn0uyx');
+      src: url('fonts/icomoon.eot?bn0uyx#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?bn0uyx') format('truetype'),
+        url('fonts/icomoon.woff?bn0uyx') format('woff'),
+        url('fonts/icomoon.svg?bn0uyx#icomoon') format('svg');
+      font-weight: normal;
+      font-style: normal;
+      font-display: block;
+    }
+
+    .father {
+      width: 150px;
+      height: 20px;
+      border: 1px red solid;
+      border-radius: 10px;
+      /* padding: 1px; */
+    }
+
+    .son::after {
+      font-family: 'icomoon';
+      content: "\e906";
+    }
+
+    .son {
+      width: 10px;
+      height: 100%;
+      border-radius: 10px;
+      background-color: red;
+      transition: width 1s;
+    }
+
+    .father:hover .son {
+      width: 100%;
+    }
+
+    span {
+      font-family: 'icomoon';
+      font-size: 50px;
+      background-color: tomato;
+      /* color: white; */
+    }
+
+    .music {
+      color: white;
+      transition: display 2s;
+    }
+
+    .alien {
+      display: none;
+      /* visibility: hidden; */
+      color: springgreen;
+      transition: display 2s;
+    }
+
+    .logo {
+      width: 52px;
+      border: turquoise 2px solid;
+      /* transition: visibility 2s; */
+      transition: display 2s;
+      /* overflow: hidden; */
+    }
+
+    /* 好像transition没啥用，如果用精灵图做就会顺滑 */
+    .logo:hover .alien {
+      /* visibility: visible; */
+      display: block;
+    }
+
+    .logo:hover .music {
+      /* visibility: hidden; */
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="father">
+    <div class="son"></div>
+  </div>
+  <div class="logo">
+    <span class="music"></span><span class="alien"></span>
+  </div>
+</body>
+
+</html>

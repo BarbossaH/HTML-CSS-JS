@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var arr = [1500, 1200, 2000, 2100, 1800];
+    var newArr = [];
+    for (var i = 0; i < arr.length; i++) {
+      if (arr[i] <= 2000) {
+        newArr.push(arr[i]);
+      }
+    }
+
+    console.log(newArr);
+    var max = arr[0];
+    for (var i = arr.length; i > 0; i--) {
+      for (var j = 0; j < i; j++) {
+        if (arr[j] > arr[j + 1]) {
+          max = arr[j];
+          arr[j] = arr[j + 1];
+          arr[j + 1] = max;
+        }
+      }
+    }
+
+    console.log(arr);
+    for (var i = arr.length - 1; i >= 0; i--) {
+      if (arr[i] > 2000) {
+        arr.pop();
+      }
+    }
+
+    console.log(arr);
+
+    console.log(arr.reverse());
+    //这个方法也太不靠谱了
+    var kk = [12, 3, 77, 3, 7];
+    console.log(kk.sort());
+    // 只能这么写，记住了就可以了
+    // 升序
+    console.log(kk.sort(function (a, b) { return a - b; }));
+    // 降序
+    console.log(kk.sort(function (a, b) { return b - a; }));
+
+    // 注意返回值找不到就是-1，重复的就找第一个 indexOf不但返回索引值，更大作用是进行了遍历查找
+    console.log(kk.indexOf(0));
+    console.log(kk.indexOf(77));
+    console.log(kk.indexOf(3));
+    console.log(kk.lastIndexOf(3));
+
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

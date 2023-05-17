@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var num = 10.1;
+    var str = num.toString();
+    console.log(typeof (num));
+    console.log(typeof (str));
+    console.log(typeof (String(num)));
+    console.log(typeof (num + ''));
+    // -------------------------------------------------------------
+    console.log(typeof (parseInt(str)));
+    console.log((parseInt(str)));
+    console.log((parseInt('120.345px'))); //result = 120
+    console.log((parseInt('px120.345px'))); //result = NaN
+    console.log(typeof (parseInt('px120.345px'))); //result = number
+    console.log((parseFloat(str)));
+    console.log((parseFloat('120.345px')));
+    // -------------------------------------------------------------
+    console.log(Number('pdsd123'));
+    console.log(Number('123.1px'));
+    console.log(Number('123.1'));
+    // -------------------------------------------------------------
+    console.log('123.1px' - 0);
+    console.log('123.1' - 122);
+    console.log('d123.1px' - 0);
+
+    // -------------------------------------------------------------
+    console.log(Boolean(null));
+    console.log(Boolean((parseInt('px120.345px'))));
+    console.log(Boolean(undefined));
+    console.log(Boolean(0));
+    console.log(Boolean('o'));
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

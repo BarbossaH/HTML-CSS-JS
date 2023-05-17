@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script src="../../00_JQuery/Jquery_min.js"></script>
+  <script>
+    $(function () {
+
+      $('a').prop('title', "please use english");
+      console.log($('a').prop('href'));
+      $('input').change(function () {
+        console.log($(this).prop('checked'));
+        console.log($('div').attr('index'));
+
+        $('div').attr('index', "4");
+
+      })
+
+    })
+  </script>
+</head>
+
+<body>
+  <a href="https://www.youtube.com/" title="油管">油管</a>
+  <input type="checkbox" name="" id="" checked>
+  <div index='1'></div>
+</body>
+
+</html>

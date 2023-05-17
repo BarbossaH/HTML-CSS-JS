@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button></button>
+  <script>
+    //函数的调用方式
+    //普通函数
+    function fn() {
+      console.log('I am ordinary function' + this);
+    }
+    fn();
+    fn.call();
+    window.fn();
+    //
+    //对象方法
+    var o = {
+      sayHi: function () {
+        console.log('对象的方法' + this);
+
+      }
+    }
+
+    o.sayHi();
+    //
+    //构造函数
+    function Star() {
+      console.log('构造函数' + this);
+
+    }
+    Star.prototype.sing = function () {
+      console.log('prototype' + this);
+
+    };
+    var life = new Star();
+    life.sing();
+    //
+    //绑定事件函数
+    var btn = document.querySelector('button');
+    btn.onclick = function (e) {
+      console.log('onclick' + this);
+
+    };//点击按钮就可以调用
+    //
+    //定时器函数
+    setInterval(function () { }, 1000);
+    //
+    //立即执行函数
+    (function () {
+      console.log('immediately');
+    })();
+    //
+  </script>
+</body>
+
+</html>

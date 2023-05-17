@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Father(uname, age) {
+      // this指向fahter
+      this.uname = uname;
+      this.age = age;
+      // console.log(this.uname, this.age);
+    }
+    Father.prototype.makingmoney = function () {
+      // console.log('tons of money');
+
+    }
+    function Son(uname, age, score) {
+      // this指向son
+      Father.call(this, uname, age);
+      this.score = score;
+      console.log(this.constructor);
+
+    }
+    // 这么操作会覆盖父类的原型函数，因为他们会指向同一个地址内的对象，所以子原型修改，也就是父原型修改
+    // Son.prototype = Father.prototype;
+
+
+    Son.prototype = new Father();
+
+    //如果不写这句话，那么son的构造函数就会指向父类的构造函数。时刻注意，一个类包含了构造和数和原型，原型中有函数和指向构造函数的constructor
+    //当进行赋值操作时，就等于同时覆盖了两个。而构造函数相当于静态的，是不会消失的，只要重新把原型的构造函数赋值回来就行
+    //简而言之，就是需要父类的函数，不需要父类的构造函数
+    console.log(Son.prototype.constructor === Father);//true
+
+    Son.prototype.constructor = Son;
+
+    Son.prototype.exam = function () {
+      // console.log("I have to do an exam");
+    }
+    var ldf = new Son('ds', 18, 99);
+    ldf.makingmoney();
+    // console.log(ldf);
+    // console.log(Father.prototype);
+    // console.log(Son.prototype.constructor);
+
+  </script>
+</body>
+
+</html>

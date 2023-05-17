@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application</title>
+  <!-- 普通的盒子是可以通过margin设置位置的，但是绝对定位是依从找到有定位的祖先为基准的
+  所以margin：0 auto就不起作用
+应用：比如一个banna，有好几个页面，那么就有页面点点表示在第几页，这个点点通常就是居中 -->
+
+  <style>
+    .box {
+      position: absolute;
+      left: 50%;
+      margin-left: -50px;
+      /* 用right就不行，那就说明定位已经把盒子的标准设置了左边，
+      但是右边仍然是body的右边，除非设置右边的定位 */
+      /* margin-right: 100px; */
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+      /* margin: 0 auto; */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+</body>
+
+</html>

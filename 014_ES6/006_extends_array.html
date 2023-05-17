@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <script>
+    //-----------------------------------contact--------------------------------------------------
+    // let arr = [1, 2, 3];
+    // let arr2 = arr.concat(); //合并生成一个新的数组
+    // let arr3 = arr.concat(arr2); //合并生成一个新的数组
+    // arr2.pop();
+    // console.log(arr);
+    // console.log(arr2);
+    // console.log(arr3);
+
+    //-----------------------------------扩展运算符（…）--------------------------------------------------
+    // let arr = [1, 2, 3];
+    // let arr2 = [...arr];//这是浅复制，只复制一层，如果多层复制就不行，就有递归
+    // arr2.pop();
+    // arr3 = [...arr, ...arr2]; //似乎跟contact是一样的
+    // console.log(arr);
+    // console.log(arr2);
+    // console.log(arr3);
+
+    // let [a, b, c] = arr3;
+    // console.log(a, b, c);
+    // let [x, y, ...z] = arr3;
+    // console.log(x, y, z); //1,2,[3,1,2]
+
+    //-----------------------------------Array.from--------------------------------------------------
+
+    // function test() {
+    //   // arguments不能写在括号里
+    //   let a = arguments[1];
+    //   console.log(a);
+    //   //将参数转化为数组
+    //   let arr = Array.from(arguments);
+    //   console.log(arr);
+
+    //   let myname = 'Julian';
+    //   console.log(Array.from(myname)); //['J','u','l','i','a','n']
+
+
+    // }
+    // test(1, 2, 3, 4);
+
+    // let lis = document.querySelectorAll('li');
+    // console.log(lis);
+    // //这个lis有一些特有的方法，但是不是属于数组的，如果使用from函数，就可以使用数组的一些方法，比如map
+    // lis = Array.from(lis);
+    // console.log(lis); //可能会丢失个别不重要的算法，不知道，看情况使用吧
+
+    //-----------------------------------Array.of--------------------------------------------------
+    // 可以弥补 new Array[3]的不足
+    // let arr1 = Array(1, 2, 3);
+    // let arr11 = new Array(1, 2, 3, 4);
+    // let arr2 = Array.of(1, 2, 3);
+    // let arr_test = Array(3);//生成长度为3的数组
+    // let arr_test1 = Array.of(3);//生成长度为3的数组
+    // console.log(arr1);
+    // console.log(arr11);
+    // console.log(arr2);
+    // console.log(arr_test.length); //3
+    // console.log(arr_test1.length);//1
+
+    //-----------------------------------find findIndex--------------------------------------------------
+
+    // let arr = [1, 2, 3, 4, 9, 6, 7];
+    // let val = arr.find(function (value) {
+    //   return value > 3;
+    // })
+    // console.log(val);
+
+    // let indx = arr.findIndex(function (value) {
+    //   return value > 5;
+    // })
+    // console.log(indx);
+
+    // //从后往前找
+    // let indxb = arr.findLastIndex(function (value) {
+    //   return value < 6;
+    // })
+    // console.log(indxb);
+
+    //-----------------------------------fill填充替换--------------------------------------------------
+    // let arr = new Array(3).fill("ok");
+    // console.log(arr);
+
+    // let arr1 = ['1', '2', '3'];
+    // arr1.fill('l', 1, 2);
+    // console.log(arr1);
+
+    //-----------------------------------flatMap重要--------------------------------------------------
+    // 扁平化
+    // let arr = [1, 2, 3, [4, 5, 6]];
+    // let arr1 = arr.flat();
+    // console.log(arr1);
+
+    let cities = [{
+      name: 'a',
+      list: [1, 2, 3]
+    }, {
+      name: 'b',
+      list: [1, 2, 3]
+    }, {
+      name: 'c',
+      list: [1, 2, 3]
+    }, {
+      name: 'd',
+      list: ['ok', 'ko', 'lp']
+    }
+    ]
+    let cityList = cities.flatMap(function (city) {
+      return city.list;
+    })
+
+    console.log(cityList);//会将list的数组合并 [1, 2, 3, 1, 2, 3, 1, 2, 3, 'ok', 'ko', 'lp']
+
+    //-------------------------------------------------------------------------------------
+
+  </script>
+</body>
+
+</html>

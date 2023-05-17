@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // var firstI = prompt('please enter your age');
+    // var SecondI = prompt('Please enter again');
+    // var sum = parseFloat(firstI) + parseFloat(SecondI);
+    // alert('the result is ' + sum);
+
+    var e = 10;
+    console.log(e++ + ++e);//22
+
+    // 后面的会转换成数值型的
+    console.log(18 == '18');
+    console.log(18 == '18x');//false
+    // 这两个以前没有遇见过，这是js特有的，因为==会将纯字符转成数值
+    console.log(18 === '18');
+    console.log(18 !== '18');
+
+    console.log(123 && 456); //456
+    console.log(789 && 16);//返回空，不是null，也不是NaN
+    console.log('' && 16);//16
+    console.log(0 && 456);//0
+    console.log(12 || 123);//12
+    console.log(0 || 12);//12
+    console.log(232 || 0);//232
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

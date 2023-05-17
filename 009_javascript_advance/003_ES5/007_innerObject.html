@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    var div = document.querySelector('div');
+    console.log(Array.prototype);
+    Array.prototype.sum = function () {
+      var sum = 0;
+      for (var i = 0; i < this.length; i++) {
+        sum += this[i];
+      }
+      return sum;
+    }
+
+    //这种方法会覆盖原有的内置方法，所以不要这么用，会报错
+    // Array.prototype = {
+    //   sum: function () {
+    //     var sum = 0;
+    //     for (var i = 0; i < this.length; i++) {
+    //       sum += this[i];
+    //     }
+    //     return sum;
+    //   }
+    // }
+    var arr = [1, 2, 3];
+    div.innerText = arr.sum();
+    // console.log(Array.prototype);
+
+  </script>
+</body>
+
+</html>

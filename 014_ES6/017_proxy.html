@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let s1 = new Set();
+    s1.add([1]);
+    console.log(s1);
+    s1.delete([1]);//这样是删不掉的，因为array是复杂数据类型，跟类一样
+    console.log(s1);
+
+    let pro = new Proxy(s1, {
+      set(target, key, value) {
+        console.log('set');
+        target[key] = value;
+      },
+      get(target, key) {
+        console.log('get');
+        let value = target[key];
+        if (value instanceof Function) {
+          return value.bind(target);
+        }
+        //因为Set是一种数据结构，包含了很多内置的方法，所以要代理Set的数据就要有返回值，否则就会报错
+        return value;
+      }
+    })
+
+    pro.add('不改变this的情况下直接添加，就会出问题');//add called on incompatible receiver
+    //所以代理想要使用被代理的原生的方法，就要改变this的指向，因为原生的方法this指向原来的对象，而代理调用就会指向代理，而不是原生的对象，所以如果代理调用了被代理对象的方法，就要修改this指向。
+    console.log(s1);
+
+  </script>
+</body>
+
+</html>

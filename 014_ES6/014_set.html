@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // let s1 = new Set([1, 22, 3, 4, 6, 7, 7, 8]);
+    let s1 = new Set(['aa', 'bb', 'c', 'd']);
+    let testArr = [...s1];
+    // 通过set可以过滤一下数组重复的元素，然后再用三个点转译转成数组
+    console.log(testArr);
+
+    // console.log(s1);
+    // console.log(s1.size);
+    // console.log([...s1]);
+    // s1.add(10);
+    // console.log(Array.from(s1));
+    // console.log(s1.has(9));
+    // s1.delete(10);
+    // console.log([...s1]);
+    for (let i of s1) {
+      console.log(i); //value 
+    }
+    for (let i of s1.keys()) {
+      console.log(i); //value 
+    }
+    for (let i of s1.values()) {
+      console.log(i); //value 
+    }
+    for (let i of s1.entries()) {
+      console.log(i); //value 
+    }
+
+    let arr1 = ['aa', 'bb', 'c', 'd'];
+    for (let i of arr1.entries()) {
+      console.log(i);
+    }
+    for (let [index, item] of arr1.entries()) {
+      console.log(index, item);
+
+    }
+
+    arr1.forEach((item, index) => {
+      console.log(item, index);
+
+    })
+
+    // s1.clear()
+    // console.log([...s1]);
+    // console.log(s1);
+
+
+    // let s2 = new Set();
+    // s2.add(1)
+    // s2.add(3)
+    // s2.add(2)
+    // s2.add(3)
+    // s2.add(5)
+    // s2.add(4)
+    // console.log(s2);
+
+    let complexStr = [1, 2, 2, 'Julian', 'Julian', [1, 2], [3, 4], [1, 2], { name: "Julian" }, { age: 100 }, { name: "Julian" }, undefined, undefined, NaN, NaN]
+
+    function uni(arr) {
+      let res = new Set();
+      return complexStr.filter((item) => {
+        console.log(item);
+        let id = JSON.stringify(item)
+        if (res.has(id)) {
+          return false;
+        } else {
+          res.add(id);
+          return true; //返回true，则塞入新的数组，返回false则过滤掉
+        }
+
+      })
+    }
+
+    console.log(uni(complexStr));
+
+  </script>
+</body>
+
+</html>

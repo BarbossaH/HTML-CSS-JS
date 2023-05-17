@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Float_Position</title>
+  <!-- 绝对定位和固定定位会完全压住盒子。
+  浮动元素不同，只会压住标准流的盒子，但是，但是！！！不会压住下面标准盒子里面的文字或者图片
+  但是绝对定位等会压住下面标准流的所有内容； -->
+
+  <!-- 浮动就可以作出环绕效果，文字可以环绕图片，这是浮动最初出现的目的。 -->
+
+  <style>
+    .box {
+      /* float: left; */
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      background-color: #884499;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <p>I just watched an episode of the game of power.</p>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>btn</button>
+  <button>btn</button>
+  <button>btn</button>
+  <script>
+    var o = {
+      name: 'Julian'
+    }
+
+    function fn(x, y) {
+      console.log(this);
+      console.log(x + y);
+
+    }
+    //bind不会立即执行
+    var f = fn.bind(o);
+    f(1, 2);
+
+    // var btn = document.querySelector('button');
+    // btn.onclick = function () {
+    //   console.log(this);
+    //   this.disabled = true;
+    //   setTimeout(function () {
+    //     this.disabled = false;
+    //     // }.bind(btn), 1500);都是可以的，但是使用下面的方法更好维护bind的this是btn，以大括号为界
+    //   }.bind(this), 1500);
+    // }
+    var btns = document.querySelectorAll('button');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].onclick = function () {
+        this.disabled = true;
+        setTimeout(function () {
+          console.log(this);
+          this.disabled = false;
+
+        }.bind(this), 2000)
+      }
+    }
+  </script>
+</body>
+
+</html>

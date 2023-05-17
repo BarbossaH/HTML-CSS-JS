@@ -1,0 +1,61 @@
+
+<div id="registrationpage">
+    <div id="register">
+        <h1>New user registration</h1>
+        <br>
+        <form onsubmit="handleRegister(event)" action ="">
+            <div class="registercontainer">
+                <label for="username"><span>*</span>Username</label> 
+                <span id="ru-span"></span>
+                <input onfocusout="registerCheck(event, 'ru-span')" id="ru-input" type="text" name="username" required/>
+            </div>
+            <br>
+            <div class="registercontainer">
+                <label for="password"><span>*</span>Password</label>
+                <span id="rp-span"></span>
+                <input onfocusout="registerCheck(event, 'rp-span')" type="password" name="password" required/>
+                <div style="font-size: 13px; color: #737373; margin: 5px 6px;">Leave blank and password will be generated automatically.</div>
+
+            </div>
+            <br>
+            <div class="registercontainer">
+                <label for="firstname"><span>*</span>First Name</label>
+                <span id="rfn-span"></span>
+                <input onfocusout="registerCheck(event, 'rfn-span')" type="text" name="firstname" required/>
+            </div>
+            <br>
+            <div class="registercontainer">
+                <label for="lastname"><span>*</span>Last Name</label>
+                <span id="rln-span"></span>
+                <input onfocusout="registerCheck(event, 'rln-span')" type="text" name="lastname" required/>
+            </div>
+            <br>
+            <div class="photocontainer">
+                <label for="photo">Photo</label>
+                <span id="rph-span"></span>
+                <input onchange="registerCheck(event, 'rph-span')" type="file" name="photo">
+            </div>
+            <br>
+            <div class="registercontainer">
+                <label for="email"><span>*</span>User Email</label>
+                <input type="email" name="email" required/>
+            </div>
+            <br>
+            <div class="registercontainer">
+                <label for="language">Language</label>
+                <select name="language" >
+                    <option>English</option>
+                    <option>Russian</option>
+                </select>
+            </div>
+            <hr style="margin-top: 30px">
+            <div id="registerbottom">
+                <button class="back" onclick="pageUrl('loginform')">Back</button>
+                <input type="submit" value="Register">            
+            </div>
+            
+        </form>
+    </div>
+
+</div>
+ 

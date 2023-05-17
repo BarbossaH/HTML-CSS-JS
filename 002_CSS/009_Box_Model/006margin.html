@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Margin</title>
+  <style>
+    div {
+      height: 200px;
+      width: 1200px;
+      background-color: palegreen;
+    }
+
+    /* 非常常用：如何让块级元素水平居中，需要满足两个条件：
+    1、盒子必须设置宽度；
+    2、只需要把左右的外边距设置为auto； */
+
+    .div1 {
+      margin: auto;
+      /* margin: 0 auto; */
+      /* margin-left: auto;
+      margin-right: auto; */
+      /* margin-bottom: 15px; */
+    }
+
+    /* 如果想要行内元素水平居中，只要在父元素增加text-align：center就可以了。 */
+    .div2 {
+      margin: auto;
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    /* 如果设置为块元素，那么就可以设置高宽和居中的属性。
+    但是元素本身就得通过位置调整来居中。 */
+    /* 所以一般对父元素操作，设置在中心，子元素的行内元素和行内块元素就可以改变位置。 */
+    span {
+      display: inline-block;
+      width: 320px;
+      height: 150px;
+      line-height: 150px;
+      /* text-align: center; */
+      /* padding: */
+      /* margin: auto; */
+      background-color: purple;
+    }
+
+
+    /* margin的方式与padding是完全一致 */
+    /* 怎么用鼠标控制谷歌浏览器的大小？ */
+  </style>
+</head>
+
+<body>
+  <div class="div1">1</div>
+  <div class="div2">
+    <span style="background-image: url(/001html/html_1_firstday/src/beauty.jpg);">Words inside</span>
+    <span>Words inside</span>
+  </div>
+</body>
+
+</html>

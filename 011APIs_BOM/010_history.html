@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <a href="https://www.youtube.com/watch?v=DRaYnlu8LWc&t=8586s">去往歌曲</a>
+  <button class='forw'>forward</button>
+  <button class='back'>back</button>
+
+  <script>
+    var forw = document.querySelector('.forw');
+    forw.addEventListener('click', function () {
+      // history.forward();
+      history.go(1);
+    })
+  </script>
+</body>
+
+</html>

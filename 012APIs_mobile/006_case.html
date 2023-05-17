@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text" id='username'> <input type="checkbox" name="" id="restore">Remmber Me
+  <script>
+    var username = document.querySelector('#username');
+    var restore = document.querySelector('#restore');
+    if (localStorage.getItem('username')) {
+      username.value = localStorage.getItem('username');
+    }
+    restore.addEventListener('change', function () {
+      // alert(1);
+      if (this.checked) {
+        localStorage.setItem('username', username.value);
+      } else {
+        localStorage.removeItem('username');
+      }
+    })
+  </script>
+</body>
+
+</html>

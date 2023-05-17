@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      position: relative;
+      margin: 100px;
+      vertical-align: middle;
+      width: 200px;
+      height: 200px;
+    }
+
+    .box .btn {
+      position: absolute;
+      left: -15px;
+      top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    淘宝二维码
+    <img src="images/tao.png" alt="">
+    <img class='btn' src="images/wrong.png" alt="">
+  </div>
+
+  <script>
+    var closebtn = document.querySelector('.btn');
+    var box = document.querySelector('.box')
+    closebtn.onclick = function () {
+      box.style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

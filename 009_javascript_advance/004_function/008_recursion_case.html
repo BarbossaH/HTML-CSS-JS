@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var json = [
+      {
+        id: 1,
+        name: 'appliance',
+        goods: [{
+          id: 11,
+          name: 'refrigerator'
+        }, {
+          id: 12,
+          name: 'washer'
+        }, {
+          id: 13,
+          name: 'TV'
+        }]
+      }, {
+        id: 2,
+        name: 'cloth',
+        goods: [{
+          id: 21,
+          name: 'skirt'
+        }, {
+          id: 22,
+          name: 'pants'
+        }, {
+          id: 23,
+          name: 'hat'
+        }]
+      }, {
+        id: 3,
+        name: 'cloth',
+        goods: [{
+          id: 31,
+          name: 'skirt'
+        }, {
+          id: 32,
+          name: 'pants'
+        }, {
+          id: 33,
+          name: 'map'
+        }],
+        moods: [{
+          id: 31,
+          name: 'kiss'
+        }, {
+          id: 32,
+          name: 'ok'
+        }, {
+          id: 23,
+          name: 'moods'
+        }]
+      },
+    ];
+    //根据id查询商品，使用递归
+    // json
+    // function getItemById(json, id) {
+    //   var o={};
+    //   json.forEach(function (item) {
+    //     if (id == item.id) {
+    //       // console.log(item);
+    //       o = item;
+    //     }
+    //     else if (item.goods && item.goods.length > 0) {
+    //       o = getItemById(item.goods, id);
+    //     }
+    //   });
+    //   return o;
+    // }
+    // getItemById(json, 23);
+    // console.log(getItemById(json, 23));
+
+    var o = [];//如果这个变量写在函数里，那么就会被递归函数释放掉
+    function getItemById(json, id) {
+      json.forEach(function (item) {
+        if (id == item.id) {
+          // console.log(item);
+          o.push(item);
+        }
+        else if (item.goods && item.goods.length > 0) {
+          getItemById(item.goods, id);
+        }
+        if (item.moods && item.moods.length > 0) {
+          getItemById(item.moods, id);
+
+        }
+      });
+      return o;
+    }
+    // getItemById(json, 23);
+    console.log(getItemById(json, 23));
+
+  </script>
+</body>
+
+</html>

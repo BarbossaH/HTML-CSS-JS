@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  /* 响应式开发主要使用media query，根据屏幕的宽度，确定一个布局容器的宽度
+  什么是布局容器？
+  常见4种布局：
+  超小屏幕，比如手机，小于768：宽度设置为100%；
+  小屏幕，比如平板大于768px，设置宽度为750px；
+  中等屏幕：桌面显示器，大于等于992，宽度设置为970；
+  大屏幕：大桌面显示器，大于等于1200，宽度设置为1170； */
+  .container {
+    height: 200px;
+    background-color: chartreuse;
+    margin: 0 auto;
+  }
+
+  @media screen and (max-width: 767px) {
+    .container {
+      width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+</style>
+
+<body>
+  <div class="container"></div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generation</title>
+
+  <style>
+    /* 我只要ol中的li元素 */
+    ol li {
+      color: red
+    }
+
+    ol a {
+      color: blue;
+    }
+
+    .nav li a {
+      color: chartreuse;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <ol>
+    wrong way will not be changed.
+    <li>我是ol的孩子1</li>
+    <li>我是ol的孩子2</li>
+    <li>我是ol的孩子3</li>
+    <li>我是ol的孩子4</li>
+    <li><a href="#">我是ol's grandchild</a></li>
+  </ol>
+  <ul>
+    <li>I am ul's child1</li>
+    <li>I am ul's child2</li>
+    <li>I am ul's child3</li>
+    <li><a href="#">I am ul's grandchild</a></li>
+  </ul>
+  <ul class="nav">
+    <li>I am ul's child1</li>
+    <li>I am ul's child2</li>
+    <li>I am ul's child3</li>
+    <li><a href="#">I am another ul's grandchild</a></li>
+  </ul>
+</body>
+
+</html>

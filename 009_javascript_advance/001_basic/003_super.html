@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button>btn</button>
+  <script>
+    class Father {
+      say() {
+        return 'I am father';
+      }
+    }
+
+    class Son extends Father {
+      say() {
+        console.log('I am the son');
+        console.log(super.say() + '\'s son');
+      }
+    }
+    var son = new Son();
+    son.say();
+
+    class Father1 {
+      constructor(x, y) {
+        this.x = x;
+        this.y = y;
+        //调用自己的函数都要用this，自己的属性也是。
+        this.sum(this.x, this.y);
+        this.btn = document.querySelector('button');
+        this.btn.onclick = this.sum1();
+      }
+      sum() {
+        console.log(this.x + this.y);
+      }
+      sum1() {
+        console.log(this.x + this.y);
+      }
+    }
+
+    var btn = document.querySelector('button');
+    btn.addEventListener('click', function () {
+      son1.sum();
+    })
+    class Son1 extends Father1 {
+      constructor(x, y) {
+        // 如果放在子类的this执行语句下面，那么sum就不能被调用
+        super(x, y);
+
+        this.x = x;
+        this.y = y;
+      }
+      subtract() {
+        console.log(this.x - this.y);
+      }
+    }
+
+    var son1 = new Son1(4, 2);
+    son1.subtract();
+    son1.sum();
+  </script>
+</body>
+
+</html>

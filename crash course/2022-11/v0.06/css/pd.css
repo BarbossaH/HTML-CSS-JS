@@ -1,0 +1,94 @@
+/*-----------------------------------*/
+#header{width:100%;margin:0;padding:0;box-shadow:0 0 16px 0 #000;position:fixed;top:0px;right:0px;z-index:70;-webkit-transition: 0.5s ease;}
+.headeroff{height:60px;background:#eee;}
+.headergo{height:60px;background:#eee;}
+#nav{width:100%;max-width:1200px;margin:0 auto;padding:0;-webkit-transition: 0.5s ease;}
+#nav img{-webkit-transition: 0.5s ease;cursor:pointer}
+#nav a{-webkit-transition: 0.5s ease;}
+.nav{height:auto;overflow:auto;}
+.nav img{height:60px;}
+.nav a{width:107px;height:50px;text-align:center;margin:10px 0 0 0;padding:0;float:right;color:#333;border-right:#999 solid 1px;display:block; background-color:#eee;line-height:50px;font-size:14px;border-radius:0 5px 0 0}
+.nav a:hover{background-color:#fff;color:#000; cursor:pointer}
+.nav .cornerblock{width:310px;height:40px;margin:0 0 0 315px;padding:0;background:#fff;display:block;position:fixed;left:50%;top:0px;}
+.nav #contactbar{width:115px;height:35px;margin:10px 5px;padding:0 0 0 30px;line-height:35px;background-color:#13528F;border-radius:8px;float:left;background-image:url(../img/icon/phone.PNG);background-size:auto 90%;background-repeat:no-repeat;background-position:center left;font-size:16px;font-weight:bolder;color:#fff;cursor:pointer;}
+.nav #contactbar:hover{background-color:#F6A246;}
+.nav #contactbar span{text-align:left;}
+.navon{height:60px;}
+.navon img{height:60px;}
+.navon a{width:107px;height:50px;text-align:center;margin:10px 0 0 0;padding:0;float:right;color:#222;border-right:#999 solid 1px;display:block; background-color:#ddd;line-height:50px;font-size:14px;border-radius:0 5px 0 0;}
+.navon a:hover{background-color:#DC2222;color:#fff; cursor:pointer}
+.navon .cornerblock{width:190px;height:50px;float:right;margin:0 0 0 16px;padding:0;background:#fff;display:block;}
+.navon #contactbar{width:35px;height:35px;margin:10px 5px;padding:0;line-height:35px;background-color:#13528F;border-radius:8px;float:left;overflow:hidden;background-image:url(../img/icon/phone.PNG);background-size:auto 90%;background-repeat:no-repeat;background-position:center;cursor:pointer;}
+.navon #contactbar:hover{background-color:#F6A246;}
+.navon #contactbar span{visibility:hidden}
+/*-----------------------------------*/
+#nav ul{width:130px;position:fixed;left:50%;margin-top:0;list-style:none;padding:0;}
+#nav ul li{width:100%;height:40px;margin:1px 0 0 0;line-height:40px;text-align:center;background:#DC2222;color:#fff;cursor:pointer}
+#nav ul li:hover{background:#fff;color:#333}
+.closed{height:0px;overflow:hidden;}
+.opened{height:auto;overflow:auto;}
+/*-----------------pages contents------------------*/
+#procard{width:50%;height:444px;background:url(../img/pages/hr.png) no-repeat center #100E29;margin:50px 0 0 0;padding:0; position:absolute;top:0;right:50%; z-index:50}
+.procard{}
+/*-----------------------------------------------------------------*/
+.content{width:100%;height:auto;overflow:auto;margin:0 auto;padding:0;max-width:1200px;min-width:1000px;color:#333;font-size:15px}
+.leadblock{width:23%;height:auto;overflow:auto;margin:12px 1%;padding:0;float:left;background:#fff;}
+.leadbicon{width:100%;height:120px;margin:0;padding:0;background-size:100% auto;background-position:center;background-repeat:no-repeat}
+.leadbtitle{width:100%;height:50px;margin:0;padding:0;font-size:22px;line-height:50px;font-weight:bolder}
+.leadbdiscr{width:100%;height:auto;overflow:auto;margin:0;padding:0;font-size:16px; text-align:left}
+.leadbdiscroff{width:100%;height:55px;overflow:hidden;margin:0;padding:0;font-size:16px; text-align:left}
+.leadbdiscron{width:100%;height:auto;overflow:auto;margin:0;padding:0;font-size:16px; text-align:left}
+.leadbsubject{width:100%;height:50px;margin:0;padding:0;font-size:30px;line-height:50px;font-weight:bolder}
+.leadbsaying{width:100%;height:auto;overflow:auto;margin:0;padding:0;font-size:22px;}
+
+.infoblock{width:50%;height:auto;overflow:auto;margin:0;padding:0;float:left;}
+.infoblock ul{list-style:none}
+.infoblock ul li{margin:5px 0}
+/*-----------------------------------------------------------------*/
+.personblock{width:23%;height:auto;overflow:auto;margin:15px 1%;padding:15px 0 0 0;float:left;background:#fff}
+.personphoto{width:100%;height:160px;margin:0;padding:0;background-size:auto 90%;background-position:center;background-repeat:no-repeat}
+.personname{width:100%;height:40px;margin:0;padding:0;font-size:16px;text-align:center;line-height:40px;font-weight:bolder}
+.persondetail{width:92%;height:70px;margin:0 4%;padding:0;font-size:12px; text-align:center}
+.personintro{width:85%;height:50px;margin:0 auto;padding:10px 0;font-size:12px;color:#111}
+.personintro a{color:#111}
+.personintro i{width:15px;height:15px;}
+/*-----------------------------------*/
+#langbar{width:70px;height:auto;overflow:auto;margin:0;padding:0;float:left}
+#langbar .flag{width:70px;height:55px;margin:0;line-height:57px;text-align:center;padding:0;cursor:pointer;color:#13528F;font-size:14px;font-weight:bolder}
+#langbar .flag:hover{color:#F6A246;}
+#en{/*background-image:url(../img/enflag.png)*/}
+#cn{/*background-image:url(../img/cnflag.png);*/}
+/*-----------------------------------*/
+#loginbar{width:60px;height:31px;margin:10px 2px;padding:0;border-redius:15px;text-align:center;line-height:31px;border:2px #13528F solid;float:left;border-radius:8px;font-size:16px;color:#13528F;font-weight:bolder;cursor:pointer;}
+#loginbar:hover{border:2px #F6A246 solid;color:#F6A246;}
+/*-----------------------------------*/
+#banner{width:100%;margin:0;padding:0;background-repeat:no-repeat;background-position:center;background-image:url(../img/banner/banner0.jpg);background-attachment: fixed;background-attachment: scroll; background-size:100% auto}
+#btt0{width:100%;height:auto;overflow:auto;max-width:1200px;margin:0 auto;padding:0}
+/*-----------------------------------*/
+.banner000{width:100%;max-width:1200px;height:auto;overflow:auto;margin:0 auto;padding:0;}
+.banner000title{width:100%;height:auto;overflow:auto;margin:50px 0 20px 0;padding:0;font-size:33px;text-align:center}
+.bansquare{width:20%;height:auto;float:left;margin:20px 0;padding:0;}
+.bantitle{width:100%;height:30px;line-height:30px;text-align:center;margin:10px 0;padding:0;font-size:22px;color:#333;font-weight:bolder}
+.bandiscr{width:90%;height:180px;text-align:center;margin:0 auto;padding:0;font-size:12px;color:#333}
+.leadbrands{width:100%;height:90px;margin:0;padding:0;background-position:center;background-repeat:no-repeat}
+
+.brandbar{width:630px;height:auto;margin:25px auto;padding:0;}
+.brands{width:170px;height:66px;background-size:auto 100%; background-position:center;background-repeat:no-repeat;margin:20px;padding:0;float:left}
+
+.filler{width:52%;margin:220px 0 0 0;}
+.smfiller{width:100%;margin:50px 0 0 0;}
+.flfiller{width:100%;margin:50px 0 0 0;float:left}
+
+.conline{width:100%;height:auto;overflow:auto;margin:5px 0}
+.contitle{width:10%;height:40px;line-height:40px;margin:2% 15px;float:left;font-size:16px}
+.coninput{width:80%;height:40px;line-height:40px;margin:10px;border:1px #999 solid;float:left;text-align:center}
+.contextarea{width:80%;height:222px;line-height:40px;margin:10px;border:1px #999 solid;float:left;text-align:center}
+
+.products{width:100%;height:auto;overflow:auto;margin:0;padding:0}
+.products div{-webkit-transition: 0.5s ease;}
+.psubject{width:100%;height:auto;overflow:auto;margin:0;padding:0;text-align:center;font-size:26px;font-weight:bolder}
+.product{width:31.33%;height:auto;overflow:auto;margin:30px 1%;padding:0;float:left;text-align:center}
+.product img{width:auto;height:auto; max-height:200px;margin:0;padding:0}
+.ptitle{width:90%;height:auto;overflow:auto;margin:0 5%;padding:0 0 20px 0;font-size:18px;text-align:left}
+.pdiscr{width:100%;height:100px;overflow-y:hidden;margin:0;padding:0 0 15px 0;font-size:15px;border-bottom:1px double #777;cursor:pointer;text-align:left}
+.pdiscr:hover{height:auto;overflow:auto;}

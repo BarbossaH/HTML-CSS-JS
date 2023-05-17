@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise</title>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      background-color: #f5f5f5;
+    }
+
+    a {
+      /* display: inline-block; */
+      color: #333;
+      text-decoration: none;
+      /* width: 100%; */
+    }
+
+    .box {
+      /* display: inline-block; */
+      width: 298px;
+      height: 349px;
+      background-color: white;
+      /* 让块级的盒子水平居中对齐 */
+      margin: 50px auto;
+    }
+
+    /* .box>img 这是我实验的时候用的模式，但是中间增加元素时，就出了问题
+    而下面这种方式是不会有问题的 */
+    .box img {
+      /* 图片的宽度和父亲一样宽 */
+      width: 100%;
+      /* 这也是管用的，用img的margin */
+      /* margin-bottom: 10px; */
+    }
+
+    .review {
+      height: 70px;
+      font-size: 14px;
+      /* 因为没有宽度属性（width），所以修改padding值就不会影响box的宽度 */
+      padding: 0px 10px;
+      /* 不用padding调整高度是因为这里设置了高度，所以如果设置padding就会修改盒子的大小（高度）
+      /* 所以这里用margin值会比较好； margin不会影响盒子的大小？会！ */
+      margin-top: 10px;
+    }
+
+    .comments {
+      font-size: 12px;
+      color: #b0b0b0;
+      padding: 0px 10px;
+      margin-top: 20px;
+    }
+
+    .info {
+      margin-top: 10px;
+      padding: 0px 10px;
+      font-size: 14px;
+    }
+
+    .info h4 {
+      display: inline-block;
+      font-weight: 400;
+    }
+
+    .info span {
+      color: #ff6700;
+    }
+
+    .info em {
+      font-style: normal;
+      color: #ebe4e0;
+      margin: 0 6px 0 18px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <a href="007margin_subsidence.html"> <img src="/001html/html_1_firstday/src/beauty.jpg" alt="" /> </a>
+    <p class="review">This is very beautiful girl and I like her so much.</p>
+    <div class="comments">Over 1000,000 person like her. This girl has no pony tail, but she is still gorgeous.</div>
+    <div class="info">
+      <h4> <a href="#">Born in America, actress.</a></h4>
+      <em>|</em>
+      <span> US$ 99</span>
+    </div>
+  </div>
+</body>
+
+</html>

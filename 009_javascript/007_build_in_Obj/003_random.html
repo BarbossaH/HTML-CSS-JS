@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random</title>
+  <script>
+    // console.log(Math.random());
+
+    function getRandomInclusive(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    // 还是得多用多练
+    console.log(getRandomInclusive(7, 13.2));
+
+    function getRandomInclusive(min, max) {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

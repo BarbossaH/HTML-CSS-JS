@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Father(uname, age) {
+      // this指向fahter
+      this.uname = uname;
+      this.age = age;
+      // console.log(this.uname, this.age);
+    }
+    Father.prototype.makingmoney = function () {
+      console.log('tons of money');
+
+    }
+    function Son(uname, age, score) {
+      // this指向son
+      Father.call(this, uname, age);
+      this.score = score;
+    }
+    // 这么操作会覆盖父类的原型函数，因为他们会指向同一个地址内的对象，所以子原型修改，也就是父原型修改
+    Son.prototype = Father.prototype;
+    Son.prototype.exam = function () {
+      console.log("I have to do an exam");
+    }
+    var ldf = new Son('ds', 18, 99);
+    console.log(ldf);
+    console.log(Father.prototype);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visibility</title>
+
+  <!-- 目前有三种方式：
+  1、display显示隐藏 very important
+  设置一个元素如何进行显示。比如block, inline, none.
+  none就是隐藏对象的意思。block也有显示元素的意思。
+  none隐藏了，而且位置也没有了
+  2、visibility显示隐藏
+  3、overflow溢出显示隐藏 -->
+
+  <style>
+    .compliment {
+      display: none;
+      /* display: block; */
+      width: 200px;
+      height: 300px;
+      background-color: aqua;
+    }
+
+    .reactive {
+      width: 200px;
+      height: 300px;
+      background-color: crimson;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="compliment"></div>
+  <div class="reactive"></div>
+</body>
+
+</html>

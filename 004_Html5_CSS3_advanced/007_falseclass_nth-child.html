@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>结构伪类选择器</title>
+  <style>
+    /* li {
+      list-style: none;
+    } */
+
+    /* 1.选择ul里的第一个孩子 */
+    ul li:first-child {
+      background-color: red;
+    }
+
+    /* 注意：如果中间不打空格，结果就会不同 */
+    /* 2.选择ul里的最后一个孩子 */
+    ul li:last-child {
+      background-color: darkmagenta;
+    }
+
+    ul li:nth-child(n) {
+      color: lime;
+    }
+
+    /* n+3是可以的，但是3+n是不行的 */
+    ul li:nth-child(n+3) {
+      font-weight: 700;
+    }
+
+    /* 这里我有犯了没有打空格的错误 */
+    ul li:nth-child(-n+5) {
+      font-size: 24px;
+    }
+
+    ul li:nth-child(even) {
+      background-color: violet;
+    }
+
+    /* 如果我冒号前面不写li，权重就变少了，那么队员第一行就会是红色 */
+    ul :nth-child(odd) {
+      background-color: darkmagenta;
+    }
+
+    ol li:nth-child(n) {
+      background-color: blueviolet;
+
+      font-weight: 700;
+    }
+
+    /* 只能写出2n，3n,4n这种形式，不能写成n*2，或者其他形式 */
+    ol li:nth-child(2n+1) {
+      color: #fff;
+    }
+
+    ol li:nth-child(2n) {
+      color: skyblue;
+    }
+
+    ol li:nth-child(5n) {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <ul>
+    <li>I am No.1 child</li>
+    <li>I am No.2 child</li>
+    <li>I am No.3 child</li>
+    <li>I am No.4 child</li>
+    <li>I am No.5 child</li>
+    <li>I am No.6 child</li>
+    <li>I am No.7 child</li>
+    <li>I am No.8 child</li>
+  </ul>
+
+  <!-- 想要同时修改尾部标签，使用fn+f2按键 -->
+  <ol>
+    <li>I am No.1 child</li>
+    <li>I am No.2 child</li>
+    <li>I am No.3 child</li>
+    <li>I am No.4 child</li>
+    <li>I am No.5 child</li>
+    <li>I am No.6 child</li>
+    <li>I am No.7 child</li>
+    <li>I am No.8 child</li>
+  </ol>
+</body>
+
+</html>

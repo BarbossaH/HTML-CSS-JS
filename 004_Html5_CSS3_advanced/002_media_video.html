@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video</title>
+
+  <!-- 视频<video> -->
+  <!-- 浏览器             mp4                WebM           ogg
+  internet explorer      Yes                No              No
+  Chrome                 Yes                Yes             Yes
+  Firefox                Yes(after v21)     Yes             Yes
+  Safari                 Yes                No              No
+  Opera                  Yes                Yes             Yes -->
+
+  <!-- video常见属性   值              描述
+  autoplay      autoplay     视频就绪自动播放，谷歌浏览器需要添加muted来解决自动播放的问题
+  controls      controls      向用户显示播放控件
+  width         pixels
+  height        pixels
+  loop          loop          循环播放
+  preload       auto预先加载    规定是否预加载视频，如果有了autoplay就忽略
+                none不预先加载
+  src           url
+  poster        imgurl        加载等待的画面图片
+  muted         muted         静音播放 -->
+  <style>
+    /* video {
+      height: 600px;
+      width: 600px;
+    } */
+  </style>
+</head>
+
+<body>
+  <!-- <video width="320" height="240" controls>
+    <source src="movie.mp4" type="video/mp4">
+    <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+  </video> -->
+  <video width="600" height="600" autoplay="autoplay" muted="muted" controls="controls" loop="loop"
+    poster="/001html/html_1_firstday/src/watch.jpeg" src="/001html/html_1_firstday/src/media2.mp4"></video>
+</body>
+
+</html>

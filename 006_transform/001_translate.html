@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- transform 的三个功能：移动translate，旋转rotation和缩放scale -->
+  <!-- 网页的坐标原点在左上角 -->
+  <!-- 沿着XY轴移动
+  自己移动不会影响其他元素，因为使用margin和position会影响其他元素
+  参数设置50%是相对自己的大小
+  对行内元素没有效果 display: inline -->
+  <style>
+    /* div:first-child */
+    div:nth-child(1) {
+      /* position: absolute; */
+      /* left: 100px;
+      top: 100px; */
+
+      width: 200px;
+      height: 200px;
+      background-color: chartreuse;
+      transition: transform, .5s;
+    }
+
+    /* div:last-child */
+    div:nth-child(2) {
+      width: 100px;
+      height: 100px;
+      background-color: cyan;
+      transition: transform, .5s;
+    }
+
+    div:first-child:hover {
+      transform: translate(10px, 50px);
+    }
+  </style>
+</head>
+
+<body>
+  <div> </div>
+  <div> </div>
+</body>
+
+</html>

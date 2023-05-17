@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3_new</title>
+  <!-- 这个有兼容性的问题，但是随着技术的更新迭代，新的特性必将得到更加广泛的应用 -->
+  <!-- 
+  属性选择器
+  结构伪类选择器
+  伪元素选择器 -->
+  <!-- 类选择器，属性选择器，伪类选择器，权重10 -->
+
+  <style>
+    /* input[value] {
+      color: aqua;
+    } */
+    input {
+      outline: none;
+    }
+
+    input[type=text] {
+      color: darkorange;
+    }
+
+    div[class^=icon] {
+      color: darkseagreen;
+    }
+
+    section[class$=data] {
+      color: deeppink;
+    }
+
+    /* 这样写也行，但是权重就只是10了，上面那个是11. */
+    [class$=data] {
+      color: deeppink;
+    }
+
+    section[class*=icon] {
+      color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 利用属性选择器就可以不借助类或者id选择器 -->
+  <!-- <input type="text" name="" id="" value="please enter your name">
+  <input type="text"> -->
+  <!--重点： 属性选择器可以选择属性=值的某些元素 -->
+  <input type="text" name="" id="">
+  <input type="password" name="" id="">
+  <!-- 属性选择器可以选择开头的某些元素 -->
+  <div class="icon1">icon1</div>
+  <div class="icon2">icon2</div>
+  <div class="icon3">icon3</div>
+  <div class="icon4">icon4</div>
+  <div>I am just passing by</div>
+  <!-- 属性选择器可以选择属性值结尾的某些元素 -->
+  <section class="icon1-data">我是安其拉</section>
+  <section class="icon2-data">我是哥斯拉</section>
+  <section class="icon3-ico">那我是谁</section>
+</body>
+
+</html>

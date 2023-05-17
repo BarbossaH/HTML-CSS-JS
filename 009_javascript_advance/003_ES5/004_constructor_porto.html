@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div></div>
+  <script>
+    function Star(uname, age) {
+      this.uname = uname;
+      this.age = age;
+    }
+
+    Star.prototype.sing = function () {
+      return 'I can sing';
+    }
+    Star.prototype.dance = function () {
+      return 'I can sing';
+    }
+    //如果把生产新的对方放到这里，那么原型对象的覆盖就会导致新的原型对象调用的方法失败；
+    //放到覆盖原型对象后面是可以的
+    var ldf = new Star('xia', 18);
+
+    var div = document.querySelector('div');
+    // var ldf = new Star('xia', 18);
+    div.innerHTML = ldf.sing() + ldf.dance();
+
+    //打印构造函数的内容，porto对象中有一个属性是指向构造函数
+    console.log(Star.prototype.constructor);
+
+    //原型对象的覆盖问题，如果覆盖，原来的构造函数就会被覆盖
+    Star.prototype = {
+      //如果不写这句话，原有的构造函数就会消失
+      // constructor: Star,
+      sing: function () {
+        console.log('I can sing again');
+      },
+      dance: function () {
+        console.log('I can play moive');
+      }
+    }
+    // 但是这里的构造函数已经变了，因为原型对象被修改了 Object() { [native code] }
+    //所以我们希望保留原来的构造函数
+    console.log(Star.prototype.constructor);
+
+    // 如果这里不重新创造一个对象，那么就无法调用新的原型的函数
+
+    var ldf = new Star('xia', 18);
+
+    ldf.sing();
+    ldf.dance();
+    // 这个方法似乎被取消了
+    console.log(ldf._proto_);
+
+
+    //构造函数有一个对象指向原型对象，原型对象有一个属性指向构造函数，商业互吹
+    //构造函数可以实例化一个对象
+  </script>
+</body>
+
+</html>

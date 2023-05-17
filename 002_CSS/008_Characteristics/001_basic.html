@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic</title>
+  <style>
+    * {
+      color: black;
+    }
+
+    body {
+      color: slateblue;
+      /* font: 20px/1.5 Times New Roman; */
+      font: 24px Times New Roman;
+      /* font: 24px/48px Times New Roman; */
+    }
+
+    div {
+      font-size: 24px;
+      color: red !important;
+    }
+
+    p {
+      font-size: 30px;
+    }
+
+    .green {
+      color: seagreen;
+    }
+
+    #idtest {
+      color: violet;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 三大特性，层叠性，继承性，优先级
+  1、相同的选择器，如果css样式是一样的，后来者居上，后面的覆盖前面的。
+  2、继承性，如果某些设置了父元素，子元素就也会受影响。注意是部分特性。
+  （text,font, line,开头的都会继承，以及color）
+  行高的继承
+  3、 优先级 通配符优先级最低(其实是继承的最低，这里没有把它排进来)，表选择器第二，
+  类选择器和伪类选择器第三（10），id选择器第四（100），行内选择器第五（内嵌），important是最优先的-->
+  <!-- 优先级注意事项：继承优先级是最低的，还不如通配符选择器 -->
+  <!-- 复合选择器会有权重叠加的问题 比如 ul>li 就比li的权重高 -->
+</body>
+<div class="green" id="idtest" style="color: royalblue;">Rainy day</div>
+<ol>
+  <li>What am I?</li>
+</ol>
+<p>It's becoming dark gradually!</p>
+<ul>
+  <!-- 这里li的文字大小会继承父亲的行高 -->
+  <li>I haven't refer the size of font.</li>
+</ul>
+
+</html>

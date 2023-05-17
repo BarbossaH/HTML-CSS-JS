@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../00_JQuery/Jquery_min.js"></script>
+
+</head>
+
+<body>
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <script>
+    $(function () {
+      // $('div').css({ background: 'green', color: 'red' });
+
+      var arr = ['red', 'purple', 'blue'];
+      var sum = 0;
+      $('div').each(function (index, domEle) {
+        // console.log(index);
+        //demEle是dom元素需要转换成jquery
+        // console.log(domEle);
+        $(domEle).css('color', arr[index]);
+        sum += parseInt($(domEle).text());
+        // console.log(sum);
+      });
+
+      $.each($('div'), function (i, ele) {
+        // console.log(i);
+        // console.log(ele);
+
+      })
+      $.each(arr, function (i, ele) {
+        // console.log(i);
+        // console.log(ele);
+      })
+
+      $.each({ name: "any", age: 18 }, function (i, ele) {
+        console.log(i);
+        // console.log(ele);
+      })
+    })
+  </script>
+</body>
+
+</html>

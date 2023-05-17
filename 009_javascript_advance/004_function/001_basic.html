@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function fn() { }
+    var fun = function () { }
+
+    // 也可以用这种方式定义函数，参数和函数体必须用引号括起来，效率很低，不建议这么写
+    //这只是代表函数都是通过这种方式做出来的，而且代表函数就是对象
+    var f = new Function('console.log(1)');
+    f();
+    console.dir(f);
+    //代表函数属于对象 instanceof
+    console.log(f instanceof Object);
+    //-------------------------------------------------------------------
+    //函数的调用方式
+    //普通函数
+    function fn() {
+      console.log('I am ordinary function');
+    }
+    fn(); fn.call();
+    //
+    //对象方法
+    var o = {
+      sayHi: function () {
+        console.log('对象的方法');
+
+      }
+    }
+
+    o.sayHi();
+    //
+    //构造函数
+    function Star() { }
+    new Star();
+    //
+    //绑定事件函数
+    btn.onclick = function (e) { };//点击按钮就可以调用
+    //
+    //定时器函数
+    setInterval(function () { }, 1000);
+    //
+    //立即执行函数
+    (function () {
+      console.log('immediately');
+    })();
+    //
+
+
+  </script>
+</body>
+
+</html>

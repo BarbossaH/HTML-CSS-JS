@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Difference</title>
+</head>
+
+<body>
+  <p>
+    today is a lovely day
+    <span> , yes it is.</span>
+  </p>
+
+  <script>
+    var ps = document.querySelector('p');
+    console.log(ps.innerText);
+    console.log(ps.innerHTML);
+    ps.innerText = '<strong>Strong</strong>';
+
+    // innerHTML是以html的格式记录，而text就显示文字，而且去除空格，html使用最多，没有适配问题
+    // ps.innerHTML = '<strong>Strong</strong>';
+
+  </script>
+</body>
+
+</html>

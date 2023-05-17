@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    var str = 'dsgsgjsdhfewwhewqe';
+    // console.log(str.replace('d', '*'));
+    var indx = 0;
+    while (str.indexOf('d') !== -1) {
+      str = str.replace('d', '*');
+      // indx = str.indexOf('d', indx) + 1;
+    }
+    console.log(str);
+
+    var str2 = 'some, ods,dfd';
+    // str2.toUpperCase();
+    console.log(str2);
+
+    // 字符变数组
+    var charStr2 = str2.split(',');
+    console.log(charStr2);
+    // 数组变字符
+    var str3 = charStr2.join();
+    console.log(str3);
+
+    // 如果这么操作只是将str3的内容改变并新建了另一个数组，但是str3还是不变的
+    console.log(str3.toUpperCase());
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

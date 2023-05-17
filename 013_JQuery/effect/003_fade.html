@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../00_JQuery/Jquery_min.js"></script>
+  <script>
+    $(function () {
+      $('button').eq(0).click(function () {
+        $('div').fadeIn(1000);
+      })
+      $('button').eq(1).click(function () {
+        $('div').fadeOut(1000);
+      })
+      $('button').eq(2).click(function () {
+        $('div').fadeToggle(1000);
+      })
+      $('button').eq(3).click(function () {
+        // 这个修改是会一直影响到这个盒子
+        $('div').fadeTo(2000, 0.3);
+      })
+    })
+  </script>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: springgreen;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+  <button>4</button>
+</body>
+
+</html>

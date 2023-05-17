@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .box {
+      width: 1226px;
+      height: 285px;
+      background-color: pink;
+      margin: 0 auto;
+    }
+
+    .box li {
+      float: left;
+      width: 296px;
+      height: 285px;
+      margin-right: 14px;
+      background-color: purple;
+    }
+
+    /* 这里要注意权重的问题 */
+    /* .box .last {
+      margin-right: 0;
+    } */
+
+    /* 这么写就是失败的，我不知道为什么，这个就会失效*/
+    .box ul li .last {
+      margin-right: 0;
+    }
+
+    /* 因为li和.last 是同一级的关系 box和ul也是。我看当时是迷糊了，哈哈 */
+  </style>
+</head>
+
+<body>
+  <!-- <div class="box"></div> -->
+  <ul class="box">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li class="last">4</li>
+  </ul>
+</body>
+
+</html>

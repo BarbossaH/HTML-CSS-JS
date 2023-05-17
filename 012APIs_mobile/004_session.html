@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text">
+  <button class='save'>Save</button>
+  <button class='get'>Get</button>
+  <button class='remove'>Remove</button>
+  <button class='clear'>Clear</button>
+
+  <script>
+    var input = document.querySelector('input');
+    var save = document.querySelector('.save');
+    save.addEventListener('click', function () {
+      var value = input.value;
+      sessionStorage.setItem('username', value);
+      sessionStorage.setItem('pwd', value);
+    })
+
+    var get = document.querySelector('.get');
+    get.addEventListener('click', function () {
+
+      console.log(sessionStorage.getItem('username'));
+
+    })
+    var remove = document.querySelector('.remove');
+    remove.addEventListener('click', function () {
+      sessionStorage.removeItem('username');
+    })
+    var clear = document.querySelector('.clear');
+    clear.addEventListener('click', function () {
+      sessionStorage.clear();
+    })
+  </script>
+</body>
+
+</html>

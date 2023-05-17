@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bear {
+      position: absolute;
+      width: 200px;
+      height: 100px;
+      top: 600px;
+      background: skyblue url(media/bear.png) no-repeat;
+      animation: bearmove 1s steps(8) infinite, bearposition 3s linear forwards;
+    }
+
+    @keyframes bearmove {
+      0% {}
+
+      100% {
+        background-position: -1600px 0;
+      }
+    }
+
+    @keyframes bearposition {
+      0% {
+        left: 0;
+      }
+
+      100% {
+        left: 50%;
+        transform: translatex(-50%);
+      }
+    }
+
+    .background {
+      position: absolute;
+      top: 450px;
+      width: 1500px;
+      height: 170px;
+      background: url(media/bg1.png);
+      background-size: 100% 100%;
+      /* background-position: -0 0; */
+      animation: bg1move 2s infinite linear;
+      /* overflow: hidden; */
+    }
+
+    @keyframes bg1move {
+      0% {
+        background-position: 0 0;
+      }
+
+      100% {
+        background-position: -1500px 0;
+        /* transform: translatex(-100%); */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="background"></div>
+  <div class="bear"></div>
+</body>
+
+</html>

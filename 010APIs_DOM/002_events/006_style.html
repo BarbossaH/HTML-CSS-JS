@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div {
+      width: 300px;
+      height: 400px;
+      background-color: lime;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="mystyle"></div>
+
+  <script>
+    var mystyle = document.querySelector('div');
+    mystyle.onclick = function () {
+      this.style.backgroundColor = 'red';
+      this.style.height = '200px';
+    }
+// 被js修改的样式，成为行内样式（还有内嵌样式，外部样式），行内样式比内嵌样式权重高。可以通过f12查看
+  </script>
+</body>
+
+</html>

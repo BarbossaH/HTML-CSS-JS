@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StringBasic</title>
+  <script>
+    // 字符串不可变：原因就是如果改变字符串，其实是重新开辟了新的内存空间，原来的字符串还存在。所以不要大量的修改字符串。字符串修改的越多，占据内存就会越多。
+
+    var str = 'Fiona do not like me.'
+
+
+    var num = str.indexOf('m'); //3从前往后数
+    var num1 = str.indexOf('m', 4); //3从前第4个字母后往后数，包含第4个
+    num = str.lastIndexOf('m'); //52从后往前数
+    console.log(num);
+    console.log(num1);
+    var indx = 0
+    for (var i = 0; i < str.length; i++) {
+      if (str.indexOf('o', indx) !== -1) {
+        indx = str.indexOf('o', indx) + 1;
+        console.log(indx);
+      }
+
+    }
+
+    for (var i = 0; i < str.length; i++) {
+      var char = str.charAt(i)
+      console.log(char);
+
+    }
+
+    //返回asc码，可以检测用户输入
+    var char = str.charCodeAt(0);
+    console.log(char);
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

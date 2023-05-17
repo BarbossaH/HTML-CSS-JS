@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // for (var i = 0; i < 3; i++) {
+
+    // }
+    // console.log(i); //i=3
+    let arr = [];
+    for (let index = 0; index < 3; index++) {
+      arr[index] = function () {
+        console.log(index);
+      }
+    }
+    arr[0]();//0
+    arr[1]();//1
+
+    let uname = 'Julian';
+
+    function test() {
+      // let uname = 'right'//这是可以的
+      console.log(uname);
+      // let uname = 'error' //如果加上这句话，就会报错，这叫暂存性区域，会优先看块作用区域
+    }
+    test();
+
+    let mage = 19;
+    console.log(window.mage);//undefined
+    var ds = 19
+    console.log(window.ds);//19
+
+  </script>
+</body>
+
+</html>

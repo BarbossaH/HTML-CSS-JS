@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Menu</title>
+</head>
+
+<body>
+  <form action="demo.php" method="GET" name="my name">
+    <!-- 可以输入任何文字 -->
+    user name: <input type="text" name="username" value="please input text" maxlength="12" /> <br>
+    <!-- 密码用户看不见输入的文字 -->
+    pass word: <input type="password" name="pwd" value="" /> <br>
+    Gender: male<input type="radio" name="gender" value="male" checked="checked" />
+    female<input type="radio" name="gender" value="female" />
+    unknown<input type="radio" name="gender" value="unknown" /> <br>
+    Interest: learning<input type="checkbox" name="interest" value="learning" />
+    coding<input type="checkbox" name="interest" checked="default" value="coding" />
+    playing<input type="checkbox" name="interest" value="playing" /> <br>
+
+    <input type="submit" value="submit" />
+    <input type="reset" value="Reset" />
+    <!-- 回头与JS一起互动 -->
+    <input type="button" value="Get message text" />
+    <!-- upload file -->
+    <input type="file" />
+  </form>
+</body>
+
+</html>

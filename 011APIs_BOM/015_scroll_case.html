@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .slider-bar {
+      position: absolute;
+      left: 50%;
+      top: 300px;
+      margin-left: 600px;
+      width: 45px;
+      height: 130px;
+      background-color: pink;
+    }
+
+    .w {
+      width: 1200px;
+      margin: 10px auto;
+    }
+
+    .header {
+      height: 150px;
+      background-color: purple;
+    }
+
+    .banner {
+      height: 250px;
+      background-color: skyblue;
+    }
+
+    .main {
+      height: 1000px;
+      background-color: yellowgreen;
+    }
+
+    span {
+      display: none;
+      position: absolute;
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="slider-bar">
+    <span class="goBack">返回顶部</span>
+  </div>
+  <div class="header w">头部区域</div>
+  <div class="banner w">banner区域</div>
+  <div class="main w">主体部分</div>
+
+  <script>
+    document.addEventListener('scroll', pageScroll);
+    var header = document.querySelector('.header');
+    var banner = document.querySelector('.banner');
+    var slider_bar = document.querySelector('.slider-bar');
+    var mainE = document.querySelector('.main');
+    var span = document.querySelector('span');
+    var goBack = document.querySelector('.goBack');
+    var fixed_position = slider_bar.offsetTop - header.offsetHeight;
+    var absolute_position = fixed_position + header.offsetHeight;
+    console.log(mainE.offsetTop);
+    goBack.addEventListener('click', function () {
+      // window.scroll(0, 0);
+      // window.scroll(0, 100);
+      animation(window, 0);
+    });
+
+    function animation(obj, distance, callback) {
+      clearInterval(obj.timer);
+      obj.timer = setInterval(function () {
+        // javascript尽量避免小数运算,另外就是要将speed的值向上取，如果是反方向就向下取，不然方块永远到不了位置因为这种算法的缘故
+        var speed = ((distance - obj.pageYOffset) / 10);
+        speed = (speed >= 0) ? Math.ceil(speed) : Math.floor(speed);
+        // console.log('speed = ' + speed);
+        // console.log(obj.offsetLeft);
+        window.scroll(0, obj.pageYOffset + speed);
+        if (distance === obj.pageYOffset) {
+          // console.log(obj.offsetLeft);
+          clearInterval(obj.timer);
+          if (callback) {
+            callback();
+          }
+        }
+      }, 20)
+    }
+
+    function pageScroll(e) {
+      if (window.pageYOffset > header.offsetHeight) {
+        slider_bar.style.position = 'fixed';
+        slider_bar.style.top = fixed_position + 'px';
+      }
+      else {
+        slider_bar.style.position = 'absolute';
+        slider_bar.style.top = absolute_position + 'px';
+      }
+      if (window.pageYOffset > mainE.offsetTop) {
+        span.style.display = 'block';
+      }
+      else {
+        span.style.display = 'none';
+      }
+    }
+
+    function getScroll() {
+      return {
+        left: window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0,
+        top: window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+      };
+    }
+    var left = getScroll().left;
+    var top = getScroll().top;
+  </script>
+</body>
+
+</html>

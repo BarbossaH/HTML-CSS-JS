@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+    var arr = new Array();
+    var arr1 = [];
+    var arr2 = [1, 2, true, 'me'];
+
+    // 这也是给数组扩容的办法
+    arr2.length += 2;
+    var arr3 = [1, 2, 3, 4];
+    console.log(arr2);
+    console.log(arr2[5]);
+    console.log(arr2.length);
+    arr2[4] = 'you';
+    console.log(arr2);
+
+    var sum = 0;
+    var avarage = 0;
+    for (var i = 0; i < arr3.length; i++) {
+      sum += arr3[i];
+    }
+
+    avarage = sum / arr3.length;
+    //多行打印
+    console.log(sum, avarage);
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

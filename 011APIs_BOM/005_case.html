@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    div {
+      margin: 200px;
+    }
+
+    span {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      background-color: #333;
+      font-size: 20px;
+      color: #fff;
+      text-align: center;
+      line-height: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span class="day">0</span>
+    <span class="hour">1</span>
+    <span class="minute">2</span>
+    <span class="second">3</span>
+  </div>
+  <button class='begin'>开始</button>
+  <button class='end'>停止</button>
+  <script>
+    // 这种方式书写就是得出时间戳
+    var date = +new Date();
+    // console.log(date);
+    var day = document.querySelector('.day'); // 小时的黑色盒子
+    var hour = document.querySelector('.hour'); // 小时的黑色盒子
+    var minute = document.querySelector('.minute'); // 分钟的黑色盒子
+    var second = document.querySelector('.second'); // 秒数的黑色盒子
+    var finalTime = +new Date('2022-12-23 17:00:00');
+    // console.log(finalTime);
+    countDown();
+    var interval = setInterval(countDown, 1000);
+    function countDown() {
+      date = +new Date();
+      var resttime = parseInt((finalTime - date) / 1000);
+      if (resttime <= 0) {
+        day.innerHTML = '00';
+        hour.innerHTML = '00';
+        minute.innerHTML = '00';
+        second.innerHTML = '00';
+        return;
+      }
+      var restDay = parseInt((resttime / 3600) / 24);
+      restDay = restDay < 10 ? '0' + restDay : restDay;
+
+      var restHour = parseInt((resttime / 3600) % (24));
+      restHour = restHour < 10 ? '0' + restHour : restHour;
+      var restMinitue = parseInt((resttime / 60) % (60));
+      restMinitue = restMinitue < 10 ? '0' + restMinitue : restMinitue;
+      var restSecond = parseInt(resttime % 60);
+      restSecond = restSecond < 10 ? '0' + restSecond : restSecond;
+
+      day.innerHTML = restDay;
+      hour.innerHTML = restHour;
+      minute.innerHTML = restMinitue;
+      second.innerHTML = restSecond;
+    }
+
+    var begin = document.querySelector('.begin');
+    begin.addEventListener('click', function () {
+      // setInterval(countDown, 1000);
+      countDown();
+
+      interval = setInterval(countDown, 1000);
+    })
+    var end = document.querySelector('.end');
+    end.addEventListener('click', function () {
+      clearInterval(interval);
+    })
+  </script>
+</body>
+
+</html>

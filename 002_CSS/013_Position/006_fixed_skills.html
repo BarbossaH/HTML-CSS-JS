@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills</title>
+  <!-- 需求：浮动的窗口跟着版心，而不是贴着屏幕的四边或者四角 -->
+  <!-- 算法：先靠左右任意一边移动，50%，然后在移动版心宽度的50%。 -->
+  <!-- 先用left or right进行定位；然后再用margin，移动版心宽度的一半 -->
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .box {
+      width: 800px;
+      height: 2000px;
+      background-color: green;
+      margin: 0 auto;
+    }
+
+    .idiom {
+      /* position: fixed; */
+      left: 50%;
+      /* 没有加这行代码就会出问题，但是把idiom写在前面就会没问题 */
+      top: 50%;
+      margin-left: 400px;
+      width: 60px;
+      height: 60px;
+      background-color: yellow;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <div class="idiom"></div>
+
+
+</body>
+
+</html>

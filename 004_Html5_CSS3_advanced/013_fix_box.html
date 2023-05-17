@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fix_box</title>
+  <style>
+    .boxsize {
+      width: 300px;
+      height: 200px;
+      background-color: pink;
+      border: 20px solid red;
+      padding: 15px;
+      /* 这是默认的方式 */
+      /* box-sizing: content-box; */
+
+      /* 用normalize.css去初始化 */
+      /* 这样以来，盒子就不会变化 前提是border和padding不超过盒子原来的大小*/
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="boxsize"></div>
+</body>
+
+</html>

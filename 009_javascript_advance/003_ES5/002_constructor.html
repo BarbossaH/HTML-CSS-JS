@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 静态成员和实例成员
+    // 通过this添加就是实例成员，只能通过实例化的对象来访问
+    function Star(uname, age) {
+      this.uname = uname;
+      this.age = age;
+      this.sing = function () {
+        console.log('I can sing.');
+
+      }
+    }
+
+    var ldh = new Star('liu', 18);
+    var zhang = new Star('zhang', 18);
+    console.log(ldh.uname);
+    ldh.sing();
+    //静态成员：在构造函数本身添加的成员
+    Star.sex = 'male';//应该是和c++ static一样的属性
+    console.log(Star.uname);//不能通过对象来访问，
+    console.log(Star.sex);
+    console.log(ldh.sing === zhang.sing);
+
+  </script>
+</body>
+
+</html>

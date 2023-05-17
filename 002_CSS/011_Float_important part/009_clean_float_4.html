@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+    }
+
+    /* 双伪元素默认是行内元素，转换成块元素 */
+    .clearfix:after {
+      clear: both;
+    }
+
+    .clearfix:before,
+    .clearfix:after {
+      content: "";
+      display: table;
+    }
+
+    .clearfix {
+      /* IE6 7专有 */
+      *zoom: 1;
+    }
+
+    .box {
+      width: 1000px;
+      margin: 0 auto;
+      border: aqua solid;
+    }
+
+    .subtle {
+      float: left;
+      width: 300px;
+      height: 300px;
+      background-color: blueviolet;
+    }
+
+    .delicate {
+      float: left;
+      width: 300px;
+      height: 300px;
+      background-color: chartreuse;
+    }
+
+    .delicious {
+      float: left;
+      width: 300px;
+      height: 300px;
+      background-color: deeppink;
+    }
+
+    .stumble {
+      height: 20px;
+      background-color: gold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box clearfix">
+    <div class="subtle">subtle</div>
+    <div class="delicate ">delicate</div>
+    <div class="delicious">delicious</div>
+  </div>
+  <div class="stumble">stumble on</div>
+</body>
+
+</html>

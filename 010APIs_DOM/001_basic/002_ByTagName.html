@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul>
+    <li>Just care about what I want 1</li>
+    <li>Just care about what I want 2</li>
+    <li>Just care about what I want 3</li>
+    <li>Just care about what I want 4</li>
+    <li>Just care about what I want 5</li>
+  </ul>
+
+  <ol id="ol_id">
+    <li>I belongs to ol</li>
+    <li>I belongs to ol</li>
+  </ol>
+  <div>div_test</div>
+  <script>
+    // 得到的是一个对象的集合（伪数组，不能使用数组的一些方法）
+    // 但可以通过遍历的方式得到里面的元素
+    // 注意：不能使用getElementsByTagName获取之后的值去作为父类获取他下面的子类。
+    // 比如获取出ol之后，要用ol[0]的方式去获取ol下面的li，不能直接ol.get***
+    // 如果通过ID去获取就没问题
+    console.log(document.getElementsByTagName('li'));
+    console.log(document.getElementsByTagName('div'));
+    var liTest = document.getElementsByTagName('li')[0];
+    console.log(liTest);
+    var ol_id = document.getElementById('ol_id');
+    console.log(ol_id);
+
+  </script>
+</body>
+
+</html>

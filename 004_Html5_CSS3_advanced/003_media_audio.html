@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Audio</title>
+
+  <!-- 音频标签和视频标签使用方式基本一致
+  浏览器支持情况不同
+谷歌浏览器把音频和视频自动播放都禁止了
+我们可以给视频标签添加muted属性来静音播放视频，音频不可以可以通过JS解决
+视频标签是重点，我们经常设置自动播放，不用controls控件，并设置为循环和设置大小属性 -->
+</head>
+
+<body>
+
+  <!-- mp3, wav, ogg -->
+  <!-- <audio controls>
+    <source src="horse.ogg" type="audio/ogg">
+    <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+  </audio> -->
+
+  <!-- Chrome默认是不自动播放音频的 所以增加了autoplay属性也没有用，需要用controls-->
+  <!-- IE是可以自动播放的 -->
+  <audio src="/001html/html_1_firstday/src/Style.mp3" autoplay="autoplay" controls="controls"></audio>
+</body>
+
+</html>

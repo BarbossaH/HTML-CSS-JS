@@ -1,0 +1,25 @@
+
+<div id="forgotpage">
+    <div id="forgot">
+        <h1>Restore Password</h1><br>
+        <form action="">
+            <div class="logincontainer">
+                <img src="./img/login/user.svg" alt="">
+                <input onfocusout="loginCheck('finput', 'fspan')" id="finput" type="text" name="username" placeholder="Username" required/>
+                <span id="fspan" style="float:left"></span>
+            </div>
+            <span id="usernamecheck"></span><br>
+            <div class="logincontainer">
+                <img src="./img/login/lock.png" alt="">
+                <input type="email" name="email" placeholder="Email" required/>
+            </div><br><br>
+            <input type="submit" value="Send">
+        </form>
+        <button onclick="pageUrl('loginform')" id="back">
+            <img class="back-icon" src="./img/login/back.png">
+        </button>
+        <br>
+    </div>
+
+</div>
+ 

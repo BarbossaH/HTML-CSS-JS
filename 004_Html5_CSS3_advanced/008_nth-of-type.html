@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NTH-OF-CHild</title>
+  <!-- nth-of-type与nth-child的区别 -->
+  <!-- 结构伪类选择器的权重是10，跟类选择器的权重是一样的 -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    /* p {
+      background-color: royalblue;
+    }
+
+    div {
+      background-color: salmon;
+    } */
+
+    /* 这个是失效的 */
+    section div :nth-child(1) {
+      background-color: greenyellow;
+    }
+
+    /* 这个是可以的，因为这个不管类型 */
+    section :nth-child(2) {
+      color: greenyellow;
+    }
+
+    /* 如果前面不写类型，那么就会把所有类型的第一个元素都选出来 */
+    section :nth-of-type(1) {
+      background-color: burlywood;
+    }
+
+    /* section div:nth-of-type(1) {
+      background-color: palegreen;
+    } */
+  </style>
+</head>
+
+<body>
+  <section>
+    <i>Darren</i>
+    <p>Nick</p>
+    <div>Fiona</div>
+    <div>Julian</div>
+  </section>
+</body>
+
+</html>

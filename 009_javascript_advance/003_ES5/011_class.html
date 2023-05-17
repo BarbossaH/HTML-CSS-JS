@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //ES6之前使用构造函数+原型实现面向对象
+    // 构造函数有原型对象prototype
+    //构造函数原型对象prototype里面有constructor指向构造函数本身
+    //构造函数可以通过原型添加方法
+    //ES6通过 类 实现面向对象编程
+    class Star {
+
+    }
+    Star.prototype.sing = function () {
+      return 'I can sing';
+    }
+    // console.log(typeof Star);//function类的本质就是一个函数，类就是构造函数的另一种写法
+    console.log(Star.prototype);
+    console.log(Star.prototype.constructor);
+
+  </script>
+</body>
+
+</html>

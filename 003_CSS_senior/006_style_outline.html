@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Outline</title>
+
+  <style>
+    input,
+    textarea {
+      /* 去掉轮廓线 */
+      outline: none;
+    }
+
+    textarea {
+      /* 默认文本域是可以拖拽的 */
+      resize: none;
+      /* outline: none; */
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text">
+
+  <!-- 默认是可以拉大拉小的 -->
+  <!-- 注意，textarea最好是写在一行，如果写在两行，输入框就会出现两个可以输入的位置 -->
+  <textarea name="who" id="" cols="30" rows="10"></textarea>
+</body>
+
+</html>

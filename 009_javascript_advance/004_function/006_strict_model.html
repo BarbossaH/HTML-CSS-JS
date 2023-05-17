@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //ie 11才支持
+    'use strict';
+    // a = 10; this is not allowed;
+    var s = 10;
+    var s = 10;
+    //delete s; //--cannot use delete
+    function fn(a, n) {
+      console.log(this);//undefined
+
+    }
+
+    fn();
+    //this is not allowed
+    // function fn(a, a) {
+    // }
+
+    function Star() {
+      this.name = 'Julian';
+      this.user = 'Julian';
+    }
+    //严格模式下使用new去调用
+    var ldf = new Star();
+    // console.log(window.name);
+    console.log(ldf);
+  </script>
+  <script>
+    (function () {
+      'use strict';
+    })()
+  </script>
+</body>
+
+</html>

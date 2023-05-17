@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- css三角强化 -->
+  <style>
+    .box1 {
+      width: 0px;
+      height: 0px;
+      line-height: 0px;
+      font-size: 0px;
+      /* 这里添加颜色还不行？？ 估计transparent和其他颜色是同一类型，所以不能同时存在*/
+      /* border-top: 100px solid transparent;
+      border-right: 50px solid red;
+      border-bottom: 0px solid blue;
+      border-left: 0px solid green; */
+      /* 还可以这样写 */
+      border-color: transparent blue transparent transparent;
+      border-style: solid;
+      border-width: 100px 50px 0 0;
+    }
+
+    .price {
+      margin: 100px auto;
+      width: 160px;
+      height: 24px;
+      border: 1px red solid;
+      text-align: center;
+      line-height: 24px;
+    }
+
+    .price .old {
+      position: relative;
+      float: left;
+      width: 88px;
+      height: 100%;
+      background-color: tomato;
+      font-weight: 700;
+      color: white;
+    }
+
+    .price .triangle {
+      /* float: right; */
+      position: absolute;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-color: transparent white transparent transparent;
+      border-style: solid;
+      border-width: 24px 12px 0 0;
+    }
+
+    .price .sale {
+      text-decoration: line-through;
+      color: grey;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <div class="box1"></div> -->
+  <div class="price">
+    <span class="old">$1000
+      <span class="triangle"></span>
+    </span>
+    <i class="sale">$1999</i>
+  </div>
+</body>
+
+</html>

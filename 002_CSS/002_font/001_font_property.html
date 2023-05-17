@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>font</title>
+
+  <style>
+    h2 {
+      /* 系统会先找前面的字体，没有找到就会依次往下找直到找到为止 */
+      /* 头部字体是特殊的，所以就要特殊的，但是如果不设置属性的话就会跟body一起改变 */
+      /* 谷歌浏览器默认字体大小16px */
+      font-family:  "Microsft YaHei",Times New Roman, STSong,Cochin, Georgia, Times, serif;
+      font-size: 40px;
+      /* 字体粗细font-weight: normal; nomal = 400 (100-900) 700=bold */
+      font-weight: 400;
+    }
+
+    body {
+      font-size: 16px;;
+    }
+
+    .bold {
+      /* font-weight: bold; */
+      font-weight: 600;
+    }
+    .em{
+      font-style: italic;
+    }
+    .em_1{
+      font-style: normal;
+    }
+  </style>
+</head>
+<body>
+  <h2>Life is a one-way journey</h2>
+  <p>I landed in Auckland</p>
+  <p>Living a apartment for one week</p>
+  <p>Enrolled international language school</p>
+  <p>I met some people and some of them became my friends</p>
+  <p>I met Fiona after Darren had a business trip</p>
+  <p class="bold">Fiona and I became good friends before I left the school</p>
+  <p class="em">You in class</p>
+  <p class="em_1">You out of class</p>
+</body>
+</html>

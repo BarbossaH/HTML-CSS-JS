@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Padding</title>
+  <style>
+    /* 如果不设置div的高度和宽度，那么高度目前是根据内容的高度，宽度则是屏幕的宽度 */
+    .father {
+      /* background-color: pink; */
+
+      /* 如果编写了复合型的设置，就会全部覆盖前面的设置。 */
+      /* 但是如果倒倒过来写呢，就会单独覆盖，后面写的就会生效。 */
+      width: 800px;
+      height: 300px;
+      background: 10px center no-repeat url(/001html/html_1_firstday/src/beauty.jpg);
+      background-color: pink;
+    }
+
+    /* #child { */
+    div {
+      /* padding-left: 20px;
+      padding-top: 20px; */
+      /* 复合性写法 如果写一个值，就代表上下左右都是指定像素的内边距*/
+      padding: 10px;
+      /* 如果是写两个，前面代表上下，后面代表左右 */
+      padding: 20px 10px;
+      /* 上，左右和下 */
+      padding: 20px 20px 15px;
+      /* 注意：上右下左，顺时针的方向，不是上下左右  */
+      padding: 20px 20px 15px 15px;
+      /* 注意2:增加了padding，也影响了盒子大小。 */
+      /* 可以应用一些内容不相同的情况，不设置width和height，利用padding去设置，影响box的大小 */
+
+      /* 注意3:背景图片会受padding影响，背景颜色不会 */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="father">
+    <div id="child">
+      We are too close to the border.
+    </div>
+  </div>
+</body>
+
+</html>

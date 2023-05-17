@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <script>
+    //-----------------------------------includes--------------------------------------------------
+    let myname = 'Julian';
+    // console.log(myname.includes('j'));//false
+    // console.log(myname.includes('J'));//true
+    // console.log(myname.includes('ia'));//true
+    // console.log(myname.includes('ina'));//false
+    //-----------------------------------startswith & endswith----------------------------------------
+    // console.log(myname.startsWith('j'));//false
+    // console.log(myname.startsWith('J'));//true
+    // console.log(myname.startsWith('J', 1));//false 从第二个开始就是false
+    // console.log(myname.startsWith('Ju'));//true
+    // console.log(myname.endsWith('n'));//true
+    // console.log(myname.endsWith('n', 2));//false
+    // console.log(myname.endsWith('n', 6));//true
+    // console.log(myname.endsWith('an', 5));//false
+    // console.log(myname.endsWith('an', 6));//true
+    //-----------------------------------repeat--------------------------------------------------
+    // console.log(myname.repeat(2));//JulianJulian
+    // console.log(myname.repeat(0));//
+    // console.log(myname.repeat('4'));//JulianJulianJulianJulian
+    //-----------------------------------isFinite--------------------------------------------------
+    // let num1 = Number.isFinite(100);//
+    // let num4 = Number.isFinite(100 / 0);
+    // let num3 = Number.isFinite(Infinity);
+    // let num2 = Number.isFinite("100");
+    // let num5 = isFinite("100");//interesting
+
+    // console.log(num1); //true
+    // console.log(num4);//false
+    // console.log(num3);//false
+    // console.log(num2);//false
+    // console.log(num5);//true
+
+    //-----------------------------------isNaN--------------------------------------------------
+    // let num1 = isNaN(100);//false
+    // let num4 = isNaN(NaN);//true
+    // let num3 = isNaN("ok");//true
+    // let num2 = isNaN("100");//false
+
+    // let num1 = Number.isNaN(100);//false
+    // let num4 = Number.isNaN(NaN);//true
+    // let num3 = Number.isNaN('ok');//false
+    // let num2 = Number.isNaN("100");//false
+
+    // console.log(num1);
+    // console.log(num4);
+    // console.log(num3);
+    // console.log(num2);
+    //-----------------------------------isInteger()--------------------------------------------------
+    // let num1 = Number.isInteger(100);//true
+    // let num2 = Number.isInteger(100.0);//true interesting
+    // let num3 = Number.isInteger('ok');//false
+    // let num4 = Number.isInteger("100");//false
+
+    // console.log(num1);
+    // console.log(num2);
+    // console.log(num3);
+    // console.log(num4);
+    //-----------------------------------极小常量--------------------------------------------------
+    // function isEqual(a, b) {
+    //   return Math.abs(a - b) < Number.EPSILON;
+    // }
+    // let f1 = 0.1;
+    // let f2 = 0.2;
+    // console.log(f1 + f2);//0.30000000000000004
+    // console.log(isEqual(f1 + f2, 0.3)); //true
+
+
+    //-----------------------------------trunc抹除小数位--------------------------------------------------
+    // console.log(Math.trunc(1.2));//1
+    // console.log(Math.trunc(1.8));//1
+    // console.log(Math.trunc(-1.2));//-1
+    // console.log(Math.trunc(-1.8));//-1
+
+    //-----------------------------------sign()--------------------------------------------------
+    console.log(Math.sign(100));//1
+    console.log(Math.sign(-100));//- 1
+    console.log(Math.sign(1));//1
+    console.log(Math.sign(0));//0
+    console.log(Math.sign(-1));//-1
+    console.log(Math.sign('koko'));//NaN
+
+    //-----------------------------------isInteger()--------------------------------------------------
+    //-----------------------------------isInteger()--------------------------------------------------
+    //-----------------------------------isInteger()--------------------------------------------------
+
+  </script>
+</body>
+
+</html>

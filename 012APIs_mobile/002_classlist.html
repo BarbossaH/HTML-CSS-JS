@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .bg {
+      background-color: aqua;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="one two"></div>
+  <button>On/Off</button>
+  <script>
+    var div = document.querySelector('div');
+    var btn = document.querySelector('button');
+    btn.addEventListener('click', function () {
+      document.body.classList.toggle('bg');
+    })
+    console.log(div.classList[1]);
+
+    div.classList.add('tree');
+    console.log(div.classList);
+    div.classList.remove('one');
+    console.log(div.classList);
+
+    // console.log(div.className);
+
+  </script>
+</body>
+
+</html>

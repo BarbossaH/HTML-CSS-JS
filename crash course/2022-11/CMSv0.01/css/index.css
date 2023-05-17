@@ -1,0 +1,589 @@
+body {
+    margin: 0;
+    font-family: areal, "Open Sans", sans-serif;
+    width: 100%;
+    height: 100vh
+  }
+  #nav {
+    width: 100%;
+    height: 45px;
+    position: fixed;
+    background-color: #444444;
+    z-index: 2;
+  }
+  
+  #logo {
+    color: white;
+    padding: 15px;
+    float: left;
+    font-size: 18px;
+    line-height: 20px;
+    text-decoration: none;
+  }
+  
+  #nav ul {
+    float: right;
+    list-style: none;
+    height: auto;
+    padding-right: 20px;
+  }
+  
+  #nav ul li {
+    display: block;
+    text-align: center;
+    line-height: 45px;
+    margin-top: -16px;
+    width: 180px;
+    height: 45px;
+    float: left;
+    cursor: pointer;
+  }
+  
+  #nav ul #notification {
+    width: 40px;
+  }
+  
+  #notification-expand {
+    display: none;
+    border-radius: 5px;
+    position: relative;
+    right: 140px;
+    top: 12px;
+    background-color: lightgray;
+    height: 90px;
+    width: 180px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  #notification-expand span {
+    background-color: black;
+    color: white;
+  
+    width: 170px;
+  }
+  
+  #profile-expand {
+    display: none;
+    padding: 0;
+    border-radius: 5px;
+    position: relative;
+    right: 20px;
+    top: 45px;
+    background-color: lightgray;
+    height: 120px;
+    width: 200px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  #profile-expand ul {
+    position: relative;
+    top: -45px;
+    left: 20px;
+  }
+  
+  #profile-expand ul li {
+    height: 40px;
+    width: 200px;
+    margin-top: 0;
+  }
+  
+  #log-out {
+    border-top: 2px solid whitesmoke;
+  }
+  
+  #profile-expand ul li span {
+    color: black !important;
+  }
+  
+  #profile-expand ul li img {
+    float: left;
+    width: 13px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  
+  #nav ul #burger {
+    width: 40px;
+    padding-top: 3px;
+    display: none;
+  }
+  
+  #nav ul #profile {
+    width: 40px;
+    float: left;
+  }
+  
+  #nav ul #down {
+    width: 15px;
+    float: left;
+    padding-right: 10px;
+  }
+  
+  #nav ul li span {
+    float: left;
+    color: lightgray;
+    padding-right: 10px;
+  }
+  
+  #nav ul li img {
+    height: 23px;
+    padding-top: 10px;
+  }
+  
+  #nav ul li:hover {
+    background-color: white;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .sidenav {
+    width: 230px;
+    background-color: lightgray;
+    height: 100%;
+    float: left;
+  }
+  
+  .sidenav #applogo {
+    width: 170px;
+    padding-top: 55px;
+    padding-left: 20px;
+  }
+  
+  .sidenav #navarrow {
+    width: 15px;
+    /*z-index: 1;*/
+    position: relative;
+    top: -18px;
+    left: 4px;
+    cursor: pointer;
+  }
+  
+  .sidenav ul {
+    list-style: none;
+    padding-left: 0px;
+  }
+  
+  .sidenav ul .non-coll {
+    height: 45px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .sidenav ul .non-coll:hover {
+    background-color: white;
+  }
+  
+  .sidenav #coll0,
+  .sidenav #coll1 {
+    display: none;
+  }
+  
+  .sidenav #coll1 ul li span {
+    line-height: 29px;
+    padding-left: 40px;
+  }
+  
+  .sidenav #coll0 ul li img {
+    float: left;
+    width: 20px;
+    padding-left: 35px;
+    padding-top: 5px;
+  }
+  .sidenav #coll0 ul li span {
+    float: left;
+    font-size: 14px;
+    margin-left: 10px;
+    line-height: 27px;
+  }
+  
+  .sidenav .coll ul li {
+    height: 30px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .sidenav .coll ul li:hover {
+    background-color: whitesmoke;
+  }
+  
+  .sidenav ul .non-coll img {
+    padding-top: 5px;
+    width: 18px;
+    padding-left: 20px;
+  }
+  
+  .sidenav ul li .leftarrow {
+    width: 10px;
+    float: right;
+    margin-top: 10px;
+    padding-right: 15px;
+  }
+  
+  .sidenav ul .non-coll span {
+    line-height: 45px;
+    margin-left: 10px;
+  }
+  
+  .sidenav .home-expand {
+    display: none;
+  }
+  
+  .sidenav #recru-expand {
+    display: none;
+  }
+  
+  .sidenav #report-expand {
+    display: none;
+  }
+  
+  /* end of sidenav class*/
+  
+  .sidenavmini {
+    float: left;
+    width: 37px;
+    background-color: lightgray;
+    height: 100%;
+  }
+  
+  .sidenavmini #applogo {
+    display: none;
+  }
+  
+  .sidenavmini #navarrow {
+    width: 15px;
+    margin-top: 70px;
+    margin-left: 12px;
+    cursor: pointer;
+  }
+  
+  .sidenavmini ul {
+    list-style: none;
+    padding-left: 32px;
+    padding-top: 20px;
+  }
+  
+  .sidenavmini ul .non-coll {
+    width: 40.5px;
+    position: relative;
+    left: -36px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    height: 37px;
+  }
+  
+  .sidenavmini ul .non-coll:hover {
+    background-color: white;
+  }
+  
+  .sidenavmini .non-coll .nav-span {
+    display: none;
+  }
+  
+  .sidenavmini ul li img {
+    width: 25px;
+    padding-left: 10px;
+    padding-top: 5px;
+    height: 25px;
+  }
+  
+  .sidenavmini .leftarrow {
+    display: none;
+  }
+  
+  .sidenavmini #coll0,
+  .sidenavmini #coll1 {
+    display: none;
+  }
+  
+  .sidenavmini #home-expand {
+    height: 37px;
+    width: 0;
+  
+    position: relative;
+    left: 40px;
+    top: -30px;
+    background-color: lightgray;
+  
+    cursor: pointer;
+  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .sidenavmini #home-expand:hover {
+    transition: 0.5s ease-in-out;
+    background-color: whitesmoke;
+  }
+  
+  .sidenavmini #home-expand span {
+    padding-left: 10px;
+    line-height: 35px;
+    visibility: hidden;
+  }
+  
+  .sidenavmini #recru-expand {
+    display: none;
+    position: relative;
+    left: 40px;
+    top: -30px;
+    background-color: lightgray;
+    height: auto;
+    width: 180px;
+    padding: 0;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .sidenavmini #recru-expand ul {
+    padding: 0;
+  }
+  
+  .sidenavmini #recru-expand ul li {
+    height: 40px;
+    padding-left: 0;
+    transition: 0.5s ease-in-out;
+  }
+  
+  .sidenavmini #recru-expand ul li span {
+    padding-left: 10px;
+    line-height: 40px;
+  }
+  
+  .sidenavmini #recru-expand ul .toWhite:hover {
+    background-color: whitesmoke;
+  }
+  
+  .sidenavmini #report-expand {
+    display: none;
+    position: relative;
+    left: 40px;
+    top: -30px;
+    background-color: lightgray;
+    height: auto;
+    width: 180px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  .sidenavmini #report-expand ul {
+    padding: 0;
+  }
+  
+  .sidenavmini #report-expand ul li {
+    height: 40px;
+    padding-left: 0;
+  }
+  
+  .sidenavmini #report-expand ul li span {
+    padding-left: 10px;
+    line-height: 40px;
+  }
+  
+  .sidenavmini #report-expand ul .toWhite:hover {
+    background-color: whitesmoke;
+    transition: 0.5s ease-in-out;
+  }
+  /*
+  #sidenavmini {
+    display: none;
+    float: left;
+    width: 37px;
+    background-color: lightgray;
+    height: 100%;
+  }
+  
+  #sidenavmini #rightarrow {
+    width: 15px;
+    margin-top: 70px;
+    margin-left: 12px;
+    cursor: pointer;
+  }
+  
+  #sidenavmini ul {
+    list-style: none;
+    padding-left: 32px;
+    padding-top: 20px;
+  }
+  
+  #home-expand {
+    height: 37px;
+    width: 0;
+  
+    position: relative;
+    left: 40px;
+    top: -30px;
+    background-color: lightgray;
+   
+    cursor: pointer;
+  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  #home-expand:hover {
+    transition: 0.5s ease-in-out;
+    background-color: whitesmoke;
+  }
+  
+  #home-expand span {
+    padding-left: 10px;
+    line-height: 35px;
+    visibility: hidden;
+  }
+  
+  #recru-expand {
+    display: none;
+    position: relative;
+    left: 40px;
+    top: -30px;
+    background-color: lightgray;
+    height: auto;
+    width: 180px;
+    padding: 0;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  #recru-expand ul {
+    padding: 0;
+  }
+  
+  #recru-expand ul li {
+    height: 40px;
+    padding-left: 0;
+    transition: 0.5s ease-in-out;
+  }
+  
+  #recru-expand ul li span {
+    padding-left: 10px;
+    line-height: 40px;
+  }
+  
+  #recru-expand ul .toWhite:hover {
+    background-color: whitesmoke;
+  }
+  
+  #report-expand {
+    display: none;
+    position: relative;
+    left: 40px;
+    top: -30px;
+    background-color: lightgray;
+    height: auto;
+    width: 180px;
+    transition: 0.5s ease-in-out;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  #report-expand ul {
+    padding: 0;
+  }
+  
+  #report-expand ul li {
+    height: 40px;
+    padding-left: 0;
+  }
+  
+  #report-expand ul li span {
+    padding-left: 10px;
+    line-height: 40px;
+  }
+  
+  #report-expand ul .toWhite:hover {
+    background-color: whitesmoke;
+    transition: 0.5s ease-in-out;
+  }
+  
+  #sidenavmini ul .sidenavminiicon {
+    width: 40px;
+    height: 37px;
+    margin-left: -35px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  #sidenavmini ul li img {
+    width: 25px;
+    padding-left: 10px;
+    padding-top: 5px;
+    height: 25px;
+  }
+  */
+  .withNavOpen {
+    padding-top: 50px;
+    padding-left: 250px;
+  }
+  
+  .withNavClosed {
+    padding-top: 50px;
+    padding-left: 50px;
+  }
+  
+  .button {
+    width: 39px;
+    height: 39px;
+    border-radius: 5px;
+    background-color: lightgray;
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: gray;
+  }
+  
+  .button img {
+    width: 20px;
+    padding-top: 10px;
+    padding-left: 9px;
+  }
+  
+  #dropdownmenu {
+    display: none !important;
+  }
+  
+  #cover {
+    width: 100%;
+    height: 100%;
+    background: gray;
+    opacity: 0.5;
+    position: absolute;
+    display: none;
+  }
+  
+  #changePassword {
+    position: absolute;
+    background: black;
+    color: white;
+    z-index: 2;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    top: 150px;
+    left: 50%;
+    margin-left: -150px;
+    height: auto;
+    display: none;
+  }
+  
+  #changePassword form {
+    text-align: center;
+  }
+  
+  #changePassword form input {
+    height: 24px;
+    font-size: 20px;
+  }
+  
+  #changePassword span {
+    color: red;
+    font-size: 14;
+  }
+  
+  #changePassword button {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+  }
+  

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 任何一个类对象都都有一个原型对象，都是继承object类，原型对象的原型对象够成了原型链，最后是null
+    function Star(unmae, age) {
+      this.unmae = unmae;
+      this.age = age;
+    }
+
+    Star.prototype.sing = function () {
+      console.log('I can sing');
+
+    }
+    var ldh = new Star('liu', 19);
+    // ldh.sex = 'male';
+    // Star.prototype.sex = 'female';
+    Object.prototype.sex = 'unknown';
+    //如果是对象里有这个属性，那么就会先使用对象的属性，如果对象没有，就会使用原型的属性,最后找到Object
+    //如果object也找不到，就返回空
+    console.log(ldh.sex);
+    console.log(ldh.toString);
+    console.log(ldh.toString());
+
+  </script>
+</body>
+
+</html>

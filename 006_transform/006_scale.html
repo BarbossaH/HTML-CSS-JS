@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <!-- 参数逗号隔开
+  参数是相对于自己尺寸的倍数
+  缩小就用小于1的值
+  同比例变化可以只填写一个参数
+  缩放不会影响别的控件
+  可以控制缩放的原点，默认在中心点的位置 -->
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: #fff999;
+      margin: 100px auto;
+      transform-origin: left top;
+    }
+
+    div:hover {
+      transform: scale(2);
+      /* width: 200px;
+      height: 200px; */
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <p>dsadsadsa</p>
+
+</body>
+
+</html>

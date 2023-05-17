@@ -1,0 +1,51 @@
+<!-- /*
+* @Author: Julian Huang
+* @Date: 2023-01-26 12:22:48
+* @Last Modified by: Julian Huang
+* @Last Modified time: 2023-01-26 12:22:48
+*/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 如果脚本放到这里，type = text的话，那么js的脚本是不能执行的，除非写window的监听，但是这里使用异步的方式，改成type=module 就可以加载完dom后后执行js-->
+  <!-- <script type="module" src="020_m1.js"></script> -->
+  <!-- <script src="020_m2.js"></script> -->
+</head>
+
+<body>
+  <div></div>
+  <script type="module">
+    // 模块化
+    //
+    //1、异步加载
+    //2、私密不漏
+    //3、重名不怕
+    //4、依赖不乱
+
+
+    //模块化在那用在那引用
+
+    //这里的fn1可以随便自定义名字，也可以写成别的.
+    // import fn1 from './020_m1.js'
+    // console.log(fn1);
+
+    // 如果导出的那边是个对象，那么此时newName就变成一个对象了
+    import { fn1, fn2 as newfn2 } from './020_m1.js'
+    // import from_m2 from './020_m2.js'
+    // // 如果m3调用了1和2的函数，那么就要在3中再次引用，否则调用不了
+    // import from_m3 from './020_m3.js'
+    console.log(fn1(), newfn2());
+
+    // console.log(newName, newName.fn1(), newName.fn2());
+    // from_m2.fn1();
+    // from_m2();
+    // from_m3();
+  </script>
+</body>
+
+</html>

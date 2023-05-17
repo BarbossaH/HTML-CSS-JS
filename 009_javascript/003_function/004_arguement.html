@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    //只有函数才有arguments，都是内置的对象
+    function func() {
+      console.log(arguments);
+      console.log(arguments.length);
+      console.log(arguments[2]);
+
+      for (var i = 0; i < arguments.length; i++) {
+        console.log(arguments[i]);
+      }
+    }
+    func(1, 2, 3, 4, 5);
+    func(1, 4, 7, 8, 32, 23, 3, 4, 5);
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

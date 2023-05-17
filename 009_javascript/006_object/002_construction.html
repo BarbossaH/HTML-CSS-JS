@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function Star(age, name, gender) {
+      this.age = age;
+      this.name = name;
+      this.gender = gender;
+      this.sing = function (name) {
+        console.log(name);
+      }
+    }
+    var ldh = new Star(89, 'ldh', 'man');
+    var zdd = new Star(12, '32', 'man');
+    console.log(typeof (ldh));
+    console.log(ldh.gender);
+    console.log(zdd.name);
+    zdd.sing('ooo');
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

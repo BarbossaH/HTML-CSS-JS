@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var o = {
+      name: 'andy'
+    };
+
+    function fn(arr) {
+      console.log(this);
+      console.log(arr);
+    }
+    fn.apply(o, ['stronger']);
+
+    var arr = [1, 2, 3, 4];
+    var max = Math.max(arr);//Nan
+    var sd = Math.max(...arr); //4
+    var min = Math.min.apply(Math, arr);//4
+    console.log(max, sd, min);
+
+  </script>
+</body>
+
+</html>

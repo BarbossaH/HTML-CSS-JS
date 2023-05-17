@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id='btn'>show me the money.</button>
+  <div id='money_count'>how much money?</div>
+
+  <script>
+    var btn = document.getElementById('btn');
+    var moneyNum = document.querySelector('#money_count');
+    console.log(moneyNum);
+
+    btn.onclick = function () {
+      // innerText是一个属性，不是一个函数，这里我出错了哈哈哈哈
+      moneyNum.innerText = getDate();
+      // moneyNum.innerText('2022');
+    }
+
+    function getDate() {
+      var date = new Date();
+      var day = date.getDay();
+      var dates = date.getDate();
+      var year = date.getFullYear();
+      var month = date.getMonth();
+      var week = ['sunday', 'monday', 'tuesday', 'wednsday', 'thursday', 'friday', 'saturday'];
+
+      return 'today is ' + year + ' ' + month + ' ' + dates + ' ' + upCaseFirstLetter(week[day]);
+    }
+
+    function upCaseFirstLetter(letter) {
+      var firstLetter = letter.charAt(0);
+      var firstCap = firstLetter.toUpperCase();
+      var rest = letter.slice(1);
+      return firstCap + rest;
+    }
+  </script>
+</body>
+
+</html>

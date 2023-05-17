@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      perspective: 500px;
+    }
+
+    .box {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 100px auto;
+      transform-style: preserve-3d;
+      transition: all 1s;
+    }
+
+    .box:hover {
+      transform: rotateY(180deg);
+    }
+
+    .front,
+    .back {
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 300px;
+    }
+
+    .front {
+      background-color: springgreen;
+      /* 这里真是被老师坑惨了，z-index不起作用 */
+      transform: translateZ(1px);
+    }
+
+    .back {
+      background-color: violet;
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="front">fiona is an idiot in some ways.</div>
+    <div class="back">but i still like this woman.</div>
+  </div>
+</body>
+
+</html>

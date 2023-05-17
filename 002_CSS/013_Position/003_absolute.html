@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>absolute</title>
+
+  <!-- 注意：如果没有父元素或者父元素没有定位，就以文档（boy）为定位标准 -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    /* 不会留下原来的位置，并飘在最上上方。（脱标，脱离标准流） */
+    .box1 {
+      position: absolute;
+      right: 10px;
+      height: 300px;
+      width: 300px;
+      background-color: springgreen;
+    }
+
+    .box2 {
+      height: 300px;
+      width: 300px;
+      background-color: violet;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../../00_JQuery/Jquery_min.js"></script>
+
+</head>
+
+<body>
+  <ul>
+    <li>I am the first li</li>
+  </ul>
+  <div class="test">I am the first born</div>
+
+  <script>
+    $(function () {
+      //c创建元素
+      var li = $('<li>I am second</li>');
+      var div = $('<div>我准备外部添加</div>');
+      // 这个只是执行了after，没有执行before
+      // $('div').after(div);
+      $('div').before(div);
+
+      $('ul').append(li);
+      //不会添加两次，只会替代前面的append
+      $('ul').prepend(li);
+      $('ul').remove();//这个是删除自己
+      $('ul').empty();//这个是删除子元素
+      $('ul').html('');//这个是删除子元素
+    })
+  </script>
+</body>
+
+</html>

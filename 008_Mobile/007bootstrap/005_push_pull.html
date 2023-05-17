@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <style>
+    .row div {
+      height: 50px;
+    }
+
+    .row div:nth-child(1) {
+      background-color: yellowgreen;
+    }
+
+    .row div:nth-child(2) {
+      background-color: gold;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-md-push-8">left</div>
+      <div class="col-md-8 col-md-pull-4">right</div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-lg-push-8">ooo</div>
+      <div class="col-lg-8 col-lg-pull-4">ggg</div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-md-push-8">左</div>
+      <div class="col-lg-8 col-md-pull-4">右</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 col-lg-push-8">天天</div>
+      <div class="col-md-8 col-lg-pull-4">方法</div>
+    </div>
+  </div>
+</body>
+
+</html>

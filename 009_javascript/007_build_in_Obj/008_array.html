@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>array</title>
+  <script>
+    var arr = [];
+    //如果只写一个数字，只代表长度
+    var arr2 = new Array(2);
+    console.log(arr2);
+    var arr3 = new Array(2, 3);
+    console.log(arr3);
+
+    function reverse(arr) {
+      if (!(arr instanceof Array)) {
+        return console.log("this is not an array");
+      }
+      // if (!Array.isArray(arr)) {
+      //   return console.log("this is not an array");
+      // }这是新增的方法，h5才支持
+
+      var newArr = new Array()
+      for (var i = 0; i < arr.length; i++) {
+        newArr[arr.length - i - 1] = arr[i];
+      }
+
+      return newArr;
+    }
+
+    console.log(reverse([1, 2, 3]));
+    // console.log(reverse(1, 2, 3));
+    reverse(1, 2, 3);
+
+    var test = [];
+    var test1 = new Object();
+    console.log(test instanceof Array);
+    console.log(test1 instanceof Array);
+
+
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

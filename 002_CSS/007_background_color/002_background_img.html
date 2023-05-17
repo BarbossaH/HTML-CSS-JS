@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMG</title>
+  <style>
+    /* background-image要么就默认为none要么就一定要写上url，不然就会出问题 
+     浏览器的好处就是程序不会崩溃，也就是不显示出来 */
+
+    /* 浏览器默认图片显示是平铺的background-repeat */
+
+    /* 如何控制背景图片的位置：
+    background-position：x， y‘ */
+    /* 方位名词 right left top bottom center; */
+    /* 如果只有一个，另一个没写，那么就水平默认center，水平是居中的；垂直是居中 */
+
+    /* 如何精确定位，前面一定是x，后面一定是y； 如果省略下，数字就一定是x，后面的一定是y，center*/
+
+    /* 也可以混合使用，前面写精确单位，后面写方位名词；但第一个值一定是x，第二个一定是y */
+
+    /* 背景图像固定 background-attachment: scroll, fixed*/
+
+    /* 复合性的写法，是常用写法 */
+    /* 如何扒图片？？ 回去做一下背景图片滚动和固定*/
+
+    h4 {
+      width: 150px;
+      height: 50px;
+      line-height: 50px;
+      text-indent: 3.5em;
+      /* background-color: violet;
+      background-image: url(/html/html_1_firstday/src/unity.jpg);
+      background-repeat: no-repeat;
+      background-position: 5px center; */
+      background: violet url(/001html/html_1_firstday/src/unity.jpg) no-repeat 5px center scroll;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 图片结合文字的模式 -->
+  <h4>I am a test!</h4>
+</body>
+
+</html>

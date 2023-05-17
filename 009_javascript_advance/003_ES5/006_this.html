@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function Star(uname, age) {
+      this.uname = uname;
+      this.age = age;
+    }
+    var that;
+    Star.prototype.sing = function () {
+      console.log('I can sing');
+      that = this;
+    }
+    var ldh = new Star('ldh', 18);
+    //1 在构造函数中，this指向的是调用者，也就是实例对象ldh
+    ldh.sing();
+    console.log(that);//ldh,可以看出原型对象的this也是指向ldh这个实例对象
+
+  </script>
+</body>
+
+</html>

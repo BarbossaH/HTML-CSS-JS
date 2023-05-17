@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // var re = /abc/;//正则表达式里不需要加引号 //all true
+    // console.log(re.test('abc'));//all true
+    // console.log(re.test('abcd'));//all true
+    // console.log(re.test('aabcd'));//all true
+    // console.log('------------------------------------');
+
+    // var reg = /^abc/;
+    // console.log(reg.test('abc'));//all true
+    // console.log(reg.test('abcd'));//all true
+    // console.log(reg.test('aabcd'));//all true
+    // console.log('------------------------------------');
+
+    // var reg1 = /^abc$/;
+    // console.log(reg1.test('abc'));//all true
+    // console.log(reg1.test('abcd'));//all true
+    // console.log(reg1.test('aabcd'));//all true
+
+    //---------------------------------------------------------------------------
+    var re = /[abc]/; //包含abc其中任何一个都是true
+    var re1 = /^abc$/;//只有其中一个才是true 所以只有三种情况是true a 或者b或者 c
+    //---------------------------------------------------------------------------
+    var re = /^abc{3}$/;//c重复三次 test('abccc') true
+    var re = /^(abc){3}$/; //abc 重复三次 abcabcabc true
+    //---------------------------------------------------------------------------
+    var re = /^[a-z]$/; // - 符号代表从a到z，可以每次检测用户的输入 代表输入英文字面才是true
+    var re2 = /^[a-zA-Z0-9_-]$/;
+    console.log(re2.test('-'));
+    //---------------------------------------------------------------------------
+    var re3 = /^[^a-zA-Z0-9_-]$/;//[^]代表取反的意思
+    //---------------------------------------------------------------------------
+
+    var re3 = /^[a-zA-Z0-9_-]{6,19}$/;//{6,}代表可以大于等于6，{6,19}代表6-19位，但是逗号后面不能有空格
+
+  </script>
+</body>
+
+</html>
